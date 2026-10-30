@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-30",
+  "passed": true,
+  "image_copies_checked": 34,
+  "qa_images_checked": 4,
+  "local_links_checked": 215,
+  "content_invariants": {
+    "eight_authoritative_boards": true,
+    "twelve_page_regions": true,
+    "exact_selected_discovery": true,
+    "corrected_hero_v11": true,
+    "four_categories": true,
+    "four_discovery_products": true,
+    "three_shared_steps": true,
+    "two_creative_products": true,
+    "three_videos": true,
+    "four_growth_modules": true,
+    "ten_faqs": true,
+    "five_order_answers_unconfirmed": true,
+    "five_questions_per_group": true,
+    "palette08_exact": true,
+    "no_extra_rc_mockup": true,
+    "three_reference_prices": true,
+    "no_empty_locale_fixture_copied": true
+  },
+  "errors": [],
+  "asset_copies": [
+    {
+      "path": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+      "sha256": "d73363f9c2c90f13e7cce31abd1f8f29d68aae3504b92cc0c1a7b3ceec79bb9b",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/mockups/mesh-discovery-user-selected.png",
+      "sha256": "4cf680d75c41275a50131896437c4bffe5bc7d76ca2617c5e61a6798b3f0146f",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/mockups/mesh-shared-play-section-v2.png",
+      "sha256": "6576cc8ce4f0f4cb107923a20bcff824edaa1f0f6a9decb8f8217acd5dbc1059",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/mockups/mesh-creative-play-v1.png",
+      "sha256": "2866dc8fe5e2951643245999f7650998df82357fd1ba9767357dfdc9eaf916bd",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/mockups/mesh-shoppable-video-v1.png",
+      "sha256": "e6f2c7be6333745cd174567cca4f2132ad6c31457542ab846499e7a5bcbad384",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/mockups/mesh-play-growth-palette08-v3.png",
+      "sha256": "1df39414b5901eb77d597673c5460104c186ba08a5712d1d941fa3b8c24a7a3b",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+      "sha256": "bffcd823f6922f8aede7f49153a70f45f72fc74954dde9318cd8dd78dd0d5885",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/mockups/mesh-faq-palette08-v3.png",
+      "sha256": "65110b518486f75ae7ca704cc8f6d3aa4b607bed2a3d3152c07b048951c4b214",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/references/palette08-selection.png",
+      "sha256": "35dd1c51cb0908646cb59004204c2b8326d8905eb3030335ba9446aeffbc1326",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/references/category-anatomy-v9-reference-only.png",
+      "sha256": "570631afa1abf904f0fd58ef5c15d82cc618bb42db5c59268d8f42cca0953086",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/references/shallow-curve-v7-reference-only.png",
+      "sha256": "1c7fa0f4502d0095d61ab1cace1d4d2f38ea48c535e7c23d3b6e768fc39234ba",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/references/user-menu-pill-reference.png",
+      "sha256": "c638b0f4538771520875437854ac94044c8a7b4e6451493734aff4aa7b93c2aa",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/references/user-category-card-detail.png",
+      "sha256": "b9b8311075004e05e343ee7de6fac0c5157e1a9fab67d98d0d410b1da6bbb19c",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/references/user-palette08-reference.png",
+      "sha256": "4c8b60b5a87a1ff264ce8e7394a688217ed8e3875c0a74b6a1577f177cc2aca5",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/3d-maze-cube.webp",
+      "sha256": "d9fbaed73d92a3099223ddddab97cb193fe451b04f8c4f4ef683d424d3c7c6de",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/air-falcon.jpg",
+      "sha256": "73039cc745669dd69d72f363928bedf5b644a296858fbe0839b15d67442dde9b",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/bumper-car-go-kart.webp",
+      "sha256": "6a3e3d0fd0624cc1bbe0427e3325d9cf061a864cf799129adfae4bbd83491304",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/colour-coder.jpg",
+      "sha256": "e0ab8940c62f1fb6c39015ad92df7d48702d4ac75dd04cf1b28d4b79f8cdde69",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/diy-instant-digital-camera.webp",
+      "sha256": "64ad2966a55c9511f09569ed0c1995b7c6df3b96eb8197443a39bae043a3cf24",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/diy-screw-drill-puzzle-toy.webp",
+      "sha256": "a455639f2d32e014bc08d67abf8bec5b66191b8ed39be3af739b2145e58d16de",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/intelligent-car.webp",
+      "sha256": "abc031c6b6b888c1750b0960b477d72419d325062240816aa1e49e5b75b82638",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/magnetic-board.jpg",
+      "sha256": "c79045c35bdfc6386c618a78ad1d3eabb013cdda34a940520f87751729fbc547",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/magnetic-tiles.jpg",
+      "sha256": "a55f68af19520b41c526f89b222704b60c31e6fb2f4dbb9ca22a279ab1660854",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/mini-rc.jpg",
+      "sha256": "136bac1ce96ada2975a1d77b296a3c121fcf6e0431ba1995c8b5bf225a10a423",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/mosaic-board.jpg",
+      "sha256": "b4ced217d58b62493aa38db52f78d557f917ba7688fe67fc5de36b5f071fd4ea",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/rc-stunt-bike.webp",
+      "sha256": "1b979bf92253f79ed77e0ede000d50311bcecf0147e265ba8e5057e6d80e44c8",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/remote-watch-car.webp",
+      "sha256": "d208735aa6893cbc4cc3cfd33a9f849f779af25f0eada5230b90244877d17ffb",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/sticker-book.jpg",
+      "sha256": "a3e4a62b64d532f824075e65ef95ae4d818b231e5027a0f04a4bbf2e802012d7",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/product-source/tabletop-drift.jpg",
+      "sha256": "4ecf41fb8d8a31f0fdaeaa9e4d4dc06c75925e9c634d09f348fa238332d843f5",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/legacy-reference/mesh-wordmark.svg",
+      "sha256": "fcee6a244900ff738c99c594ebe5a1a87be9d1188cf66ff5c049fa4d234a0bd3",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/legacy-reference/mesh-category-educational.png",
+      "sha256": "13d07a689d70779bd7008631d05dce2e52a3ff00290735b87ad372ac0b7b00e7",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/legacy-reference/mesh-category-gadgets.png",
+      "sha256": "07458e6ecd6ddf92c946a2a78e8e7ef11e72a039acc6ba4961c5d451388afd20",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/legacy-reference/mesh-category-puzzles.png",
+      "sha256": "85e79343f651db1e136d08f8a1ba875c967a8a48a655e92608dd904539d7177e",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/legacy-reference/mesh-category-remote-control.png",
+      "sha256": "3ee0cf4a65c19fcb0f6908c966f73c3816bf3d654b11a73bec5ffa5fb6bf284c",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/verification/gallery-desktop.png",
+      "sha256": "4cf1ef6fcd946f539cc445753aebd3592ef97926aab987086f454c1917789c8d",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/verification/handbook-mobile.png",
+      "sha256": "8a7c561df0b15d6c5d29cda8068df9b29e4c9c725d26136785415e64c146a63e",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/verification/wireframe-1280.png",
+      "sha256": "3116f047101fbf87fb79f5fe3c0a6e446f9e78118df1ebce3a4d60e8b5bba92c",
+      "source_exists": true,
+      "matches": true
+    },
+    {
+      "path": "assets/verification/wireframe-390.png",
+      "sha256": "8fb28e7e3220e03a85d8aaab9bce834e5c70ac477bbbc69f5587f197a7532ff0",
+      "source_exists": true,
+      "matches": true
+    }
+  ]
+}

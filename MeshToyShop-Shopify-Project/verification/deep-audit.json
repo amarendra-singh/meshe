@@ -1,0 +1,321 @@
+{
+  "passed": true,
+  "errors": [],
+  "images_decoded": 38,
+  "decoded_assets": [
+    {
+      "path": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+      "decoded": true,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/mockups/mesh-discovery-user-selected.png",
+      "decoded": true,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/mockups/mesh-shared-play-section-v2.png",
+      "decoded": true,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/mockups/mesh-creative-play-v1.png",
+      "decoded": true,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/mockups/mesh-shoppable-video-v1.png",
+      "decoded": true,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/mockups/mesh-play-growth-palette08-v3.png",
+      "decoded": true,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+      "decoded": true,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/mockups/mesh-faq-palette08-v3.png",
+      "decoded": true,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/references/palette08-selection.png",
+      "decoded": true,
+      "dimensions": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "assets/references/category-anatomy-v9-reference-only.png",
+      "decoded": true,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/references/shallow-curve-v7-reference-only.png",
+      "decoded": true,
+      "dimensions": [
+        1828,
+        860
+      ]
+    },
+    {
+      "path": "assets/references/user-menu-pill-reference.png",
+      "decoded": true,
+      "dimensions": [
+        1001,
+        80
+      ]
+    },
+    {
+      "path": "assets/references/user-category-card-detail.png",
+      "decoded": true,
+      "dimensions": [
+        1207,
+        204
+      ]
+    },
+    {
+      "path": "assets/references/user-palette08-reference.png",
+      "decoded": true,
+      "dimensions": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "assets/product-source/3d-maze-cube.webp",
+      "decoded": true,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "assets/product-source/air-falcon.jpg",
+      "decoded": true,
+      "dimensions": [
+        498,
+        500
+      ]
+    },
+    {
+      "path": "assets/product-source/bumper-car-go-kart.webp",
+      "decoded": true,
+      "dimensions": [
+        1000,
+        984
+      ]
+    },
+    {
+      "path": "assets/product-source/colour-coder.jpg",
+      "decoded": true,
+      "dimensions": [
+        500,
+        500
+      ]
+    },
+    {
+      "path": "assets/product-source/diy-instant-digital-camera.webp",
+      "decoded": true,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "assets/product-source/diy-screw-drill-puzzle-toy.webp",
+      "decoded": true,
+      "dimensions": [
+        1000,
+        922
+      ]
+    },
+    {
+      "path": "assets/product-source/intelligent-car.webp",
+      "decoded": true,
+      "dimensions": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "assets/product-source/magnetic-board.jpg",
+      "decoded": true,
+      "dimensions": [
+        500,
+        500
+      ]
+    },
+    {
+      "path": "assets/product-source/magnetic-tiles.jpg",
+      "decoded": true,
+      "dimensions": [
+        500,
+        500
+      ]
+    },
+    {
+      "path": "assets/product-source/mini-rc.jpg",
+      "decoded": true,
+      "dimensions": [
+        373,
+        500
+      ]
+    },
+    {
+      "path": "assets/product-source/mosaic-board.jpg",
+      "decoded": true,
+      "dimensions": [
+        333,
+        500
+      ]
+    },
+    {
+      "path": "assets/product-source/rc-stunt-bike.webp",
+      "decoded": true,
+      "dimensions": [
+        1000,
+        660
+      ]
+    },
+    {
+      "path": "assets/product-source/remote-watch-car.webp",
+      "decoded": true,
+      "dimensions": [
+        880,
+        1000
+      ]
+    },
+    {
+      "path": "assets/product-source/sticker-book.jpg",
+      "decoded": true,
+      "dimensions": [
+        500,
+        327
+      ]
+    },
+    {
+      "path": "assets/product-source/tabletop-drift.jpg",
+      "decoded": true,
+      "dimensions": [
+        500,
+        500
+      ]
+    },
+    {
+      "path": "assets/legacy-reference/mesh-wordmark.svg",
+      "decoded": true,
+      "dimensions": "vector"
+    },
+    {
+      "path": "assets/legacy-reference/mesh-category-educational.png",
+      "decoded": true,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "assets/legacy-reference/mesh-category-gadgets.png",
+      "decoded": true,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "assets/legacy-reference/mesh-category-puzzles.png",
+      "decoded": true,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "assets/legacy-reference/mesh-category-remote-control.png",
+      "decoded": true,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "assets/verification/gallery-desktop.png",
+      "decoded": true,
+      "dimensions": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "path": "assets/verification/handbook-mobile.png",
+      "decoded": true,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "assets/verification/wireframe-1280.png",
+      "decoded": true,
+      "dimensions": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "path": "assets/verification/wireframe-390.png",
+      "decoded": true,
+      "dimensions": [
+        1440,
+        1000
+      ]
+    }
+  ],
+  "locked_copy_strings_checked": 59,
+  "action_contracts_checked": 44,
+  "html_runtime_resources_checked": 54,
+  "relocation": {
+    "passed": true,
+    "folder_name_changed": true,
+    "original_workspace_required": false,
+    "stdout": "{\n  \"date\": \"2026-10-30\",\n  \"passed\": true,\n  \"image_copies_checked\": 34,\n  \"qa_images_checked\": 4,\n  \"local_links_checked\": 215,\n  \"errors\": []\n}",
+    "stderr": ""
+  },
+  "standalone_product_reference_slots": 7,
+  "slots_without_confirmed_standalone": 18,
+  "original_mockup_hashes_unchanged": true
+}

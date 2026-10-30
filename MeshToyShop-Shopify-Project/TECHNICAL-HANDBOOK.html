@@ -1,0 +1,1538 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mesh Toy Shop — Technical handbook</title><style>*{box-sizing:border-box}body{margin:0;background:#FFFCF5;color:#172B4D;font:16px/1.6 system-ui,sans-serif}a{color:#2354D7}a:focus-visible,button:focus-visible{outline:3px solid #172B4D;outline-offset:4px}header{padding:40px max(24px,calc((100vw - 1200px)/2));background:#172B4D;color:white}header a{color:#FFE16B}h1{font-size:clamp(30px,4vw,48px);line-height:1.1;margin:12px 0}h2{line-height:1.2;margin:36px 0 16px}h3{margin-top:28px}main{max-width:1280px;margin:auto;padding:24px}.lead{max-width:850px}.nav{display:flex;flex-wrap:wrap;gap:12px}.nav a,button{border:1px solid #2354D7;border-radius:8px;padding:10px 16px;background:white;color:#2354D7;font:inherit;cursor:pointer;min-height:44px}.notice{border-left:5px solid #FF8547;background:#fff2e8;padding:16px;margin:20px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}.card{padding:20px;border:1px solid #d6dfec;border-radius:12px;background:white}.board{padding:20px 0;border-bottom:1px solid #d6dfec}.board img{display:block;width:100%;height:auto;border:1px solid #e0e4ea;border-radius:6px}.meta{font-size:14px;color:#53647e}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:10px;border:1px solid #d6dfec;vertical-align:top;overflow-wrap:anywhere}th{background:#edf1fc}pre{overflow:auto;background:#f2f4f7;padding:16px}code{font-size:.92em}details{border:1px solid #d6dfec;background:white;border-radius:8px;margin:14px 0;padding:16px}summary{cursor:pointer;font-weight:700;min-height:32px}article{scroll-margin-top:20px;overflow-wrap:anywhere}.toc{columns:2;column-gap:32px}.swatches{display:flex;gap:12px;flex-wrap:wrap}.swatch{padding:18px;min-width:150px;border-radius:10px;border:1px solid #ddd}.asset-thumb{height:170px;max-width:100%;object-fit:contain}.table-wrap{overflow:auto}.badge{display:inline-block;padding:4px 9px;border-radius:6px;background:#edf1fc;font-size:13px}.divider{border-top:2px solid #d6dfec;margin:50px 0}@media(max-width:600px){main{padding:16px}.toc{columns:1}header{padding:24px 16px}th,td{padding:7px}.card{padding:14px}}@media print{header{background:white;color:#172B4D}.nav{display:none}details{break-inside:avoid}summary{display:none}details>div{display:block}.board{break-before:page}a{color:inherit}}header .badge{color:#172B4D}</style></head><body><header><h1>Technical handbook</h1><p>Detailed contract for the next implementing AI. Original boards control visual fidelity; explicit engineering targets fill missing CSS/state detail.</p><nav class="nav"><a href="START-HERE.html">Reference gallery</a><a href="wireframes/index.html">Wireframes</a><a href="ASSET-LIBRARY.html">Assets</a></nav></header><main><ol class="toc"><li><a href="#01-design-authority">01 design authority</a></li><li><a href="#02-page-structure">02 page structure</a></li><li><a href="#03-design-system-responsive">03 design system responsive</a></li><li><a href="#04-section-specifications">04 section specifications</a></li><li><a href="#05-content-and-destinations">05 content and destinations</a></li><li><a href="#06-assets-and-production">06 assets and production</a></li><li><a href="#07-shopify-architecture">07 shopify architecture</a></li><li><a href="#08-interactions-and-cart">08 interactions and cart</a></li><li><a href="#09-commerce-and-launch-dependencies">09 commerce and launch dependencies</a></li><li><a href="#10-quality-requirements">10 quality requirements</a></li><li><a href="#11-build-and-acceptance">11 build and acceptance</a></li><li><a href="#12-do-not-repeat">12 do not repeat</a></li><li><a href="#13-evidence-and-decisions">13 evidence and decisions</a></li><li><a href="#14-receiving-ai-audit">14 receiving ai audit</a></li></ol><article id="01-design-authority"><h1>01 — Design authority and approval register</h1>
+<h2>Reading the approval history accurately</h2>
+<p>The merchant explicitly selected the first-render discovery attachment and approved shared play with “next approve.” Other sections evolved through corrections and continuation requests. On 30 October, after the video board, the merchant stated “home page is done” and requested a complete build handoff without changing mockups. This package freezes the latest non-rejected set as the documentation baseline. It does not rewrite history to claim each was individually approved at generation time.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Authoritative file in assets/mockups</th>
+<th>Applies to</th>
+<th>Selection basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M01</td>
+<td>mesh-mobile-shallow-curve-v11.png</td>
+<td>Ticker, header, hero, four categories</td>
+<td>Latest measured correction after explicit rejection of excessive mobile curvature; final baseline</td>
+</tr>
+<tr>
+<td>M02</td>
+<td>mesh-discovery-user-selected.png</td>
+<td>Learning discovery</td>
+<td>Exact attachment selected by merchant; explicitly overrides later v 3</td>
+</tr>
+<tr>
+<td>M03</td>
+<td>mesh-shared-play-section-v2.png</td>
+<td>Shared play</td>
+<td>Explicit “next approve”; later stale “unapproved” sentence in source note is overridden</td>
+</tr>
+<tr>
+<td>M04</td>
+<td>mesh-creative-play-v1.png</td>
+<td>Creative shopping</td>
+<td>Latest non-RC replacement; merchant continued, then declared homepage done</td>
+</tr>
+<tr>
+<td>M05</td>
+<td>mesh-shoppable-video-v1.png</td>
+<td>Video shopping</td>
+<td>Latest requested video addition; followed by homepage-complete handoff request</td>
+</tr>
+<tr>
+<td>M06</td>
+<td>mesh-play-growth-palette08-v3.png</td>
+<td>Growth and connection</td>
+<td>Latest palette 08/realism revision; final baseline</td>
+</tr>
+<tr>
+<td>M07</td>
+<td>mesh-whatsapp-palette08-v2.png</td>
+<td>Customer-message rail</td>
+<td>Latest palette 08 revision; layout only, real screenshots absent</td>
+</tr>
+<tr>
+<td>M08</td>
+<td>mesh-faq-palette08-v3.png</td>
+<td>Expanded FAQ</td>
+<td>Latest ten-question palette 08 revision</td>
+</tr>
+</tbody>
+</table></div>
+<p>All eight are copied byte-for-byte. Supporting references live in assets/references; they cannot replace these boards.</p>
+<h2>Do not implement these obsolete alternatives</h2>
+<ul>
+<li>mesh-mobile-curve-restored-v10.png: rejected approximately 10.2% mobile dip.</li>
+<li>mesh-reference-cards-four-v9.png: category anatomy useful, but detached mobile hero panels are wrong. Use only as supporting anatomy evidence.</li>
+<li>mesh-hero-pill-menu-four-categories-v8.png: missing required card details, superseded.</li>
+<li>mesh-next-section-discovery-v3.png: not the user's selected discovery render.</li>
+<li>mesh-rc-section-v1.png and mesh-rc-feature-add-to-cart-v2.png: additional RC section rejected; don't add them anywhere in this page.</li>
+<li>mesh-buying-help-v1.png: earlier four-question FAQ, superseded by ten-question version.</li>
+<li>Older teal/green/violet palettes, earlier hero slogans, old family campaign banners, 24 October two-column desktop product design, and 27 October red-arrow/serif review treatment are historical, not this handoff's visual authority.</li>
+</ul>
+<h2>Conflict resolution</h2>
+<ol>
+<li><strong>Colour:</strong> exact palette 08 tokens override approximate generated blues. Original selected pastel panels/menu chips remain component-specific exceptions; do not erase the mint puzzle-menu or mint educational/discovery panel merely to reduce all UI to five flat fills. Do not introduce new unrelated mint/lilac accents into later sections. A global re-palette of selected boards requires a separate design decision.</li>
+<li><strong>Buttons:</strong> selected discovery retains outlined View toy, as drawn. Creative and video have solid Add to cart. Never silently replace all actions because a later section requested cart buttons.</li>
+<li><strong>Video ratio:</strong> final video board's posters measure closer to 0.63 width/height than true 9:16. Preserve the board's approximate 0.63 display geometry; original 9:16 footage can be fitted with safe cropping. Earlier instruction to force 9:16 is an engineering suggestion, not authority over the selected visual.</li>
+<li><strong>Mobile imagery:</strong> some generated boards use distinct mobile scenes. Keep mobile image slots for art direction; don't assume one desktop crop can reproduce them exactly. No photorealistic product fidelity is implied.</li>
+<li><strong>Page order:</strong> no approved full-page stitched image exists. docs 02 records a minimal assembly decision using all retained sections, with video before growth and customer messages before FAQ. Do not label this order separately approved.</li>
+<li><strong>Footer:</strong> preserve the existing native footer; its current paragraph/assets need readback. Do not invent a footer screenshot or claim a visual approval absent from the record.</li>
+</ol>
+<h2>Scope frozen by this handoff</h2>
+<p>No extra RC section, popup funnel, countdown, fake rating, trust badge row, unconfirmed shipping strip, discount ticker, quiz or app is added. Layout completion does not make photography, product data, policies or prepaid checkout enforcement complete.</p></article><div class="divider"></div><article id="02-page-structure"><h1>02 — Page structure and wireframes</h1>
+<p>Open <a href="wireframes/index.html">interactive wireframes</a>. The diagrams show layout and reading order, not new colours, copy or visual approvals. Original boards remain authoritative.</p>
+<h2>Assembly order</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Section ID</th>
+<th>Role</th>
+<th>Board</th>
+<th>Desktop</th>
+<th>Mobile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00</td>
+<td>announcement</td>
+<td>Discover range</td>
+<td>M01</td>
+<td>Full-width ticker</td>
+<td>Full-width ticker</td>
+</tr>
+<tr>
+<td>01</td>
+<td>header</td>
+<td>Brand, browse, search, cart</td>
+<td>M01</td>
+<td>Logo;3 pastel icon pills;search/cart</td>
+<td>Logo;search/cart/menu</td>
+</tr>
+<tr>
+<td>02</td>
+<td>hero</td>
+<td>Curiosity/shared-play invitation</td>
+<td>M01</td>
+<td>Wide image, left cream overlay</td>
+<td>Copy/actions, shallow convex edge, photo</td>
+</tr>
+<tr>
+<td>03</td>
+<td>categories</td>
+<td>Four collection routes</td>
+<td>M01</td>
+<td>2 columns ×2 rows horizontal cards</td>
+<td>4 stacked horizontal cards</td>
+</tr>
+<tr>
+<td>04</td>
+<td>discovery</td>
+<td>Four concrete play activities</td>
+<td>M02</td>
+<td>4 vertical product cards</td>
+<td>2 columns ×2 rows</td>
+</tr>
+<tr>
+<td>05</td>
+<td>shared-play</td>
+<td>One caregiver play idea</td>
+<td>M03</td>
+<td>Photo about 63%, text 37%</td>
+<td>Heading/copy → photo →3 steps →CTA</td>
+</tr>
+<tr>
+<td>06</td>
+<td>creative-play</td>
+<td>Two creative purchases</td>
+<td>M04</td>
+<td>Panoramic photo;2 purchase areas</td>
+<td>Photo;2 stacked purchase rows</td>
+</tr>
+<tr>
+<td>07</td>
+<td>shoppable-video</td>
+<td>See mechanics, then shop</td>
+<td>M05</td>
+<td>3 portrait demos and shopping footers</td>
+<td>1 large card + next sliver</td>
+</tr>
+<tr>
+<td>08</td>
+<td>growth</td>
+<td>Four observable play opportunities</td>
+<td>M06</td>
+<td>2×2 image/text modules</td>
+<td>4 stacked image/text rows</td>
+</tr>
+<tr>
+<td>09</td>
+<td>customer-stories</td>
+<td>Genuine customer messages</td>
+<td>M07</td>
+<td>3 portrait screenshot cards</td>
+<td>1 card + next sliver</td>
+</tr>
+<tr>
+<td>10</td>
+<td>faq</td>
+<td>Choosing and ordering help</td>
+<td>M08</td>
+<td>2 groups side by side</td>
+<td>Choosing group then order group</td>
+</tr>
+<tr>
+<td>11</td>
+<td>footer</td>
+<td>Existing support/navigation</td>
+<td>Inherit</td>
+<td>Existing native Dawn footer</td>
+<td>Existing accessible responsive footer</td>
+</tr>
+</tbody>
+</table></div>
+<p>This sequence preserves the latest section set. The newly requested video section is positioned before growth; the shared-play section remains after discovery. Video was not used to replace another approved section. The exact assembly order is a documented inference, not a recovered full-page design.</p>
+<h2>Section boundaries</h2>
+<p>Only the mobile hero has the shallow curved copy/photo transition. All other sections have straight outer boundaries and ordinary local corner radii. Do not insert waves, giant blobs or gaps between the hero curve and photo. Normal vertical section spacing should be consistent; do not copy the presentation board's grey DESKTOP/MOBILE labels, blank bottom canvas margins, phone frame or preview warning bars into the customer page.</p>
+<p>Development-only preview labels stay outside shopper content when placeholders are visible in an explicitly labelled development preview. Genuine public media uses actual content and no mockup instructions.</p>
+<h2>Tablet interpolation</h2>
+<p>No tablet board was supplied. At 750–989CSS px: collapse header to mobile menu, use mobile-style hero copy/photo flow, retain 2 category columns only while their horizontal anatomy remains readable, show 2 discovery columns, stack shared-play content, retain 2 creative purchase areas if each has at least 300 px, show 2 video cards with horizontal overflow for the third, stack growth modules in one column, show 2 customer cards, and stack FAQ groups. At the low end, fall back to mobile layouts rather than squeezing text or shrinking touch controls. These are engineering rules subject to source-matching QA.</p>
+<h2>Navigation destination model</h2>
+<p>Announcement and Explore toys → all products. RC routes → Remote Control collection. Puzzles/Gadgets/Educational → selected corresponding collections. Discovery/play-idea actions → exact selected products. Creative collection link → an existing, verified relevant collection or one configured deliberately; never a guessed URL. Growth CTA → selected learning/play collection. Customer story footer → product actually discussed. Ask Mesh → confirmed support route. Missing destinations are configuration gaps, not '#'.</p>
+<h2>Supporting pages</h2>
+<p>Keep product, collection, search, cart, contact and existing policy routes functional. Use native current theme patterns unless a later approved page design exists. Do not reinterpret homepage completion as approval of an entirely new PDP/checkout layout. Commerce behaviour is specified separately because homepage buttons depend on it.</p></article><div class="divider"></div><article id="03-design-system-responsive"><h1>03 — Design system and responsive specification</h1>
+<p>Exact tokens are in <a href="data/design-tokens.json">design-tokens.json</a>. The source boards are raster concepts, not reliable font or colour samples.</p>
+<h2>Colour and type</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Value</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary</td>
+<td>#2354D7</td>
+<td>Purchase actions, links, selected headline emphasis, ticker</td>
+</tr>
+<tr>
+<td>Page cream</td>
+<td>#FFFCF5</td>
+<td>Dominant large surfaces</td>
+</tr>
+<tr>
+<td>Tangerine</td>
+<td>#FF8547</td>
+<td>Short strokes and warm accents; not small text on cream</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td>#FFE16B</td>
+<td>Restrained highlights</td>
+</tr>
+<tr>
+<td>Navy</td>
+<td>#172B4D</td>
+<td>Main headings/body/control outlines</td>
+</tr>
+<tr>
+<td>White</td>
+<td>#FFFFFF</td>
+<td>Cards and text on primary buttons</td>
+</tr>
+</tbody>
+</table></div>
+<p>Existing category/menu/discovery pastel backgrounds remain as shown: pale blue, peach, pale yellow and pale mint. Treat them as tinted component surfaces rather than extra competing action colours. Products retain their real colours. Do not apply colour filters to photos.</p>
+<p>Font identity is not confirmed by generated images. Proposed implementation match: Outfit variable for rounded confident headings; DM Sans for body/UI. Prefer available licensed/self-hosted WOFF2 or Shopify-supported font settings; verify actual files/license before adding. Preserve the full Mesh Toy Shop name and orange burst; the legacy SVG is not automatically the approved wordmark master. Do not replace headings with black, a serif face, handwriting or thin geometric display type.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Text role</th>
+<th>Desktop target</th>
+<th>Mobile target</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hero H1</td>
+<td>64–76 px,700–800,1.0–1.06 line-height</td>
+<td>38–44 px,1.02–1.08</td>
+<td>'Let curiosity' / 'lead.' where width permits</td>
+</tr>
+<tr>
+<td>Section H2</td>
+<td>42–56 px,700–800,1.06–1.15</td>
+<td>30–36 px,1.08–1.16</td>
+<td>Meaningful phrase wrapping; never overflow</td>
+</tr>
+<tr>
+<td>Card H3</td>
+<td>20–26 px,650–750</td>
+<td>17–20 px</td>
+<td>Allow 2 lines, no ellipsis for product identity</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>18–22 px,400–500,1.4–1.5</td>
+<td>16–18 px,1.4–1.5</td>
+<td>Navy/muted navy with verified contrast</td>
+</tr>
+<tr>
+<td>Buttons</td>
+<td>17–19 px,600</td>
+<td>16–18 px,600</td>
+<td>Minimum 44CSS px interaction area</td>
+</tr>
+<tr>
+<td>Eyebrow</td>
+<td>12–14 px,600,0.10 emtracking</td>
+<td>12–13 px</td>
+<td>Uppercase only where board uses it</td>
+</tr>
+</tbody>
+</table></div>
+<p>These sizes are starting targets; generated boards use different presentation scales. Match relative hierarchy and wrapping at the same effective viewport. Do not enlarge a later heading until it rivals the hero merely because its board has a large export title.</p>
+<h2>Breakpoints and container</h2>
+<ul>
+<li>Mobile:320–749 px. Tablet:750–989 px. Desktop:990 px+. Test widescreen at 1920 px; constrain readable content rather than stretching cards indefinitely.</li>
+<li>Initial container target:1440 px maximum with 32 px desktop and 16 px mobile gutters; tablet 24 px. Adjust only to match the reference proportions, not to change component layout.</li>
+<li>Standard gaps: desktop 20–24 px, mobile 12–16 px. Section vertical padding: desktop 56–72 px, mobile 32–44 px. Hero/category boundary is tighter, approximately 16 px.</li>
+<li>Button radius 999 px except video shopping buttons, which use the more modest rounded rectangle visible in M05. Content radius 12–20 px; desktop hero overlay 28–32 px. Do not turn all cards into identical pills.</li>
+<li>No horizontal page overflow. Only deliberate video/customer tracks scroll horizontally. Preserve document-level vertical scrolling on touch.</li>
+</ul>
+<h2>Hero curve geometry — regression-critical</h2>
+<p>Reference sampling: V7 centre dip≈6.6% of sampled width; rejected V10 ≈ 10.2%; V11≈6.2%. Measure the curve's central offset relative to the straight chord between its left/right join endpoints, not the overall panel height.</p>
+<p>Implementation acceptance target:5.5–7.0% of mobile hero width. Example at 390 px content width:21.5–27.3 px dip, target 24.2 px. At 375 px:20.6–26.3 px. The cream panel overlaps the image continuously; photo top is not an independently rounded box. A shallow elliptical/pseudo-element or equivalent scalable path may be used, but retain room for all text and CTA above the curve. No fixed height that clips translated/enlarged text.</p>
+<h2>Element-specific responsive behaviour</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Required mobile treatment</th>
+<th>Never do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Hide desktop pills into menu; keep search/cart/menu visible</td>
+<td>Shrink pills to unreadable labels or hide ticker</td>
+</tr>
+<tr>
+<td>Categories</td>
+<td>Single-column wide horizontal cards; retain description and arrow</td>
+<td>Convert to 2×2 square icon tiles</td>
+</tr>
+<tr>
+<td>Discovery</td>
+<td>2 columns with consistent photo/text/action slots</td>
+<td>Carousel or 1 column at normal 375–430 width</td>
+</tr>
+<tr>
+<td>Shared play</td>
+<td>Copy above photo; steps and CTA below</td>
+<td>Photo first on mobile or new curve</td>
+</tr>
+<tr>
+<td>Creative</td>
+<td>Preserve both activities in image crop; two purchase rows</td>
+<td>Reuse discovery card grid</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>Large portrait + next sliver; footer/action visible</td>
+<td>Autoplay sound or tiny four-up mobile videos</td>
+</tr>
+<tr>
+<td>Growth</td>
+<td>Photo left, copy right within 4 stacked modules</td>
+<td>Four full-screen hero banners</td>
+</tr>
+<tr>
+<td>WhatsApp</td>
+<td>Large readable message card, next-card glimpse</td>
+<td>Invented conversation or unreadable thumbnail grid</td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td>Two labelled groups stacked, first question initially open</td>
+<td>Truncate question text or replace with 4 questions</td>
+</tr>
+</tbody>
+</table></div>
+<p>At 320 px and 200% text zoom allow natural reflow. If two discovery columns cannot retain usable text/actions at large zoom, accessibility reflow is an explicit exception, not permission to change the ordinary mobile design. Landscape phones use available width rules, not user-agent detection.</p>
+<h2>Image fitting</h2>
+<p>Packshots: contain, preserving complete product and proportions. Lifestyle photos: cover only when approved focal areas remain intact. Hero mother, child and toy must remain recognisable; don't crop faces or remove the woman. Use separate mobile art-directed assets where needed. Customer screenshots: contain and offer enlargement, never crop message text to force a ratio. Video footage may be 9:16 while display frame follows M05≈0.63 width/height; keep essential action in the safe centre.</p></article><div class="divider"></div><article id="04-section-specifications"><h1>04 — Section-by-section build contract</h1>
+<p>For each section, the named board controls visual identity. Dimensions below are approximate measurements from 1536×1024 boards or explicit implementation targets, not source CSS. Exclude presentation labels/gutters when comparing.</p>
+<h2>S00 — Announcement</h2>
+<p>M01. Solid cobalt strip across viewport, centred white 'Discover toys for every kind of play →'. Target 36–44 px desktop and 32–40 px mobile, natural wrapping at extreme text zoom. Single link to all products; no moving marquee needed. The user explicitly required keeping the ticker. No unconfirmed discount, shipping threshold or countdown. It precedes header in DOM and visual order.</p>
+<h2>S01 — Header</h2>
+<p>M01. Desktop left wordmark Mesh Toy Shop with orange burst; three centred pastel pills: orange car icon/RC Toys, green puzzle icon/Puzzles, yellow bulb/Gadgets. Search and cart at right. Cream/white background, clear horizontal alignment, restrained icon stroke. Mobile logo left, search/cart/hamburger right; desktop pill navigation is in drawer. Header is not a graphic baked into the hero.</p>
+<p>Target desktop 70–88 px, mobile 60–72 px excluding ticker; allow content-driven growth. Logo width≈250–300 px desktop and 190–220 px mobile subject to 375 px fit. Icons 24 px within 44 px hit zones. At 320 px narrow the logo appropriately; do not overlap controls. M01 itself shows a smaller mobile logo proportion than desktop. Use native accessible search/cart/menu behaviours and visible cart count when nonzero. Sticky behaviour is not specified by the mockup; preserve current theme setting unless a measured usability issue requires a documented change.</p>
+<h2>S02 — Hero</h2>
+<p>M01. Desktop: rounded wide family photograph, generated mother and boy with blue RC toy; cream copy card over the left portion. Approximate board image bounds x 8–1096, y 118–605; width 1088, height 487, ratio 2.23:1. Overlay x 36–524, y 195–556; about 45% of image width. This is a reference composition, not a fixed height for every viewport.</p>
+<p>Copy: small orange dash; H1 'Let curiosity lead.' with 'lead.' cobalt; subtext 'RC adventures, puzzles and hands-on play to discover together.' Solid Explore toys pill and underlined Shop RC toys with balanced spacing. No extra eyebrow or development paragraph.</p>
+<p>Mobile: full-width cream copy first, primary action wide, secondary link beneath, then photo immediately joined via shallow convex lower edge. Keep≈6% dip; see docs 03. No white gap, detached rounded card or deep bowl. Photo is shorter than a full-screen portrait; parent/child/vehicle remain legible. Image asset is currently embedded in board; production requires a clean approved export or real shoot preserving composition. Do not substitute old father/child or wooden-block campaign image.</p>
+<h2>S03 — Four category cards</h2>
+<p>M01 authority; supporting V9 category-anatomy reference in assets/references. Exactly Remote Control, Puzzles &amp; Play, Gadgets, Educational in that order. Desktop 2×2; mobile 4 stacked. Board desktop cards approximately 519×168/180 px; ratio≈3.0:1. Mobile≈383×110 px; ratio≈3.5:1. Content-driven sizing at real CSS scale; horizontal grammar must survive.</p>
+<p>Left zone≈45–50%: navy heading, supporting 2 lines, plain navy right arrow at lower left. Right zone≈45–52%: large product cutout with soft contact shadow and small orange sparks. Preserve breathing room and product scale. Entire card can be one semantic link; do not nest a second arrow link.</p>
+<p>Backgrounds: RC pale blue, puzzles peach, gadgets pale yellow, educational pale mint. RC blue/black car; puzzle wooden blocks; gadget camera; education construction/drill. Current standalone older category artwork has a different orange truck/robot/stacker and must not be substituted. Standalone exact selected cutouts are missing; board holds the identity/composition reference.</p>
+<p>Copy is in docs 05. No prices, cart controls, circular arrow buttons, centred labels or category icons inside these cards.</p>
+<h2>S04 — Learning discovery</h2>
+<p>M02, exact user attachment. Header 'Little hands. Big discoveries.' with blue second phrase; subline and desktop right-aligned Explore learning toys link. On mobile the section link is a full-width outlined action below the grid.</p>
+<p>Four vertical cards: Colour Coder, Magnetic Drawing Board, DIY Screw Drill Puzzle,3D Maze Cube. Large contained photo on peach/yellow/mint/ice-blue surface, activity chip MATCH/DRAW/BUILD/SOLVE, navy title, short body and outlined View toy. White rounded card body with aligned lower actions. Board desktop photo frames about 255×325 px (0.78 width/height); do not force square merely because an old prompt said square. Mobile photo frames≈192×209 px, with narrower type and natural title wrapping.</p>
+<p>Desktop 4 equal columns; mobile 2×2 with 12 px gap. Preserve all four items and their order. Source mobile titles differ in wrapping; implementation may align actions using grid/flex without deleting copy. Image contain ensures full products visible. No automatic newest-first selection that fills this learning shelf with RC products. Selected board contains no prices and no Add to cart; preserve its editorial View toy purpose. Commerce controls belong in S06/S07 and PDP.</p>
+<h2>S05 — Shared play</h2>
+<p>M03. Cream section; desktop large rounded photo left≈63% inner width (board 660×735 px), text right≈37%. Image: woman and girl using Colour Coder. Small orange strokes, spaced uppercase eyebrow, headline 'The joy of figuring it out.' with second phrase blue; subtext then three numbered peach circles and steps; solid CTA.</p>
+<p>Mobile: eyebrow/headline/subtext first, photo≈384×340 px, steps below, full-width CTA. Do not retain desktop photo-first DOM reading order through a visually reordered but confusing keyboard sequence; organise semantic content carefully. No duplicate headings announced. Keep number badges decorative when the steps are an ordered list. Do not add another hero wave or product-card grid.</p>
+<p>Steps: Pick a pattern → Slide to match → Swap turns. These are a suggested caregiver activity, not certified game rules. CTA Explore Colour Coder → selected product. Exact generated image includes product cover deck; genuine demonstration asset should show accurate parts and use.</p>
+<h2>S06 — Creative play shopping</h2>
+<p>M04. Eyebrow THE CREATIVE CORNER. Headline 'Made by little hands.' Subline 'Peel a sticker. Place a bead. Make it their own.' One wide overhead craft scene showing sticker book on left and tiger board on right. Board desktop scene≈1032×444 px (2.32:1); mobile≈420×346 px (1.21:1). Keep both activities visible, no face-led portrait replacement.</p>
+<p>Under scene: two unboxed desktop purchase areas separated by thin vertical line, each with thumbnail left, title/body/price/button right. Mobile: two stacked rows, thumbnail left and title/price/button right; descriptions are omitted in M04 mobile and may remain desktop-only. Horizontal divider separates mobile rows. Preserve shopping bag icon and solid pill Add to cart. Bottom centred Explore creative play link with arrow.</p>
+<p>Products: Sticker-by-Number Book₹250; Mosaic Bead Board₹625. Values are reference calculations; live UI uses selected product/variant price, with no silent overwrites of live catalog. Missing product means editor-only placeholder and configuration warning; public cart action requires purchasable variant.</p>
+<h2>S07 — Shoppable video</h2>
+<p>M05. 'Watch them play.' and 'See how it works. Find their next favourite.' Desktop three portrait poster cards, centred play controls, bottom overlay captions, compact white shopping footer and full-width cobalt rounded-rectangle Add to cart. Header right has circular previous/next controls. Mobile one large card plus next sliver, footer visible, dots and swipe hint. Phone casing/status bar in board are presentation only.</p>
+<p>Approximate desktop poster 333×527 px (0.63 ratio), mobile 288×474(0.61). Preserve approximate visible frame geometry, not a forced square. Slots: Colour Coder₹450, Sticker-by-Number Book₹250, Mosaic Bead Board₹625. Each linked to exact product and real matching video. Preview label outside UI says posters are not real footage; do not fake playback or invent durations/views.</p>
+<p>Click-to-play, one active player, accessible pause/audio/fullscreen where supported. A card tap on the play control must not trigger Add to cart. Navigation controls disabled when no further movement; suppress unneeded carousel controls when all content fits, while retaining visual spacing. Full state contract in docs 08.</p>
+<h2>S08 — Growth and connection</h2>
+<p>M06. Centred headline 'Play that gives them room to grow.' and subline. Small warm decorative strokes/star/triangle, not large coloured blocks. Desktop 2×2 editorial modules separated by thin rules: photo left and text/activity pill right within each. Mobile 4 stacked image-left/text-right rows. Bottom centred Explore ways to play button; mobile full width.</p>
+<p>Four modules: Attention &amp; patience / Problem-solving / Creative expression / Connection &amp; emotions. Photos depict pattern play, magnetic building, art and mother/child turn-taking. Body copy describes actions, not promised IQ/attention/behaviour results. Pills are labels in the board, not approved extra navigation. If made interactive later, destinations and semantics require explicit specification.</p>
+<p>Target photo proportion about 1.1:1 desktop and≈0.95:1 mobile with bounded crops. Source exact dimensions vary per column; do not stretch people. Latest photos remain generated, and fine product details are not guaranteed.</p>
+<h2>S09 — Customer WhatsApp stories</h2>
+<p>M07. Left-aligned headline 'Your playtime stories.' with blue final word, subline, small orange dash. Three desktop portrait cards; mobile 1 plus next sliver. Light-blue top band, small green platform mark, pale-yellow content area, white footer with matching-product thumbnail/title and View toy. Circular carousel controls below. No mobile phone casing.</p>
+<p>All three screenshot positions are placeholders, not real customers. Keep actual future screenshot text intact and readable. Do not recolour genuine conversations to simulate authenticity or reconstruct their content. A full-size viewer may be used for legibility with accessible close/focus handling. If a message refers to no product, omit the matching product footer instead of guessing.</p>
+<p>The current board's labels are internal preview instructions. Public production requires real consent-cleared screenshots; otherwise hide this section for shoppers, retain clearly marked editor preview. Previously authorised fictional development samples must not become public reviews. No ratings, dates, names, testimonials or count badges may be invented.</p>
+<h2>S10 — Expanded FAQ</h2>
+<p>M08. Header 'A few things before playtime.' with blue ending and subline. Two pale-blue group panels desktop; stacked mobile. Left Choosing a toy with 5 questions, right Orders &amp; support with 5. First question expanded initially; all others collapsed. Plus/minus controls, thin separators, no clipped multi-line questions.</p>
+<p>Bottom peach contact strip: chat outline, Still have a question?, supporting sentence, Ask Mesh blue pill. Desktop horizontal alignment; mobile compact wrap without overcrowding. Use native details/summary or equivalent accessible state. No extra purchase button inside answers. FAQ answer copy/operational status in docs 05/09.</p>
+<h2>S11 — Footer</h2>
+<p>No new board. Preserve the existing native footer and current responsive behaviour. Historical verified labels: Explore Mesh; Home, Catalog, Contact; Small toys. Shared moments.; email signup; existing privacy-policy link. Read back current paragraph, menu handles and policy links; do not recover copy from guesswork. Add operational policy links only when those pages are confirmed. No unverified payment logos, certifications, phone numbers or social profiles. Footer visual fidelity is inherited-state verification, not comparison to an absent mockup.</p></article><div class="divider"></div><article id="05-content-and-destinations"><h1>05 — Content and destination registry</h1>
+<p>Machine-readable exact UI copy: <a href="data/content.json">content.json</a>. Keep punctuation and British/Indian English: colours, favourite, practise. Do not add SEO keyword strings or developmental claims to concise visible titles. Content strings are merchant-editable; this registry is the initial approved-design baseline.</p>
+<h2>Header/hero/category copy</h2>
+<ul>
+<li>Ticker: Discover toys for every kind of play →</li>
+<li>Logo text: Mesh Toy Shop</li>
+<li>Desktop menu: RC Toys / Puzzles / Gadgets</li>
+<li>Hero: Let curiosity lead.</li>
+<li>Hero support: RC adventures, puzzles and hands-on play to discover together.</li>
+<li>Hero actions: Explore toys / Shop RC toys</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Supporting copy</th>
+<th>Destination binding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remote Control</td>
+<td>Simple joys. Big adventures indoors and out.</td>
+<td>Selected Remote Control collection</td>
+</tr>
+<tr>
+<td>Puzzles &amp; Play</td>
+<td>Hands-on fun for everyday moments.</td>
+<td>Selected puzzles collection</td>
+</tr>
+<tr>
+<td>Gadgets</td>
+<td>Little surprises to explore and share.</td>
+<td>Selected gadgets collection</td>
+</tr>
+<tr>
+<td>Educational</td>
+<td>Build, try and discover together.</td>
+<td>Selected educational collection</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Discovery</h2>
+<p>Little hands. Big discoveries.</p>
+<p>Match a pattern. Make a shape. Try a new way.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Chip</th>
+<th>Product title</th>
+<th>Supporting sentence</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MATCH</td>
+<td>Colour Coder</td>
+<td>Slide colours to match a pattern.</td>
+<td>View toy</td>
+</tr>
+<tr>
+<td>DRAW</td>
+<td>Magnetic Drawing Board</td>
+<td>Lift beads with the magnetic pen.</td>
+<td>View toy</td>
+</tr>
+<tr>
+<td>BUILD</td>
+<td>DIY Screw Drill Puzzle</td>
+<td>Build pictures with shapes and screws.</td>
+<td>View toy</td>
+</tr>
+<tr>
+<td>SOLVE</td>
+<td>3D Maze Cube</td>
+<td>Guide the ball through the maze.</td>
+<td>View toy</td>
+</tr>
+</tbody>
+</table></div>
+<p>Section action: Explore learning toys.</p>
+<h2>Shared play</h2>
+<p>A PLAY IDEA TO SHARE</p>
+<p>The joy of figuring it out.</p>
+<p>A pattern to solve. A little encouragement. A moment to share.</p>
+<p>Steps: Pick a pattern / Slide to match / Swap turns.</p>
+<p>Explore Colour Coder.</p>
+<h2>Creative shopping</h2>
+<p>THE CREATIVE CORNER</p>
+<p>Made by little hands.</p>
+<p>Peel a sticker. Place a bead. Make it their own.</p>
+<p>Sticker-by-Number Book — Match numbers to make animal pictures. — ₹250.</p>
+<p>Mosaic Bead Board — Place colourful beads to create a pattern. — ₹625.</p>
+<p>Both Add to cart; section Explore creative play. Product body sentences are not shown in the selected mobile purchase rows.</p>
+<h2>Video shopping</h2>
+<p>Watch them play.</p>
+<p>See how it works. Find their next favourite.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Toy</th>
+<th>Poster caption</th>
+<th>Reference price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Colour Coder</td>
+<td>Slide. Match. Try again.</td>
+<td>₹450</td>
+</tr>
+<tr>
+<td>Sticker-by-Number Book</td>
+<td>One sticker at a time.</td>
+<td>₹250</td>
+</tr>
+<tr>
+<td>Mosaic Bead Board</td>
+<td>Build a colourful pattern.</td>
+<td>₹625</td>
+</tr>
+</tbody>
+</table></div>
+<p>Add to cart for each; mobile Swipe to explore. Mockup warning is outside shopper UI.</p>
+<h2>Growth</h2>
+<p>Play that gives them room to grow.</p>
+<p>Ways to practise, create and connect.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Heading</th>
+<th>Body</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attention &amp; patience</td>
+<td>Follow a pattern, one move at a time.</td>
+<td>Pattern play</td>
+</tr>
+<tr>
+<td>Problem-solving</td>
+<td>Test a piece. Change the plan. Try again.</td>
+<td>Building play</td>
+</tr>
+<tr>
+<td>Creative expression</td>
+<td>Choose colours. Make a picture their own.</td>
+<td>Art &amp; making</td>
+</tr>
+<tr>
+<td>Connection &amp; emotions</td>
+<td>Take turns, name feelings and celebrate effort.</td>
+<td>Playing together</td>
+</tr>
+</tbody>
+</table></div>
+<p>Explore ways to play.</p>
+<h2>Customer stories</h2>
+<p>Your playtime stories.</p>
+<p>A closer look at everyday play.</p>
+<p>Matching toy / View toy are placeholder footer labels. Actual customer content is absent; never create testimonial text from these headings. Preview labels are 'LAYOUT PREVIEW — REAL CUSTOMER SCREENSHOTS NEEDED', 'Customer screenshot' and 'PLACEHOLDER — NOT A CUSTOMER MESSAGE'.</p>
+<h2>FAQ</h2>
+<p>A few things before playtime.</p>
+<p>Choosing, ordering and getting ready to play.</p>
+<p>Choosing a toy:</p>
+<ol>
+<li><strong>How do I choose the right toy?</strong> Start with what they enjoy: puzzles, building, art or imaginative play. Check the toy’s age guidance before choosing. This exact answer is visible in M08.</li>
+<li><strong>Can play support focus and patience?</strong> Draft: Matching a pattern or trying a puzzle gives children opportunities to stay with a task and try again. Follow their pace and keep play enjoyable; outcomes vary.</li>
+<li><strong>Which toys work without batteries?</strong> Draft: Many puzzles, art activities and building sets work without batteries. Check each product’s power requirements and included accessories.</li>
+<li><strong>What comes in the box?</strong> Draft: Contents vary by product. Check the listing for pieces, accessories and any batteries needed. Ask us if anything is unclear before ordering.</li>
+<li><strong>Can you help me choose a gift?</strong> Draft: Tell us the child’s age, interests and your budget, and we can help you compare suitable options. Follow the manufacturer’s age guidance.</li>
+</ol>
+<p>Orders &amp; support — questions locked, answers require operational confirmation:</p>
+<ol start="6">
+<li>When will my order arrive?</li>
+<li>How much does shipping cost?</li>
+<li>Can I pay on delivery?</li>
+<li>What if an item arrives damaged?</li>
+<li>Can I cancel or return an order?</li>
+</ol>
+<p>Proposed answers are in docs 09, not approved merchant promises. Keep placeholders clearly identified in editor previews and do not publish empty or misleading answers.</p>
+<p>Contact strip: Still have a question? / Send us the product names and what you’re looking for. / Ask Mesh.</p>
+<h2>Destination requirements</h2>
+<p>Use Shopify route objects, selected product/collection objects and menu links; avoid hardcoded guessed handles. Data/product-map.json gives identifiers only where historical evidence exists. Resolve current IDs before implementation. A product title may have a shorter editorial label without changing its official catalog title. Link the label/image to its actual PDP.</p>
+<p>No '#' destinations, empty hrefs, unrelated collection fallbacks, duplicate purchase nested inside links, or dead play buttons. Missing support number means use the verified contact page rather than inventing a WhatsApp number. External chat opens only after a user action; don't send messages automatically.</p></article><div class="divider"></div><article id="06-assets-and-production"><h1>06 — Assets, provenance and production gaps</h1>
+<p>Every included image is under assets/. <a href="data/asset-manifest.json">asset-manifest.json</a> records original location, package path, SHA-256, byte size, dimensions, role and readiness. <a href="data/asset-slots.json">asset-slots.json</a> maps each image need to the available source or a specific missing standalone asset. <a href="data/asset-manifest.csv">asset-manifest.csv</a> is the spreadsheet-readable inventory.</p>
+<h2>Four distinct asset classes</h2>
+<ol>
+<li><strong>Authoritative mockups:</strong> eight complete boards. Immutable visual references; never use them as full-page storefront backgrounds or clickable image maps.</li>
+<li><strong>Supporting reference images:</strong> colour board, corrected category anatomy, older shallow curve, supplied header/menu crop and original attached detail images where accessible. Their filename/manifest states which detail they support. Never apply their obsolete parts.</li>
+<li><strong>Catalog source images:</strong> original available product files. These are the closest evidence for exact toy identity, but may be low-resolution, collaged or contain supplier text. Their presence does not establish reproduction rights, safety certification, current stock or final product specs.</li>
+<li><strong>Legacy references:</strong> older logo/category/campaign files, isolated and explicitly non-authoritative. They are included to prevent a builder from mistaking a convenient existing file for the selected design.</li>
+</ol>
+<h2>Available versus embedded-only</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Required media</th>
+<th>Available separately?</th>
+<th>Required action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M01 hero mother/boy/RC scene</td>
+<td>No clean selected export</td>
+<td>Obtain clean approved master or shoot; preserve composition and safe zones</td>
+</tr>
+<tr>
+<td>Four exact M01 category cutouts</td>
+<td>No</td>
+<td>Obtain selected masters; do not substitute older robot/stacker art</td>
+</tr>
+<tr>
+<td>Discovery four products</td>
+<td>Yes, catalog references</td>
+<td>Verify resolution/rights; use source originals and contained fitting</td>
+</tr>
+<tr>
+<td>M03 mother/daughter Colour Coder scene</td>
+<td>No clean selected export</td>
+<td>Real shoot or approved clean master, preserving scene/layout</td>
+</tr>
+<tr>
+<td>M04 creative overhead scene</td>
+<td>No clean selected export</td>
+<td>Photograph both actual products with matching composition</td>
+</tr>
+<tr>
+<td>Creative purchase thumbnails</td>
+<td>Yes, sticker-book/tiger-board source images</td>
+<td>Confirm exact SKU and composition</td>
+</tr>
+<tr>
+<td>M05 three poster scenes</td>
+<td>Embedded only</td>
+<td>Use frames from genuine matching videos</td>
+</tr>
+<tr>
+<td>M05 actual videos</td>
+<td>No</td>
+<td>Film/upload; never animate still mockups as fake demos</td>
+</tr>
+<tr>
+<td>M06 four activity photos</td>
+<td>Embedded only</td>
+<td>Capture actual play photos with consent and accurate product mechanics</td>
+</tr>
+<tr>
+<td>M07 WhatsApp screenshots</td>
+<td>No</td>
+<td>Genuine messages, publish permission, redact personal details</td>
+</tr>
+<tr>
+<td>Wordmark master/font files</td>
+<td>Legacy SVG only, not verified against M01</td>
+<td>Confirm final master; do not silently replace the selected wordmark</td>
+</tr>
+<tr>
+<td>Footer assets</td>
+<td>Existing store inheritance</td>
+<td>Read current theme settings before reuse</td>
+</tr>
+</tbody>
+</table></div>
+<p>All embedded scenes remain visible in the original boards. They have not been cropped, retouched or regenerated to create apparently genuine assets. Transparent silhouettes or masked photo exports require a separate asset-production step; a background-bearing JPEG is not a transparent cutout.</p>
+<h2>Image preparation contract</h2>
+<ul>
+<li>Preserve originals; export derivatives under a new production subfolder with provenance and approval recorded.</li>
+<li>Product image target: sufficiently large for its maximum rendered dimension and device pixel ratio; don't upscale a 500 px supplier image and claim new detail. Source inventory exposes actual dimensions.</li>
+<li>Hero desktop target clean 2400 px-wide master; mobile 1200 px-wide art-directed master if needed. These are acquisition targets, not files currently supplied.</li>
+<li>Video source target 1080×1920 portrait, stable light, no baked price/promo text. Selected visual display may crop to M05 ratio≈0.63; keep action central. Short useful demonstrations, duration based on actual footage rather than fabricated labels.</li>
+<li>Serve responsive candidates through Shopify CDN, set width/height to reserve space, provide accurate sizes, and lazy-load below-fold media. Do not load desktop and mobile images simultaneously when only one is visible.</li>
+<li>Meaningful alt text describes product/activity; decoration uses empty alt. Avoid claiming that a generated family is a customer.</li>
+<li>Real screenshot original remains intact except privacy redaction; enlargement must retain meaning. Do not transcribe/forge chat bubbles to simulate social proof.</li>
+</ul>
+<h2>Photography brief</h2>
+<p>Natural window light, ordinary home setting, varied relaxed expressions, believable hands and actual child/toy scale. Avoid waxy skin, uniformly perfect smiles, dramatic golden glow and impossible product mechanics. Adult/guardian permission for identifiable children; source records for all published media. Photograph the actual Colour Coder 4×4 tokens and sliding action, the sticker book being used as sold, and the tiger-board stylus/parts accurately. Loose decorative props are not promised inclusions.</p>
+<h2>Preview versus release</h2>
+<p>Layout implementation can proceed with explicit development placeholders. Production release depends on real media and verified rights. No synthetic review or nonfunctional video should silently be shown as genuine. Asset gaps do not authorize redesigning the selected layout.</p></article><div class="divider"></div><article id="07-shopify-architecture"><h1>07 — Shopify architecture and editor contract</h1>
+<h2>Recommended implementation surface</h2>
+<p>Use the existing Dawn-based Online Store 2.0 theme with native Liquid sections and Shopify product data. This is a design-handoff recommendation grounded in the existing project, not a proposal to migrate to headless, install a page builder or replace checkout. Shopify <a href="https://shopify.dev/docs/storefronts/themes/architecture/sections">sections</a> provide reusable merchant-editable modules; <a href="https://shopify.dev/docs/storefronts/themes/architecture/templates/json-templates">JSON templates</a> organise their settings and order.</p>
+<p>Current state must be read again before coding. Historical evidence says Dawn was active by 25 October, theme 198870106278, with 17 published products and password protection. Earlier 23 October notes saying Horizon current/Dawn draft are stale. This package performed no live readback or theme deployment.</p>
+<h2>File responsibility map — proposed names, not generated code</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>File / area</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Existing announcement/header/footer groups</td>
+<td>Preserve native structure; implement selected branding/menu treatment</td>
+</tr>
+<tr>
+<td>sections/mesh-hero.liquid</td>
+<td>One H1; responsive hero image/copy and shallow mobile transition</td>
+</tr>
+<tr>
+<td>sections/mesh-category-links.liquid</td>
+<td>Four horizontal collection cards</td>
+</tr>
+<tr>
+<td>sections/mesh-learning-discovery.liquid</td>
+<td>Four editorial product cards, activity tags and View toy</td>
+</tr>
+<tr>
+<td>sections/mesh-shared-play.liquid</td>
+<td>Photo, editorial copy, ordered steps, product link</td>
+</tr>
+<tr>
+<td>sections/mesh-creative-play.liquid</td>
+<td>One shared image, two commerce rows</td>
+</tr>
+<tr>
+<td>sections/mesh-shoppable-video.liquid</td>
+<td>Product-linked video blocks and responsive track</td>
+</tr>
+<tr>
+<td>sections/mesh-play-growth.liquid</td>
+<td>Four activity modules and collection CTA</td>
+</tr>
+<tr>
+<td>sections/mesh-customer-stories.liquid</td>
+<td>Genuine screenshot blocks with optional related product</td>
+</tr>
+<tr>
+<td>sections/mesh-buying-help.liquid</td>
+<td>Two FAQ groups, ten questions, contact strip</td>
+</tr>
+<tr>
+<td>snippets/mesh-purchase-control.liquid</td>
+<td>Reuse native product form/variant/error behaviour consistently</td>
+</tr>
+<tr>
+<td>snippets/mesh-media-poster.liquid</td>
+<td>Responsive poster, accessible play control</td>
+</tr>
+<tr>
+<td>assets/mesh-theme.css or scoped component styles</td>
+<td>Tokens and component-specific rules without breaking Dawn globals</td>
+</tr>
+<tr>
+<td>Scoped component JS</td>
+<td>Carousel, video, optional cart integration; no global reinitialisation leaks</td>
+</tr>
+<tr>
+<td>templates/index.json</td>
+<td>Section order and resource settings after mapping real IDs</td>
+</tr>
+<tr>
+<td>locales</td>
+<td>Merge new UI state labels into existing dictionaries; don't replace files</td>
+</tr>
+</tbody>
+</table></div>
+<p>Names may adapt to current source to avoid duplication. The existing mesh-reference-home.liquid bundles an older hero/category/new-arrivals design. Inspect and refactor only where needed; don't keep its old product shelf in addition to the selected discovery section. The existing mesh-category-shelves.liquid is not an instruction to restore rejected RC content.</p>
+<h2>Theme editor settings</h2>
+<p>Use resource pickers for products/collections/images/videos, plain or rich text where appropriate, and constrained settings. Merchant-editable does not mean dozens of unrelated style switches. Preserve fixed approved layout defaults.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Settings</th>
+<th>Blocks / limits</th>
+<th>Empty handling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hero</td>
+<td>Heading, emphasis phrase, support text, desktop/mobile image, focal positions,2CTA labels/destinations</td>
+<td>None</td>
+<td>Explicit editor image placeholder; don't substitute random product</td>
+</tr>
+<tr>
+<td>Categories</td>
+<td>Spacing/container</td>
+<td>4 category blocks: title, description, collection, image, surface</td>
+<td>Editor warns missing destination; don't ship dead links</td>
+</tr>
+<tr>
+<td>Discovery</td>
+<td>Heading, subline, collection CTA</td>
+<td>4 product blocks: product, short title, activity, description, image override, tint</td>
+<td>Missing product flagged in editor; no arbitrary newest-first fallback</td>
+</tr>
+<tr>
+<td>Shared</td>
+<td>Eyebrow, heading, subtext, desktop/mobile photo, product, CTA</td>
+<td>3 ordered text steps</td>
+<td>Missing product CTA disabled only in development; resolve before release</td>
+</tr>
+<tr>
+<td>Creative</td>
+<td>Heading/subtext, desktop/mobile scene, collection CTA</td>
+<td>2 product blocks: product, short title, description, thumbnail</td>
+<td>Public purchase action only for actual available variant</td>
+</tr>
+<tr>
+<td>Videos</td>
+<td>Heading/subline, preview mode</td>
+<td>3 initial blocks; optional future expansion: video, poster, product, caption</td>
+<td>No fake play control; hide unfilled public block</td>
+</tr>
+<tr>
+<td>Growth</td>
+<td>Heading/subline, CTA collection</td>
+<td>4 blocks: title, body, image, label, icon</td>
+<td>Preserve 4 in preview; complete approved imagery for release</td>
+</tr>
+<tr>
+<td>Stories</td>
+<td>Heading/subline, preview mode</td>
+<td>3 initial blocks: screenshot, alt, optional product, permission status</td>
+<td>Public output only for verified real entries</td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td>Heading/subline, contact text/route</td>
+<td>10 blocks: question, answer, group, initially_open</td>
+<td>Non-empty approved answers required for public questions</td>
+</tr>
+<tr>
+<td>Footer</td>
+<td>Existing native menus/brand/signup/policies</td>
+<td>Preserve</td>
+<td>No guessed links or merchant details</td>
+</tr>
+</tbody>
+</table></div>
+<p>Block wrappers must support Shopify editor selection; handle editor load/unload/select events where scripts need reinitialisation. Unique element IDs use section/block identity. Remove listeners/observers and pause video on unload. Check duplicate instances do not interfere.</p>
+<h2>Data boundaries</h2>
+<p>Content settings hold editorial labels/copy; Shopify product objects own title source, URL, selected variants, price, compare-at price, media and inventory state. Reference prices in screenshots are not hardcoded storefront truth. Use current currency formatting. Product handles/IDs in manifests are nullable until verified.</p>
+<p>No new app/metafield system is required just to store this small homepage set. Native blocks suffice for screenshot/video curation. If the merchant later needs reusable multi-page records, design that data model separately against current Shopify docs; do not add abstractions pre-emptively.</p>
+<h2>Existing source safeguards</h2>
+<p>implementation-reference contains an unchanged snapshot of historical partial source, not a valid complete theme. It lacks required base layouts/settings/templates. The original theme-work/locales/en.default.json was an empty lint fixture and is deliberately excluded from reusable locale files. Never upload that fixture or push the partial directory as a theme.</p>
+<p>Read the complete current checkout before choosing cart integration. Retain base content_for_header/content_for_layout and native assets. Do not remove established translations, tracking consent integration, apps or working cart code as part of a visual refactor.</p>
+<p>No new Liquid code is delivered in this package. Future code must pass Theme Check and appropriate schema validation plus browser checks; historical lint success does not validate future changes.</p></article><div class="divider"></div><article id="08-interactions-and-cart"><h1>08 — Interactions, cart and failure states</h1>
+<p>These contracts fill states not visible in static mockups. They do not add new homepage sections.</p>
+<h2>Navigation/search/menu</h2>
+<p>Ticker/category links are real anchors. Header search opens current native predictive search where available; Enter/search submit reaches results. Handle no results and network failure without trapping users. Mobile menu opens via labelled button, traps focus while modal, closes with Escape/close/backdrop as appropriate and restores focus to trigger. Keep cart count synchronised. No hover-only essential navigation.</p>
+<h2>Add to cart state machine</h2>
+<p>Applies to creative and video shopping footers. Discovery retains View toy.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>State</th>
+<th>UI and action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single available variant</td>
+<td>Add to cart submits selected variant and quantity 1</td>
+</tr>
+<tr>
+<td>Multiple required options</td>
+<td>Open accessible option picker or route to PDP; do not silently choose colour/size</td>
+</tr>
+<tr>
+<td>Adding</td>
+<td>Prevent duplicate submissions; show busy feedback and retain readable context</td>
+</tr>
+<tr>
+<td>Success</td>
+<td>Update native cart drawer/count/subtotal; announce added item; preserve section position</td>
+</tr>
+<tr>
+<td>Sold out</td>
+<td>Disabled Sold out state; no fabricated stock count or urgency</td>
+</tr>
+<tr>
+<td>Stock/quantity rejected</td>
+<td>Show server message near action; restore control; don't show success</td>
+</tr>
+<tr>
+<td>Network timeout</td>
+<td>Explain retry; reconcile cart before blind retry to avoid duplicate quantities</td>
+</tr>
+<tr>
+<td>Product missing/unpublished</td>
+<td>Editor configuration notice; no dead public purchase form</td>
+</tr>
+<tr>
+<td>Cart-render failure after successful add</td>
+<td>Reconcile cart and expose a working View cart path; never double-add to repair HTML</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reuse the active Dawn product form/cart components where compatible. If custom AJAX is required, use Shopify's locale-aware <a href="https://shopify.dev/docs/api/ajax/reference/cart">Cart API</a>. Add uses variant identity, not product ID. Distinct lines with properties must be updated by the correct line key. Do not assume a storefront line remains at the same numeric index after another change.</p>
+<p>Use bundled section rendering for the cart surfaces already present. A null returned section is a rendering failure, not necessarily a failed cart mutation. Shopify's <a href="https://shopify.dev/docs/api/ajax/section-rendering">Section Rendering API</a> supports partial UI refresh; maintain event/focus handling after replacement. Verify current section IDs and locale routes rather than copying examples blindly.</p>
+<p>Cart controls: quantity changes and removal update totals, discount lines and badge consistently; empty cart has useful browse link. Announce errors accessibly. Checkout goes to Shopify checkout, with the actual server totals. Don't calculate a prepaid discount in browser CSS/JS and present it as an enforced total.</p>
+<h2>Video playback</h2>
+<p>Initial state loads posters, not three full video downloads. Play fetches/initialises only chosen video. Play/pause/mute controls are independently labelled; never autoplay sound. Pause other clips when a new one starts and pause when a player leaves active view, document is hidden or section removed. Respect reduced-motion preferences and avoid automatic looping previews by default.</p>
+<p>Native inline controls or accessible expanded player are acceptable if the visible initial card matches M05. If modal: Escape/close, focus containment/restoration and no background scroll leak. Caption meaningful speech, offer fallback text describing the action. Poster failures should not remove product purchase information. Video failures display a retry/fallback and working PDP link.</p>
+<p>Product footer remains tied to the demonstrated SKU. Price/availability may differ from the historical reference; report data differences without altering merchant prices. Don't display fictional engagement metrics or invent a length label.</p>
+<h2>Video/customer carousel</h2>
+<p>Prefer native horizontal scroll with scroll-snap and small scoped navigation logic. One gesture must not hijack vertical page scrolling. Previous/next move a predictable card step, disabled at boundaries; no infinite duplication of fake items. Dots reflect actual visible item and are labelled when interactive. Keyboard arrows/Home/End may operate a focused track; don't intercept page-wide keys. Hide redundant controls when there is no overflow. Keep 44 px targets and visible focus.</p>
+<p>For screenshot enlargement, retain full original aspect ratio, readable text and an obvious close control. A screenshot is not automatically a link to buy; matching-product footer has its own real PDP link. No automatic WhatsApp ingestion or message sending is part of the design.</p>
+<h2>FAQ/support/newsletter</h2>
+<p>First FAQ open, others closed by default. Use semantic disclosures with full question in summary and plus/minus as decorative state cue. Multiple answers may remain open unless merchant explicitly requests an exclusive accordion. Do not animate height in a way that clips content or ignores reduced motion. Order FAQs require verified answers before public release.</p>
+<p>Ask Mesh uses confirmed contact page or business WhatsApp link. It must not trigger an outgoing message automatically. Existing newsletter form shows clear success/error feedback and appropriate consent handling; no automatic marketing enrolment from cart interactions.</p>
+<h2>No-JS / offline degradation</h2>
+<p>Primary links remain usable. Native product forms route to cart where supported. FAQ remains readable via native disclosure. Video exposes a useful fallback link/message. Never make the entire homepage dependent on a client-side render or a third-party widget being available.</p></article><div class="divider"></div><article id="09-commerce-and-launch-dependencies"><h1>09 — Catalog, commercial rules and launch dependencies</h1>
+<h2>Catalog scope and pricing</h2>
+<p>Mesh Enterprise at https://www.meshenterprise.in/ is part of the merchant's range. The historical 17 Shopify imports are a subset, not the whole assortment. Do not import unrelated household products solely because they share a supplier website. Existing product-map records are references and must be reconciled to current Shopify products.</p>
+<p>Confirmed pricing rule for NEW IndiaMART selections: 2.5× listed quote. No requested rounding. Verified examples: Colour Coder 180→450, sticker book 100→250, mosaic board 250→625. Existing Shopify prices must not be silently overwritten. Supplier quotes/MOQs are not retail stock guarantees. No compare-at savings, fabricated sale percentages or fake MRP should be derived from this multiplier.</p>
+<p>Product listing requirements: verified exact toy/variant, current sellable stock, actual price, materials, dimensions, contents, battery requirements, manufacturer age guidance and warnings. Supplier marketing copy is not proof of cognitive benefit or certification. Data/product-map.json deliberately leaves unresolved Shopify IDs null.</p>
+<h2>Prepaid incentive</h2>
+<p>Historical confirmed merchant rule:15% discount for prepaid orders, COD available, no cap and no minimum. Gateway work remains deferred; no enforcement solution is verified in this handoff. The current ticker is the selected discovery message, not a prepaid advertising strip.</p>
+<p>Before activation, verify current plan, checkout/gateway capabilities and any chosen app's supported enforcement path. A payment-method-dependent offer cannot be considered safe merely because the cart shows a discount or a banner says prepaid. Switching to COD, express checkout, gateway failure, abandoned/resumed checkout and discount stacking must all be tested. Do not promise a particular Shopify Function/UI extension can inspect a final payment choice without confirming current capability.</p>
+<p>Required test outcomes: prepaid eligible order receives 15%; COD receives no prepaid benefit; switching methods recalculates correctly; no unintended cap/minimum; tax/shipping treatment explicit; existing discount combinations intentional; refunds use correct paid totals. No live real-money test order without the user's relevant authorization. Record payment provider fees and contribution margin before enabling the incentive.</p>
+<h2>Competitor-derived FAQ proposals — not active Mesh terms</h2>
+<p>The user requested copying competitor policies. We researched and paraphrased; competitor fulfilment capacity is not Mesh capacity. Visual questions are fixed, operational answers remain pending.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>FAQ</th>
+<th>Prepared proposed answer</th>
+<th>Dependency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>When will my order arrive?</td>
+<td>We aim to dispatch within two working days. Estimated delivery is 3–8 working days after dispatch, depending on your PIN code. Tracking is shared once shipped.</td>
+<td>Confirm actual warehouse/courier timings and tracking automation</td>
+</tr>
+<tr>
+<td>How much does shipping cost?</td>
+<td>Shipping is calculated at checkout before payment.</td>
+<td>Configure actual rates and exceptions; no free-shipping threshold approved</td>
+</tr>
+<tr>
+<td>Can I pay on delivery?</td>
+<td>COD is available for eligible orders and PIN codes, subject to confirmation. Available payment options and charges appear at checkout.</td>
+<td>Verify COD coverage, fees and validation</td>
+</tr>
+<tr>
+<td>What if an item arrives damaged?</td>
+<td>Contact us within 48 hours with your order number and photos of the item and packaging. Keep packaging while we review and arrange the appropriate resolution.</td>
+<td>Confirm reporting window, replacement/refund process; do not imply statutory rights expire</td>
+</tr>
+<tr>
+<td>Can I cancel or return an order?</td>
+<td>Contact us promptly to request cancellation before dispatch. For an incorrect or defective item, contact support with the order details.</td>
+<td>Finalize eligibility, reverse pickup, costs, refund method/timing and exceptions</td>
+</tr>
+</tbody>
+</table></div>
+<p>Source checked 30 October: <a href="https://www.funcorp.in/pages/shipping-policy">FunCorp shipping</a> lists dispatch within 2 working days, location-dependent estimates, ordinary shipping₹70 up to₹699/free above₹699 and₹100 additional COD handling. These are observations, not Mesh rates. <a href="https://www.funcorp.in/pages/returns-cancellation-policy">FunCorp returns</a> uses wrong-item/defect eligibility, same-day damage evidence wording plus a 48-hour return contact window, and a four-hour cancellation request condition. The proposed Mesh wording above intentionally avoids copying that inconsistency. Neither source establishes a legally sufficient Mesh policy; publish only operationally accurate final terms.</p>
+<h2>App/plugin and retention boundaries</h2>
+<p>No new app is required for a static homepage, native FAQ, product-linked video or screenshot blocks. Start with native theme/Shopify features. If a later feature needs an app, compare current subscription cost, page weight, checkout compatibility, merchant workflow and maintenance using official documentation and actual store testing before selecting it. No paid subscription is approved by this package.</p>
+<p>Cart recovery/retargeting is a later configured flow, not silently bundled into this design. Specify consent, eligible audience, suppression after purchase, frequency, genuine incentive and attribution before enabling campaigns. Don't send email/WhatsApp campaigns from this documentation task. No unsolicited extra popup or new discount path should appear in the approved homepage.</p>
+<h2>Release blockers versus build tasks</h2>
+<p>Layout can be built immediately against the frozen references. Before launch: real media/permissions, resolved product IDs and accurate data, confirmed support identity/policies, shipping/taxes, checkout/payment tests, enforced prepaid rule if advertised, privacy/consent configuration and final accessibility/performance verification. User approval of the homepage does not resolve those operational inputs.</p></article><div class="divider"></div><article id="10-quality-requirements"><h1>10 — Performance, accessibility, SEO and measurement</h1>
+<h2>Performance budget — targets, not results</h2>
+<p>Follow current <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance">Shopify theme performance guidance</a>: minimise JavaScript, avoid unnecessary libraries, load noncritical assets later and use responsive media. Build on native functionality instead of adding a slider/page-builder library for a few tracks.</p>
+<p>Project targets: LCP≤2.5 s, INP≤200 ms and CLS≤0.1 at the 75 th percentile when sufficient real-user data exists. Lab checks are diagnostics, not proof of field performance or sales uplift. Suggested initial transfer budget for incremental homepage JS≤35KBcompressed, mobile hero candidate≤250KBwhere quality permits, below-fold poster≤100KB. These are tunable engineering budgets, not observed current file sizes. Don't compromise product legibility to hit arbitrary bytes.</p>
+<p>Only above-fold/LCP image loads eagerly with suitable priority. Below-fold images lazy-load; reserve intrinsic dimensions. Use Shopify <a href="https://shopify.dev/docs/api/liquid/filters/image_tag">image_url/image_tag</a>, responsive candidates and accurate sizes. Avoid downloading both desktop/mobile masters. No full mockup PNG is embedded as the website. Video media bytes should not load until interaction; Shopify-hosted <a href="https://shopify.dev/docs/api/liquid/filters/video_tag">video_tag</a> supports native video output. Inspect actual network waterfall, not attribute presence alone.</p>
+<p>Keep font families/weights limited, use font-display swap or equivalent supported behaviour, verify fallback metrics to reduce shifts. No synchronous third-party requests solely for decoration. Scope event handlers, clean up editor listeners and avoid layout thrashing. Test slow network, CPU throttling and media failures.</p>
+<h2>Accessibility</h2>
+<p>Use <a href="https://shopify.dev/docs/storefronts/themes/best-practices/accessibility">Shopify accessibility guidance</a>. One H1 in hero; H2 per major section; card titles at appropriate lower level. Do not bake UI text into images. Maintain descriptive links, labelled icon buttons, focus visibility and logical keyboard order.</p>
+<p>Validate text contrast against actual rendered surfaces, including hover/focus/error/disabled states. White on confirmed cobalt is approximately 6.3:1; navy on cream approximately 13.8:1. Tangerine on cream is not suitable for small text. Minimum 44CSS pxinteraction target is the project standard; do not shrink actual hit areas to match tiny exported mockup controls.</p>
+<p>Test keyboard-only navigation,200% text zoom, reduced motion, screen-reader announcements for cart updates, error association, modal focus restoration and meaningful alt text. Avoid duplicate content announced from separate mobile/desktop markup. Screenshot text needs an accessible equivalent or a meaningful summary that preserves the actual approved message; don't invent a quote to fill it. Spoken videos need captions. Essential information cannot rely on colour or hover alone.</p>
+<h2>SEO and structured content</h2>
+<p>Preserve native canonical/meta/title handling and valid semantic page structure. Use product data on real PDPs; do not add fake AggregateRating/Review structured data from placeholders. No homepage medical/developmental keyword stuffing. Image alt text describes the scene/product accurately. Collection links must lead to actual relevant products. Do not leak development labels into production page title/metadata.</p>
+<h2>Analytics proposal</h2>
+<p>Use the existing consent-aware analytics/pixel setup after inspecting it; do not inject duplicate providers. Native purchase/cart events remain the system of record. Proposed custom event names below are project conventions, not claims that Shopify emits them automatically.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Trigger</th>
+<th>Useful nonpersonal parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mesh_section_view</td>
+<td>Section≥50% visible once/session or another documented rule</td>
+<td>section_id, viewport_bucket</td>
+</tr>
+<tr>
+<td>mesh_product_click</td>
+<td>Product destination selected</td>
+<td>section_id, product_id, position</td>
+</tr>
+<tr>
+<td>mesh_video_start</td>
+<td>Playback actually starts</td>
+<td>product_id, video_id</td>
+</tr>
+<tr>
+<td>mesh_video_complete</td>
+<td>Actual ended event</td>
+<td>product_id, video_id</td>
+</tr>
+<tr>
+<td>mesh_faq_open</td>
+<td>Question changes to open</td>
+<td>question_id, group</td>
+</tr>
+<tr>
+<td>mesh_story_product_click</td>
+<td>Genuine story's product link selected</td>
+<td>story_id, product_id</td>
+</tr>
+</tbody>
+</table></div>
+<p>Avoid chat text, names, phone numbers, email or unconsented personal data in events. Deduplicate event listeners after theme-editor/cart updates. For experiments, measure completed purchase/revenue per session and contribution, not only clicks; keep traffic mix and position comparable. No claimed uplift, AOV lift or superiority without measured evidence.</p></article><div class="divider"></div><article id="11-build-and-acceptance"><h1>11 — Build sequence and acceptance checklist</h1>
+<h2>Build stages</h2>
+<ol>
+<li><strong>Inspect and freeze:</strong> complete current theme pull/read, backup, screenshot current desktop/mobile, read all eight reference boards, confirm product/menu bindings. Record current source revision and theme ID.</li>
+<li><strong>Foundation:</strong> add scoped tokens, font matching, header/ticker/menu controls. Preserve base theme and native cart. No payment work yet.</li>
+<li><strong>Hero/category pass:</strong> implement M01, measure shallow mobile curve, verify four category descriptions/arrows/image positions. Compare at same effective width before moving on.</li>
+<li><strong>Product/editorial pass:</strong> M02/M03/M04 with native data, no extra RCshelf. Verify exact discovery first render and distinct creative composition.</li>
+<li><strong>Media/benefit/help pass:</strong> M05/M06/M07/M08 with genuine-media gates and full error/empty states. Preserve footer.</li>
+<li><strong>Commerce verification:</strong> every product route, variant path, Add to cart, drawer quantity/removal, duplicate-click/network failure, checkout entry. Keep operations test-safe.</li>
+<li><strong>Responsive/accessibility/performance pass:</strong> matrix below; verify no regressions to already-accepted sections.</li>
+<li><strong>Review and release preparation:</strong> screenshots, short change log, residual gaps, rollback reference. Deployment depends on current user instruction, not this document alone.</li>
+</ol>
+<h2>Viewport matrix</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>CSS width</th>
+<th>Intent</th>
+<th>Main checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>320</td>
+<td>Small-phone edge</td>
+<td>Header fit, no clipped copy,44 pxcontrols, readable discovery</td>
+</tr>
+<tr>
+<td>375</td>
+<td>Baseline mobile</td>
+<td>V11 curve,2×2 discovery,4 horizontal categories</td>
+</tr>
+<tr>
+<td>390</td>
+<td>Common mobile</td>
+<td>Media rails 1+peek, CTA fit, no page overflow</td>
+</tr>
+<tr>
+<td>430</td>
+<td>Large mobile</td>
+<td>Natural line wraps, images not overcropped</td>
+</tr>
+<tr>
+<td>749/750</td>
+<td>Breakpoint boundary</td>
+<td>No disappearing content or abrupt duplicate controls</td>
+</tr>
+<tr>
+<td>768</td>
+<td>Tablet portrait</td>
+<td>Defined interpolation,2 column where appropriate</td>
+</tr>
+<tr>
+<td>989/990</td>
+<td>Desktop boundary</td>
+<td>Menu mode and hero overlay transition</td>
+</tr>
+<tr>
+<td>1024</td>
+<td>Small desktop/tablet landscape</td>
+<td>No compressed heading/photo collision</td>
+</tr>
+<tr>
+<td>1280/1440</td>
+<td>Desktop</td>
+<td>4 discovery,3 video/story cards,2×2 categories/growth</td>
+</tr>
+<tr>
+<td>1920</td>
+<td>Wide desktop</td>
+<td>Max-width restraint, no stretched product photos</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test mobile portrait/landscape, modern Chromium plus Safari/WebKit and Firefox when available; document any environment not exercised. All dimensions refer to CSS viewport, not screenshot file pixel count or scrollbar-inclusive desktop window.</p>
+<h2>Visual acceptance by section</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Pass evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S00–01</td>
+<td>Ticker visible; full brand; correct pastel icon pills; search/cart/menu functional</td>
+</tr>
+<tr>
+<td>S02</td>
+<td>Woman/child scene; exact short copy;2 CTAs; continuous shallow mobile edge 5.5–7.0%</td>
+</tr>
+<tr>
+<td>S03</td>
+<td>Exactly 4 wide cards, correct order/copy, plain lower-left arrows, large right products</td>
+</tr>
+<tr>
+<td>S04</td>
+<td>Exact M02 selection;4 desktop / 2 mobile; full titles/descriptions; View toy; no extra RCitems</td>
+</tr>
+<tr>
+<td>S05</td>
+<td>Desktop photo≈63% split; mobile copy/photo/steps/CTA sequence;3 steps</td>
+</tr>
+<tr>
+<td>S06</td>
+<td>One shared scene,2 purchase areas, correct products/prices, Add to cart states</td>
+</tr>
+<tr>
+<td>S07</td>
+<td>3 portrait demos; mobile 1+peek; product footers; actual playback only with actual media</td>
+</tr>
+<tr>
+<td>S08</td>
+<td>4 distinct modules; exact action-based copy; no unsupported outcome claims</td>
+</tr>
+<tr>
+<td>S09</td>
+<td>3 desktop/1+peek; real screenshots or explicit development placeholders; no fake reviews</td>
+</tr>
+<tr>
+<td>S10</td>
+<td>10 questions in 2 groups; first open; all text readable; verified answers</td>
+</tr>
+<tr>
+<td>S11</td>
+<td>Existing footer readback preserved; legitimate links and functional signup</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Interaction acceptance</h2>
+<ul>
+<li>All visible links resolve to intended resources; no '#' or unbound objects.</li>
+<li>Multiple-variant products require selection; unavailable variants cannot be added.</li>
+<li>Add succeeds once, shows server-confirmed result and correct cart count. Errors remain recoverable.</li>
+<li>Quantity/removal and empty cart work; no stale subtotal or line mismatch.</li>
+<li>Video starts only on action, pauses other players, exposes pause/audio controls; video failure leaves product action usable.</li>
+<li>Carousel previous/next/boundaries, touch, keyboard and reduced-motion behaviour verified; no unwanted page scroll lock.</li>
+<li>FAQ and modal focus behaviour pass keyboard testing;200% text zoom remains usable.</li>
+<li>Theme-editor reorder/add/remove/reload works without duplicated handlers or lost content.</li>
+</ul>
+<h2>Evidence and regression procedure</h2>
+<p>For each viewport, record screenshot, DOM viewport/document width, selected media dimensions and visible section order. Compare source board's desktop/mobile region at matching scale. Measure curve endpoint/centre positions and calculate dip/width. For category corrections, check adjacent hero/header and all four descriptions again.</p>
+<p>Run official Theme Check and relevant current schema validation on generated code. Fix genuine errors, then browser-check actual data because lint does not catch empty collections or stale cart UI. Performance screenshots/reports must state environment and date. Do not repeat tests after passing unless new changes or unresolved risks justify it.</p>
+<p>Package verification in verification/REPORT.md validates this handoff's files/links/copies, not a future Shopify build. Never cite package checks as proof that storefront checkout or video playback works.</p></article><div class="divider"></div><article id="12-do-not-repeat"><h1>12 — Mistakes not to repeat</h1>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Previous problem / risk</th>
+<th>Mandatory prevention</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Removed ticker</td>
+<td>Keep original discovery announcement</td>
+<td>Visible desktop/mobile</td>
+</tr>
+<tr>
+<td>Plain nav replaced requested pills</td>
+<td>Preserve 3 pastel icon pills desktop</td>
+<td>Compare M01 menu</td>
+</tr>
+<tr>
+<td>Four-category request changed card style</td>
+<td>Add count without changing horizontal anatomy</td>
+<td>Description, plain arrow, right cutout on all 4</td>
+</tr>
+<tr>
+<td>Mobile hero became detached rounded panels</td>
+<td>One continuous cream-to-photo join</td>
+<td>No gap or separate rounded photo top</td>
+</tr>
+<tr>
+<td>Curve exaggerated</td>
+<td>Measure dip against endpoint chord</td>
+<td>5.5–7.0% width, never V10 ≈ 10.2%</td>
+</tr>
+<tr>
+<td>Wrong discovery render selected</td>
+<td>Use exact user-selected file</td>
+<td>Manifest filename/hash</td>
+</tr>
+<tr>
+<td>Added another RC section</td>
+<td>Keep rejected RCboards out</td>
+<td>No duplicate RCshelf</td>
+</tr>
+<tr>
+<td>Only initial 17 products considered</td>
+<td>Include selected IndiaMART range</td>
+<td>Product mapping includes new toys</td>
+</tr>
+<tr>
+<td>Repeated same card grid/story</td>
+<td>Preserve distinct compositions</td>
+<td>Shared split/creative panorama/video rail/growth modules</td>
+</tr>
+<tr>
+<td>Shopping lacks cart action</td>
+<td>Solid Add to cart in creative/video</td>
+<td>Native available-variant path tested</td>
+</tr>
+<tr>
+<td>Global action replacement changes selected discovery</td>
+<td>Keep its View toy editorial action</td>
+<td>M02 comparison</td>
+</tr>
+<tr>
+<td>All UI became loud blue or random colours</td>
+<td>Exact palette 08 primary, cream dominant, restrained accents</td>
+<td>Token review plus component exceptions</td>
+</tr>
+<tr>
+<td>AI-looking people</td>
+<td>Candid genuine product-use footage/photos for production</td>
+<td>Skin/hands/light/product fidelity</td>
+</tr>
+<tr>
+<td>Toy parts changed</td>
+<td>Check actual source SKU/geometry</td>
+<td>Colour Coder 4×4; actual included parts</td>
+</tr>
+<tr>
+<td>Source image mistaken for approved cutout</td>
+<td>Distinguish source/legacy/embedded classes</td>
+<td>Asset-slot mapping</td>
+</tr>
+<tr>
+<td>Fake reviews/WhatsApp evidence</td>
+<td>Only actual permission-cleared messages</td>
+<td>Provenance and redaction</td>
+</tr>
+<tr>
+<td>Poster presented as functioning video</td>
+<td>Label development posters; real player requires video</td>
+<td>Real playback test</td>
+</tr>
+<tr>
+<td>Fake ages/certifications/brain claims</td>
+<td>Use verified product facts and action-based copy</td>
+<td>Content audit</td>
+</tr>
+<tr>
+<td>Copied competitor shipping promises as fact</td>
+<td>Keep proposals pending actual operations</td>
+<td>FAQ/policy consistency</td>
+</tr>
+<tr>
+<td>Supplier multiplier overwrites existing retail</td>
+<td>Apply 2.5×only to new selections</td>
+<td>Compare current catalog before change</td>
+</tr>
+<tr>
+<td>Cart badge/discount text pretends enforcement</td>
+<td>Server checkout validation for prepaid/COD</td>
+<td>Method-switch test matrix</td>
+</tr>
+<tr>
+<td>Footer invented because no mockup</td>
+<td>Preserve current native footer</td>
+<td>Readback rather than reconstruction</td>
+</tr>
+<tr>
+<td>Old notes treated as current state</td>
+<td>New authority register wins</td>
+<td>Dates/status conflict review</td>
+</tr>
+<tr>
+<td>Partial theme uploaded wholesale</td>
+<td>Use complete current checkout; surgical file changes</td>
+<td>No empty locale fixture upload</td>
+</tr>
+<tr>
+<td>Full screenshot embedded as website</td>
+<td>Rebuild semantic editable DOM</td>
+<td>Selectable text, real links, real data</td>
+</tr>
+<tr>
+<td>Mobile content hidden to fit</td>
+<td>Responsive reflow, safe crops, no truncation</td>
+<td>375/390/430 and 200% zoom</td>
+</tr>
+<tr>
+<td>Tablet claimed approved</td>
+<td>Label interpolation as engineering choice</td>
+<td>Compare adjacent breakpoints</td>
+</tr>
+<tr>
+<td>Mockup altered during documentation</td>
+<td>Byte-identical copies, checksum audit</td>
+<td>Verification report</td>
+</tr>
+<tr>
+<td>Performance/conversion claimed without measurement</td>
+<td>State targets/hypotheses separately</td>
+<td>Actual dated evidence</td>
+</tr>
+</tbody>
+</table></div>
+<p>Do not “improve” a locked section during implementation without identifying the exact requirement or correction that permits the change. Fix functional/accessibility defects while preserving visual intent and record any necessary deviation.</p></article><div class="divider"></div><article id="13-evidence-and-decisions"><h1>13 — Evidence, decisions and unresolved inputs</h1>
+<h2>Evidence hierarchy</h2>
+<p>Current user instruction declares the homepage design phase done and asks for an unchanged detailed build handoff. Original boards plus the explicit corrections establish the baseline. Historical source notes are included as text snapshots for traceability; they may contain superseded wording and are not a second active specification.</p>
+<h2>Current primary technical references</h2>
+<p>Checked 30 October 2026. Shopify toolkit search failed with 'fetch failed'; direct official documentation was accessed instead. No generated theme code was produced in this documentation task.</p>
+<ul>
+<li><a href="https://shopify.dev/docs/storefronts/themes/architecture/sections">Sections</a> — native merchant-editable modules.</li>
+<li><a href="https://shopify.dev/docs/storefronts/themes/architecture/templates/json-templates">JSON templates</a> — section configuration/order.</li>
+<li><a href="https://shopify.dev/docs/api/ajax/reference/cart">Cart API</a> — locale-aware cart mutations and bundled rendering.</li>
+<li><a href="https://shopify.dev/docs/api/ajax/section-rendering">Section Rendering API</a> — partial HTML refresh.</li>
+<li><a href="https://shopify.dev/docs/api/liquid/filters/image_tag">image_tag</a> — responsive image output and intrinsic dimensions.</li>
+<li><a href="https://shopify.dev/docs/api/liquid/filters/video_tag">video_tag</a> — Shopify video output.</li>
+<li><a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance">Performance guidance</a>.</li>
+<li><a href="https://shopify.dev/docs/storefronts/themes/best-practices/accessibility">Accessibility guidance</a>.</li>
+</ul>
+<p>Technical details must be rechecked if implementation occurs against a different platform version/capability. No app pricing, checkout plan entitlement or API operation has been invented in this package.</p>
+<h2>Content and catalog evidence</h2>
+<ul>
+<li><a href="https://www.meshenterprise.in/learning-and-educational-toy.html">Mesh educational catalog</a>: product types and source price references. Supplier claims are not independent verification.</li>
+<li><a href="https://www.meshenterprise.in/">Mesh home</a>: broader range beyond imported subset.</li>
+<li><a href="https://www.healthychildren.org/English/family-life/power-of-play/Pages/the-power-of-play-how-fun-and-games-help-children-thrive.aspx">AAP play guidance</a>: supports discussion of play and caregiver interaction, not proof of Mesh-specific cognitive outcomes.</li>
+<li><a href="https://www.funcorp.in/pages/shipping-policy">FunCorp shipping</a> and <a href="https://www.funcorp.in/pages/returns-cancellation-policy">returns</a>: competitor operational benchmarks only, not confirmed Mesh policy.</li>
+</ul>
+<h2>Decisions introduced by this handoff</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Basis</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eight-board baseline</td>
+<td>Latest non-rejected set + homepage-complete instruction</td>
+<td>Frozen for documentation</td>
+</tr>
+<tr>
+<td>Page assembly order</td>
+<td>Preserve chronological selected story, place video before growth and messages beforeFAQ</td>
+<td>Explicit engineering assembly; no full-page composite approval claimed</td>
+</tr>
+<tr>
+<td>Outfit/DM Sans candidate</td>
+<td>Shape matching to generated typography direction</td>
+<td>Proposed implementation match, exact font unconfirmed</td>
+</tr>
+<tr>
+<td>750/990 breakpoints</td>
+<td>Mobile/desktop reference interpolation and existing Dawn conventions</td>
+<td>Engineering starting point</td>
+</tr>
+<tr>
+<td>Preserve original pastel exceptions</td>
+<td>No-change instruction + specific earlier chosen menu/cards</td>
+<td>Keep those surfaces; no new unrelated palette</td>
+</tr>
+<tr>
+<td>Preserve video poster≈0.63 ratio</td>
+<td>Actual final board over earlier 9:16 prompt target</td>
+<td>Visual-fidelity rule</td>
+</tr>
+<tr>
+<td>Footer inheritance</td>
+<td>Existing verified footer, no new board</td>
+<td>Readback required</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Inputs that remain absent</h2>
+<ol>
+<li>Clean selected lifestyle/category masters, genuine video clips and customer screenshots/permissions.</li>
+<li>Exact current Shopify bindings for new products/collections, current prices/stock and verified product facts.</li>
+<li>Final logo vector/font files; candidate typefaces need visual matching and license checks.</li>
+<li>Current footer brand paragraph/menu settings and confirmed support WhatsApp/contact details.</li>
+<li>Merchant fulfilment/returns/tax/COD policies and online payment provider.</li>
+<li>Verified 15% prepaid payment-method enforcement path and discount stacking rules.</li>
+</ol>
+<p>These gaps are tracked rather than concealed. They do not block development of independent layout, but they prevent an honest claim that the store is launch-ready. All available images are packaged; no missing original was regenerated or substituted.</p></article><div class="divider"></div><article id="14-receiving-ai-audit"><h1>14 — Receiving-AI audit and completeness contract</h1>
+<p>This chapter is the final transfer check, not an additional design. The eight boards remain unchanged. Read HANDOFF-STATUS.md before claiming the package is production-ready.</p>
+<h2>Instruction coverage</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Merchant requirement</th>
+<th>Handoff location / evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Senior Shopify developer plus ecommerce/marketing judgment</td>
+<td>AGENTS.md role, evidence and app-decision rules</td>
+</tr>
+<tr>
+<td>Think first, simplicity, surgical changes, verify outcomes</td>
+<td>AGENTS.md four working principles; docs11 acceptance stages</td>
+</tr>
+<tr>
+<td>Blue primary, selected palette08</td>
+<td>data/design-tokens.json; docs03; palette reference</td>
+</tr>
+<tr>
+<td>Retain ticker and pastel icon-pill menu</td>
+<td>M01; docs04 S00–S01; exact copy in data/content.json</td>
+</tr>
+<tr>
+<td>Mother/child scene and concise emotional/intellectual story</td>
+<td>M01/M03/M06; docs04/05; no unsupported medical claims</td>
+</tr>
+<tr>
+<td>Four horizontal category cards with full reference anatomy</td>
+<td>M01; category anatomy reference; docs04 S03</td>
+</tr>
+<tr>
+<td>Shallow mobile hero curve, not exaggerated</td>
+<td>V11; measured target and tolerance in docs03; diagram geometry checked separately</td>
+</tr>
+<tr>
+<td>Exact user-selected learning-discovery mockup</td>
+<td>M02; immutable source checksum and filename invariant</td>
+</tr>
+<tr>
+<td>Do not repeat another RC shelf</td>
+<td>Rejected-file register; docs12; no extra RC board in manifest</td>
+</tr>
+<tr>
+<td>Broader IndiaMART assortment</td>
+<td>Product map and catalog originals; docs09</td>
+</tr>
+<tr>
+<td>Add to cart on later shopping sections</td>
+<td>M04/M05; docs08 state machine; routes-and-actions.json</td>
+</tr>
+<tr>
+<td>New catalog retail =2.5×supplier quote</td>
+<td>docs09; reference prices 450/250/625; existing live prices not overwritten</td>
+</tr>
+<tr>
+<td>Realistic imagery, accurate toys</td>
+<td>docs06 photo brief; source image dimensions and missing master list</td>
+</tr>
+<tr>
+<td>More FAQs</td>
+<td>M08; 10 questions, 2 groups, exact first visible answer; 5 operational answers pending</td>
+</tr>
+<tr>
+<td>WhatsApp customer screenshots</td>
+<td>M07; genuine evidence/permission rules; no actual messages supplied</td>
+</tr>
+<tr>
+<td>Video section</td>
+<td>M05; real media requirements, play/cart separation and loading behaviour</td>
+</tr>
+<tr>
+<td>Detailed desktop/mobile/responsive wireframes</td>
+<td>wireframes/index.html; docs02–04; tablet assumptions explicitly marked</td>
+</tr>
+<tr>
+<td>Preserve final mockups</td>
+<td>Eight original files, SHA-256 equality checks; no generated replacement</td>
+</tr>
+<tr>
+<td>All available assets in an asset folder</td>
+<td>assets/ plus exhaustive asset manifest; standalone gaps explicitly listed</td>
+</tr>
+<tr>
+<td>AI can build without conversation context</td>
+<td>AI-IMPLEMENTATION-BRIEF, AGENTS, docs01–14, machine manifests and receiving checklist</td>
+</tr>
+<tr>
+<td>Folder delivery, no ZIP</td>
+<td>README and AGENTS; unsolicited archive removed</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Findings corrected in this audit</h2>
+<ol>
+<li>The portable AGENTS file did not fully repeat the senior role, evidence standards and four working principles from the parent workspace. These are now explicit inside the handed-over folder.</li>
+<li>Earlier verification checked listed images but did not reject unlisted image files or cross-check every asset slot/product/mockup reference. Validation now checks both directions and the cross-references.</li>
+<li>Link validation previously allowed links to files outside the package. Local links now must stay inside the handoff; external source citations remain permitted.</li>
+<li>Destination requirements existed in prose, but the structured content aliases lacked a central action resolver. data/routes-and-actions.json now records every homepage action and required resource binding.</li>
+<li>A seed assembly script could overwrite later data edits if rerun. It now refuses to reseed an existing frozen handoff.</li>
+<li>FINAL-MOCKUPS.html was a separately written page. The viewer builder now regenerates it from the same authoritative eight-board manifest as the overview.</li>
+<li>The wireframe's curve used the outer preview width as its percentage reference. It now measures against the hero's own width; named layout containers keep this fix from changing desktop/tablet rules. The original V11 image is untouched.</li>
+<li>Browser QA scripts assumed the author's absolute workspace path. Portable entry points now derive URLs from the current local handoff page or accept a supplied base URL.</li>
+<li>Asset readiness was spread across files. HANDOFF-STATUS.md and data/readiness-register.json now provide one receiving checklist with available, embedded-only, missing and unresolved items.</li>
+</ol>
+<h2>What is complete, and what is not</h2>
+<p><strong>Design handoff:</strong> original boards, reference/source files currently available, exact visible copy, section geometry, responsive rules, interaction states, code/data responsibilities and acceptance criteria are present.</p>
+<p><strong>Production media:</strong> not complete. Seven product reference images have standalone files, but some are only 333–500 px across or contain supplier layout text. Eighteen initial asset slots lack a confirmed standalone production-ready file. This count includes the unconfirmed final logo master; a legacy SVG exists but is not equivalent to an approved final logo. Font binaries are also absent and tracked separately. No actual video clip or genuine customer conversation was supplied.</p>
+<p><strong>Store integration:</strong> unresolved current product/variant/collection IDs, support identity, footer readback, confirmed operating policies and payment-method enforcement. These are implementation inputs, not permission to guess. Build independent layout while resolving them; do not publish fabricated placeholders as real commerce or proof.</p>
+<h2>Receiving checklist</h2>
+<p>Audit evidence: all 38 packaged image/vector files decode; 59 visible-copy strings, 44 action contracts and 54 local HTML runtime resources checked. The folder also validates under a different directory name. Browser measurements cover eight widths from 320 to 1280 CSS px, including 749/750 and 989/990 boundaries. All 49 browser assertions passed, with no canvas overflow; the shallow curve measures 6.2% of its own hero width. Updated wireframe/mobile-handbook screenshots are documentation QA, not replacement mockups. See <a href="verification/receiving-ai-browser-checks.json">browser measurements</a> and <a href="verification/deep-audit.json">deep audit</a>.</p>
+<ol>
+<li>Open README, HANDOFF-STATUS and all eight boards. Read AGENTS and the brief before editing code.</li>
+<li>Run <code>python tools/validate_package.py</code>. For deeper decoding and transfer checks, run <code>python tools/audit_handoff.py</code> with Pillow installed. The HTML files themselves need no Python/server/network to open.</li>
+<li>Check that all local resource links remain inside this folder. Provenance paths may point to the old authoring workspace; they are records, not runtime dependencies.</li>
+<li>Resolve only required production inputs from the actual store/merchant. Record the returned IDs, permission status and policies with dates. Do not overwrite an existing product's price because the mockup shows another value.</li>
+<li>Use the original boards for visual checks; the wireframe is structural, not a redesigned storefront. Keep eight board hashes unchanged.</li>
+<li>Follow docs11 for implementation and test evidence. Package audits do not validate a future Shopify deployment, checkout, real video playback or marketing campaign.</li>
+</ol>
+<h2>UI icons and typography</h2>
+<p>No separate final icon/font package was supplied. Reuse compatible existing theme SVG controls or implement simple code-native icons to match the selected stroke/style; keep accessible labels. Brand wordmark matching needs a confirmed master. Do not use an emoji as a substitute for the selected car/puzzle/bulb menu icons, or fetch an unlicensed font because its name appears as a candidate. Existing Outfit/DM Sans guidance remains a visual-match proposal, not a bundled-font claim.</p>
+<h2>Official route reference</h2>
+<p>The <a href="https://shopify.dev/docs/api/liquid/objects/routes">Shopify routes object</a> provides locale-aware standard storefront destinations. The <a href="https://shopify.dev/docs/api/ajax/reference/cart">Cart API</a> uses variant-based cart actions. These references support the resolver contract; actual store IDs and option rules still require readback.</p></article><div class="divider"></div></main></body></html>

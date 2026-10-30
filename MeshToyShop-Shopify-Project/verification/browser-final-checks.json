@@ -1,0 +1,15 @@
+{
+  "galleryBadge": {
+    "background": "rgb(237, 241, 252)",
+    "color": "rgb(23, 43, 77)"
+  },
+  "mobile": {
+    "faqQuestions": 10,
+    "heroActionDisplays": [
+      "block",
+      "block"
+    ],
+    "scroll": 389,
+    "width": 389
+  }
+}

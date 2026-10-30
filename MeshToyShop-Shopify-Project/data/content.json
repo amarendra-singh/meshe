@@ -1,0 +1,263 @@
+{
+  "announcement": {
+    "text": "Discover toys for every kind of play →",
+    "destination": "all_products"
+  },
+  "header": {
+    "brand": "Mesh Toy Shop",
+    "menu": [
+      "RC Toys",
+      "Puzzles",
+      "Gadgets"
+    ]
+  },
+  "hero": {
+    "heading": "Let curiosity lead.",
+    "emphasis": "lead.",
+    "body": "RC adventures, puzzles and hands-on play to discover together.",
+    "primary": "Explore toys",
+    "secondary": "Shop RC toys"
+  },
+  "categories": [
+    {
+      "title": "Remote Control",
+      "description": "Simple joys. Big adventures indoors and out.",
+      "destination": "collection_remote_control",
+      "surface": "pale blue"
+    },
+    {
+      "title": "Puzzles & Play",
+      "description": "Hands-on fun for everyday moments.",
+      "destination": "collection_puzzles",
+      "surface": "pale peach"
+    },
+    {
+      "title": "Gadgets",
+      "description": "Little surprises to explore and share.",
+      "destination": "collection_gadgets",
+      "surface": "pale yellow"
+    },
+    {
+      "title": "Educational",
+      "description": "Build, try and discover together.",
+      "destination": "collection_educational",
+      "surface": "pale mint"
+    }
+  ],
+  "discovery": {
+    "heading": "Little hands. Big discoveries.",
+    "body": "Match a pattern. Make a shape. Try a new way.",
+    "cta": "Explore learning toys",
+    "item_cta": "View toy",
+    "products": [
+      {
+        "product": "colour_coder",
+        "title": "Colour Coder",
+        "tag": "MATCH",
+        "description": "Slide colours to match a pattern."
+      },
+      {
+        "product": "magnetic_drawing_board",
+        "title": "Magnetic Drawing Board",
+        "tag": "DRAW",
+        "description": "Lift beads with the magnetic pen."
+      },
+      {
+        "product": "diy_drill",
+        "title": "DIY Screw Drill Puzzle",
+        "tag": "BUILD",
+        "description": "Build pictures with shapes and screws."
+      },
+      {
+        "product": "maze_cube",
+        "title": "3D Maze Cube",
+        "tag": "SOLVE",
+        "description": "Guide the ball through the maze."
+      }
+    ]
+  },
+  "shared_play": {
+    "eyebrow": "A PLAY IDEA TO SHARE",
+    "heading": "The joy of figuring it out.",
+    "body": "A pattern to solve. A little encouragement. A moment to share.",
+    "steps": [
+      "Pick a pattern",
+      "Slide to match",
+      "Swap turns"
+    ],
+    "cta": "Explore Colour Coder"
+  },
+  "creative_play": {
+    "eyebrow": "THE CREATIVE CORNER",
+    "heading": "Made by little hands.",
+    "body": "Peel a sticker. Place a bead. Make it their own.",
+    "cta": "Explore creative play",
+    "purchase_cta": "Add to cart",
+    "products": [
+      {
+        "key": "sticker_book",
+        "description": "Match numbers to make animal pictures."
+      },
+      {
+        "key": "mosaic_board",
+        "description": "Place colourful beads to create a pattern."
+      }
+    ]
+  },
+  "video": {
+    "heading": "Watch them play.",
+    "body": "See how it works. Find their next favourite.",
+    "purchase_cta": "Add to cart",
+    "mobile_hint": "Swipe to explore",
+    "products": [
+      {
+        "key": "colour_coder",
+        "caption": "Slide. Match. Try again."
+      },
+      {
+        "key": "sticker_book",
+        "caption": "One sticker at a time."
+      },
+      {
+        "key": "mosaic_board",
+        "caption": "Build a colourful pattern."
+      }
+    ]
+  },
+  "growth": {
+    "heading": "Play that gives them room to grow.",
+    "body": "Ways to practise, create and connect.",
+    "cta": "Explore ways to play",
+    "modules": [
+      {
+        "title": "Attention & patience",
+        "body": "Follow a pattern, one move at a time.",
+        "label": "Pattern play"
+      },
+      {
+        "title": "Problem-solving",
+        "body": "Test a piece. Change the plan. Try again.",
+        "label": "Building play"
+      },
+      {
+        "title": "Creative expression",
+        "body": "Choose colours. Make a picture their own.",
+        "label": "Art & making"
+      },
+      {
+        "title": "Connection & emotions",
+        "body": "Take turns, name feelings and celebrate effort.",
+        "label": "Playing together"
+      }
+    ]
+  },
+  "stories": {
+    "heading": "Your playtime stories.",
+    "body": "A closer look at everyday play.",
+    "cta": "View toy",
+    "real_screenshots_available": false
+  },
+  "faq": {
+    "heading": "A few things before playtime.",
+    "body": "Choosing, ordering and getting ready to play.",
+    "groups": [
+      "Choosing a toy",
+      "Orders & support"
+    ],
+    "questions": [
+      {
+        "id": "faq_01",
+        "group": 0,
+        "question": "How do I choose the right toy?",
+        "answer": "Start with what they enjoy: puzzles, building, art or imaginative play. Check the toy’s age guidance before choosing.",
+        "status": "visible_mockup_copy",
+        "initial_open": true
+      },
+      {
+        "id": "faq_02",
+        "group": 0,
+        "question": "Can play support focus and patience?",
+        "answer": "Matching a pattern or trying a puzzle gives children opportunities to stay with a task and try again. Follow their pace and keep play enjoyable; outcomes vary.",
+        "status": "draft",
+        "initial_open": false
+      },
+      {
+        "id": "faq_03",
+        "group": 0,
+        "question": "Which toys work without batteries?",
+        "answer": "Many puzzles, art activities and building sets work without batteries. Check each product’s power requirements and included accessories.",
+        "status": "draft",
+        "initial_open": false
+      },
+      {
+        "id": "faq_04",
+        "group": 0,
+        "question": "What comes in the box?",
+        "answer": "Contents vary by product. Check the listing for pieces, accessories and any batteries needed. Ask us if anything is unclear before ordering.",
+        "status": "draft",
+        "initial_open": false
+      },
+      {
+        "id": "faq_05",
+        "group": 0,
+        "question": "Can you help me choose a gift?",
+        "answer": "Tell us the child’s age, interests and your budget, and we can help you compare suitable options. Follow the manufacturer’s age guidance.",
+        "status": "draft",
+        "initial_open": false
+      },
+      {
+        "id": "faq_06",
+        "group": 1,
+        "question": "When will my order arrive?",
+        "answer": null,
+        "status": "operational_confirmation_required",
+        "initial_open": false
+      },
+      {
+        "id": "faq_07",
+        "group": 1,
+        "question": "How much does shipping cost?",
+        "answer": null,
+        "status": "operational_confirmation_required",
+        "initial_open": false
+      },
+      {
+        "id": "faq_08",
+        "group": 1,
+        "question": "Can I pay on delivery?",
+        "answer": null,
+        "status": "operational_confirmation_required",
+        "initial_open": false
+      },
+      {
+        "id": "faq_09",
+        "group": 1,
+        "question": "What if an item arrives damaged?",
+        "answer": null,
+        "status": "operational_confirmation_required",
+        "initial_open": false
+      },
+      {
+        "id": "faq_10",
+        "group": 1,
+        "question": "Can I cancel or return an order?",
+        "answer": null,
+        "status": "operational_confirmation_required",
+        "initial_open": false
+      }
+    ],
+    "contact_heading": "Still have a question?",
+    "contact_body": "Send us the product names and what you’re looking for.",
+    "contact_cta": "Ask Mesh"
+  },
+  "footer": {
+    "status": "inherit_current_theme_and_read_back",
+    "known_heading": "Small toys. Shared moments.",
+    "known_menu": [
+      "Home",
+      "Catalog",
+      "Contact"
+    ],
+    "brand_paragraph": null
+  }
+}

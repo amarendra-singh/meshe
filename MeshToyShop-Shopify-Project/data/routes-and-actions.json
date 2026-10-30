@@ -1,0 +1,468 @@
+{
+  "status": "implementation contract, not a live-store configuration",
+  "bindings": {
+    "all_products": {
+      "kind": "shopify_route",
+      "resolver": "routes.all_products_collection_url",
+      "resolved_at_render": true
+    },
+    "home": {
+      "kind": "shopify_route",
+      "resolver": "routes.root_url",
+      "resolved_at_render": true
+    },
+    "search": {
+      "kind": "shopify_route",
+      "resolver": "routes.search_url",
+      "resolved_at_render": true
+    },
+    "cart": {
+      "kind": "shopify_route",
+      "resolver": "routes.cart_url",
+      "resolved_at_render": true
+    },
+    "support": {
+      "kind": "verified_page_or_business_whatsapp",
+      "value": null,
+      "status": "confirm_support_route"
+    },
+    "footer_menu": {
+      "kind": "current_theme_menu",
+      "value": null,
+      "status": "read_back_current_menu"
+    },
+    "privacy": {
+      "kind": "current_store_policy",
+      "value": null,
+      "status": "read_back_current_policy"
+    },
+    "collection_remote_control": {
+      "kind": "collection_picker",
+      "value": null,
+      "status": "resolve_actual_collection_no_guessed_handle"
+    },
+    "collection_puzzles": {
+      "kind": "collection_picker",
+      "value": null,
+      "status": "resolve_actual_collection_no_guessed_handle"
+    },
+    "collection_gadgets": {
+      "kind": "collection_picker",
+      "value": null,
+      "status": "resolve_actual_collection_no_guessed_handle"
+    },
+    "collection_educational": {
+      "kind": "collection_picker",
+      "value": null,
+      "status": "resolve_actual_collection_no_guessed_handle"
+    },
+    "collection_creative_play": {
+      "kind": "collection_picker",
+      "value": null,
+      "status": "resolve_actual_collection_no_guessed_handle"
+    },
+    "collection_learning_play": {
+      "kind": "collection_picker",
+      "value": null,
+      "status": "resolve_actual_collection_no_guessed_handle"
+    }
+  },
+  "actions": [
+    {
+      "id": "ticker",
+      "section": "S00",
+      "kind": "link",
+      "label": "Discover toys for every kind of play →",
+      "binding": "all_products",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "logo",
+      "section": "S01",
+      "kind": "link",
+      "label": "Mesh Toy Shop",
+      "binding": "home",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "nav-collection_remote_control",
+      "section": "S01",
+      "kind": "link",
+      "label": "RC Toys",
+      "binding": "collection_remote_control",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "nav-collection_puzzles",
+      "section": "S01",
+      "kind": "link",
+      "label": "Puzzles",
+      "binding": "collection_puzzles",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "nav-collection_gadgets",
+      "section": "S01",
+      "kind": "link",
+      "label": "Gadgets",
+      "binding": "collection_gadgets",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "header-search",
+      "section": "S01",
+      "kind": "search_dialog",
+      "label": "Search",
+      "binding": "search",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "header-cart",
+      "section": "S01",
+      "kind": "cart_drawer",
+      "label": "Cart",
+      "binding": "cart",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "header-menu",
+      "section": "S01",
+      "kind": "menu_dialog",
+      "label": "Menu",
+      "binding": null,
+      "product": null,
+      "notes": "Contains the same verified category routes; do not invent an extra menu taxonomy."
+    },
+    {
+      "id": "hero-primary",
+      "section": "S02",
+      "kind": "link",
+      "label": "Explore toys",
+      "binding": "all_products",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "hero-secondary",
+      "section": "S02",
+      "kind": "link",
+      "label": "Shop RC toys",
+      "binding": "collection_remote_control",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "category-1",
+      "section": "S03",
+      "kind": "whole_card_link",
+      "label": "Remote Control",
+      "binding": "collection_remote_control",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "category-2",
+      "section": "S03",
+      "kind": "whole_card_link",
+      "label": "Puzzles & Play",
+      "binding": "collection_puzzles",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "category-3",
+      "section": "S03",
+      "kind": "whole_card_link",
+      "label": "Gadgets",
+      "binding": "collection_gadgets",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "category-4",
+      "section": "S03",
+      "kind": "whole_card_link",
+      "label": "Educational",
+      "binding": "collection_educational",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "discover-colour_coder",
+      "section": "S04",
+      "kind": "product_link",
+      "label": "View toy",
+      "binding": null,
+      "product": "colour_coder",
+      "notes": ""
+    },
+    {
+      "id": "discover-magnetic_drawing_board",
+      "section": "S04",
+      "kind": "product_link",
+      "label": "View toy",
+      "binding": null,
+      "product": "magnetic_drawing_board",
+      "notes": ""
+    },
+    {
+      "id": "discover-diy_drill",
+      "section": "S04",
+      "kind": "product_link",
+      "label": "View toy",
+      "binding": null,
+      "product": "diy_drill",
+      "notes": ""
+    },
+    {
+      "id": "discover-maze_cube",
+      "section": "S04",
+      "kind": "product_link",
+      "label": "View toy",
+      "binding": null,
+      "product": "maze_cube",
+      "notes": ""
+    },
+    {
+      "id": "discovery-all",
+      "section": "S04",
+      "kind": "link",
+      "label": "Explore learning toys",
+      "binding": "collection_learning_play",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "shared-product",
+      "section": "S05",
+      "kind": "product_link",
+      "label": "Explore Colour Coder",
+      "binding": null,
+      "product": "colour_coder",
+      "notes": ""
+    },
+    {
+      "id": "creative-product-sticker_book",
+      "section": "S06",
+      "kind": "product_link",
+      "label": "Product title / thumbnail",
+      "binding": null,
+      "product": "sticker_book",
+      "notes": ""
+    },
+    {
+      "id": "creative-add-sticker_book",
+      "section": "S06",
+      "kind": "add_to_cart_or_variant_selection",
+      "label": "Add to cart",
+      "binding": null,
+      "product": "sticker_book",
+      "notes": "Read current selected variant and server price; native cart error/success states required."
+    },
+    {
+      "id": "creative-product-mosaic_board",
+      "section": "S06",
+      "kind": "product_link",
+      "label": "Product title / thumbnail",
+      "binding": null,
+      "product": "mosaic_board",
+      "notes": ""
+    },
+    {
+      "id": "creative-add-mosaic_board",
+      "section": "S06",
+      "kind": "add_to_cart_or_variant_selection",
+      "label": "Add to cart",
+      "binding": null,
+      "product": "mosaic_board",
+      "notes": "Read current selected variant and server price; native cart error/success states required."
+    },
+    {
+      "id": "creative-all",
+      "section": "S06",
+      "kind": "link",
+      "label": "Explore creative play",
+      "binding": "collection_creative_play",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "video-play-colour_coder",
+      "section": "S07",
+      "kind": "real_video_play",
+      "label": "Play video",
+      "binding": null,
+      "product": "colour_coder",
+      "notes": "No playback action without real matching media; pause other active videos."
+    },
+    {
+      "id": "video-add-colour_coder",
+      "section": "S07",
+      "kind": "add_to_cart_or_variant_selection",
+      "label": "Add to cart",
+      "binding": null,
+      "product": "colour_coder",
+      "notes": ""
+    },
+    {
+      "id": "video-product-colour_coder",
+      "section": "S07",
+      "kind": "product_link",
+      "label": "Product title",
+      "binding": null,
+      "product": "colour_coder",
+      "notes": ""
+    },
+    {
+      "id": "video-play-sticker_book",
+      "section": "S07",
+      "kind": "real_video_play",
+      "label": "Play video",
+      "binding": null,
+      "product": "sticker_book",
+      "notes": "No playback action without real matching media; pause other active videos."
+    },
+    {
+      "id": "video-add-sticker_book",
+      "section": "S07",
+      "kind": "add_to_cart_or_variant_selection",
+      "label": "Add to cart",
+      "binding": null,
+      "product": "sticker_book",
+      "notes": ""
+    },
+    {
+      "id": "video-product-sticker_book",
+      "section": "S07",
+      "kind": "product_link",
+      "label": "Product title",
+      "binding": null,
+      "product": "sticker_book",
+      "notes": ""
+    },
+    {
+      "id": "video-play-mosaic_board",
+      "section": "S07",
+      "kind": "real_video_play",
+      "label": "Play video",
+      "binding": null,
+      "product": "mosaic_board",
+      "notes": "No playback action without real matching media; pause other active videos."
+    },
+    {
+      "id": "video-add-mosaic_board",
+      "section": "S07",
+      "kind": "add_to_cart_or_variant_selection",
+      "label": "Add to cart",
+      "binding": null,
+      "product": "mosaic_board",
+      "notes": ""
+    },
+    {
+      "id": "video-product-mosaic_board",
+      "section": "S07",
+      "kind": "product_link",
+      "label": "Product title",
+      "binding": null,
+      "product": "mosaic_board",
+      "notes": ""
+    },
+    {
+      "id": "video-controls",
+      "section": "S07",
+      "kind": "carousel_navigation",
+      "label": "Previous / Next / progress",
+      "binding": null,
+      "product": null,
+      "notes": "Actual item count; disable at boundaries; no infinite duplicates."
+    },
+    {
+      "id": "growth-all",
+      "section": "S08",
+      "kind": "link",
+      "label": "Explore ways to play",
+      "binding": "collection_learning_play",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "story-image",
+      "section": "S09",
+      "kind": "genuine_image_enlarge",
+      "label": "Customer screenshot",
+      "binding": null,
+      "product": null,
+      "notes": "Requires real screenshot and permission; accessible viewer; do not invent text."
+    },
+    {
+      "id": "story-product",
+      "section": "S09",
+      "kind": "optional_product_link",
+      "label": "View toy",
+      "binding": null,
+      "product": null,
+      "notes": "Bind each real screenshot to the toy actually discussed; unresolved until genuine content arrives."
+    },
+    {
+      "id": "story-controls",
+      "section": "S09",
+      "kind": "carousel_navigation",
+      "label": "Previous / Next",
+      "binding": null,
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "faq-disclosures",
+      "section": "S10",
+      "kind": "disclosure",
+      "label": "Ten question summaries",
+      "binding": null,
+      "product": null,
+      "notes": "First initially open; each full question accessible."
+    },
+    {
+      "id": "faq-support",
+      "section": "S10",
+      "kind": "link",
+      "label": "Ask Mesh",
+      "binding": "support",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "footer-menu",
+      "section": "S11",
+      "kind": "inherited_menu",
+      "label": "Home / Catalog / Contact",
+      "binding": "footer_menu",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "footer-privacy",
+      "section": "S11",
+      "kind": "inherited_policy_link",
+      "label": "Privacy",
+      "binding": "privacy",
+      "product": null,
+      "notes": ""
+    },
+    {
+      "id": "footer-newsletter",
+      "section": "S11",
+      "kind": "native_newsletter_form",
+      "label": "Existing email signup",
+      "binding": null,
+      "product": null,
+      "notes": "Preserve current form, errors, success and consent behaviour."
+    }
+  ]
+}

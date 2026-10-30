@@ -1,0 +1,17 @@
+Edit the attached Mesh Toy Shop FAQ design into a larger TEN-question FAQ while preserving brand typography, cream background, navy/cobalt heading, pale-blue expanded answer, peach support treatment and plus/minus indicators. Desktop/mobile1536x1024, both complete. User wants broader assortment, no RC focus. Reduce headline from oversized prior version so ten questions fit elegantly.
+Exact heading "A few things before playtime." supporting "Choosing, ordering and getting ready to play."
+Desktop two equal FAQ columns under heading. Left heading "Choosing a toy" with5questions. Right heading "Orders & support" with5questions. Contact panel becomes compact fullwidth peach strip BELOW both columns saying "Still have a question?" and cobalt "Ask Mesh →" button. This preserves style while adding needed content.
+Mobile one column: heading, Choosing a toy group5, Orders & support group5, small peach support strip last. No tabs hiding content. Ten rows all readable and visible; mobile first open answer compact, closed rows min44px. Section title28–32pxmobile, questions16px minimum, no tiny text.
+Left questions exact:
+1 "How do I choose the right toy?" OPEN answer "Start with what they enjoy: puzzles, building, art or imaginative play. Check the toy’s age guidance before choosing."
+2 "Can play support focus and patience?" CLOSED
+3 "Which toys work without batteries?" CLOSED
+4 "What comes in the box?" CLOSED
+5 "Can you help me choose a gift?" CLOSED
+Right all CLOSED:
+6 "When will my order arrive?"
+7 "How much does shipping cost?"
+8 "Can I pay on delivery?"
+9 "What if an item arrives damaged?"
+10 "Can I cancel or return an order?"
+Each closed question has plus onright; open has minus. Do not show ANY unconfirmed answer for shipping/returns/COD, only question labels. No fake policy badges or delivery promises. One continuous light background, subtle lines, no repeated product-card layout. No RC images or names. External DESKTOP/MOBILE labels. No other sections, footer, reviews or artwork. Exact ten unique questions in same order on both viewports.

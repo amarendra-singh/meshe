@@ -1,0 +1,108 @@
+<section class="mesh-faq"><div class="mesh-faq__intro"><p>{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2><div>{{ section.settings.description | escape }}</div>{% if section.settings.contact_url != blank %}<a href="{{ section.settings.contact_url }}">{{ section.settings.contact_label | escape }} ↗</a>{% endif %}</div><div class="mesh-faq__questions">{% for block in section.blocks %}<details {{ block.shopify_attributes }}><summary>{{ block.settings.question | escape }}<span aria-hidden="true">+</span></summary><div>{{ block.settings.answer }}</div></details>{% endfor %}</div></section>
+{% stylesheet %}
+.mesh-faq{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;padding:70px max(5%,calc((100% - 1280px)/2));background:#fffcf5;color:#071d49;font-family:Arial,sans-serif}.mesh-faq__intro>p{font-size:13px;font-weight:700;letter-spacing:.12em;color:#0754ef;margin:0 0 16px}.mesh-faq h2{font:700 clamp(32px,3.8vw,48px)/1.1 Arial,sans-serif;color:inherit;letter-spacing:-.04em;margin:0 0 20px}.mesh-faq__intro>div{font-size:18px;line-height:1.5;color:#405271}.mesh-faq__intro>a{display:inline-block;margin-top:24px;color:inherit;font-size:17px;text-underline-offset:6px;padding:10px 0}.mesh-faq details{border-bottom:1px solid #d9dfe9}.mesh-faq summary{display:flex;justify-content:space-between;gap:24px;list-style:none;cursor:pointer;font-size:19px;font-weight:700;line-height:1.4;padding:24px 0}.mesh-faq summary::-webkit-details-marker{display:none}.mesh-faq summary span{font-size:25px;font-weight:400}.mesh-faq details[open] summary span{transform:rotate(45deg)}.mesh-faq details>div{font-size:17px;line-height:1.7;color:#405271;padding:0 32px 22px 0}.mesh-faq details>div p{margin:0}.mesh-faq summary:focus-visible{outline:3px solid #ff8547;outline-offset:4px}
+@media(max-width:749px){.mesh-faq{grid-template-columns:1fr;gap:24px;padding:42px 6%}.mesh-faq summary{font-size:17px}}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Mesh helpful FAQs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "A LITTLE HELP BEFORE YOU CHOOSE"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Good questions. Clear answers."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Find the right starting point for your next play moment."
+    },
+    {
+      "type": "text",
+      "id": "contact_label",
+      "label": "Contact link label",
+      "default": "Need a hand choosing?"
+    },
+    {
+      "type": "url",
+      "id": "contact_url",
+      "label": "Contact page"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "How do I choose a toy?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mesh helpful FAQs",
+      "blocks": [
+        {
+          "type": "question",
+          "settings": {
+            "question": "How do I choose the right toy?",
+            "answer": "<p>Start with what they enjoy: driving, building, solving or exploring. Check the individual product details and age guidance before choosing.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "What comes in the box?",
+            "answer": "<p>Contents vary by product. Check the individual listing for the included items, variants and any batteries or accessories needed.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "How can we make time for screen-free play?",
+            "answer": "<p>Start small: choose one toy, make a little space, and invite them to explore. Shared play can be a simple part of your family routine; every child and household is different.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "Where can I find new arrivals?",
+            "answer": "<p>Little finds, big fun shows products from our New Arrivals collection. You can also explore each play category to discover more.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "Where do I check delivery and returns?",
+            "answer": "<p>Review the store shipping and returns information before ordering. Contact us if you need clarification about a particular item or destination.</p>"
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "index"
+    ]
+  }
+}
+{% endschema %}

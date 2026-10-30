@@ -1,0 +1,65 @@
+{
+  "gallery": {
+    "boards": 8,
+    "documentWidth": 1425,
+    "loaded": true,
+    "title": "Mesh Toy Shop — Start here",
+    "width": 1440
+  },
+  "handbook": {
+    "brokenImages": 0,
+    "chapters": 13,
+    "documentWidth": 375,
+    "width": 390
+  },
+  "wireframes": [
+    {
+      "canvasClient": 1279,
+      "canvasScroll": 1279,
+      "canvasWidth": 1280,
+      "categories": "598.667px 598.667px",
+      "discovery": "291.333px 291.333px 291.333px 291.333px",
+      "faq": "596.667px 596.667px",
+      "faqQuestions": 10,
+      "growth": "596.667px 596.667px",
+      "sections": 12,
+      "videoCard": 394
+    },
+    {
+      "canvasClient": 767,
+      "canvasScroll": 767,
+      "canvasWidth": 768,
+      "categories": "342.667px 342.667px",
+      "discovery": "342.667px 342.667px",
+      "faq": "701.333px",
+      "faqQuestions": 10,
+      "growth": "701.333px",
+      "sections": 12,
+      "videoCard": 343
+    },
+    {
+      "canvasClient": 389,
+      "canvasScroll": 389,
+      "canvasWidth": 390,
+      "categories": "339.333px",
+      "discovery": "163.667px 163.667px",
+      "faq": "339.333px",
+      "faqQuestions": 10,
+      "growth": "339.333px",
+      "sections": 12,
+      "videoCard": 292
+    },
+    {
+      "canvasClient": 319,
+      "canvasScroll": 319,
+      "canvasWidth": 320,
+      "categories": "269.333px",
+      "discovery": "128.667px 128.667px",
+      "faq": "269.333px",
+      "faqQuestions": 10,
+      "growth": "269.333px",
+      "sections": 12,
+      "videoCard": 232
+    }
+  ]
+}

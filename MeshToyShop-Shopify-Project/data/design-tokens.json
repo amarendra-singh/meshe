@@ -1,0 +1,40 @@
+{
+  "status": "Palette confirmed; metrics/font choices are implementation targets",
+  "colors": {
+    "primary": "#2354D7",
+    "cream": "#FFFCF5",
+    "tangerine": "#FF8547",
+    "yellow": "#FFE16B",
+    "navy": "#172B4D",
+    "white": "#FFFFFF"
+  },
+  "component_exceptions": "Preserve selected pale mint/pastel category/menu/discovery surfaces; no new unrelated UI accents",
+  "typography": {
+    "heading_candidate": "Outfit",
+    "body_candidate": "DM Sans",
+    "identity_confirmed": false
+  },
+  "breakpoints_css_px": {
+    "mobile_max": 749,
+    "tablet_min": 750,
+    "tablet_max": 989,
+    "desktop_min": 990
+  },
+  "container_max_css_px": 1440,
+  "gutters_css_px": {
+    "mobile": 16,
+    "tablet": 24,
+    "desktop": 32
+  },
+  "touch_target_min_css_px": 44,
+  "mobile_hero_curve_dip_fraction": {
+    "target": 0.062,
+    "min": 0.055,
+    "max": 0.07
+  },
+  "targets_not_measured": {
+    "lcp_seconds": 2.5,
+    "inp_ms": 200,
+    "cls": 0.1
+  }
+}

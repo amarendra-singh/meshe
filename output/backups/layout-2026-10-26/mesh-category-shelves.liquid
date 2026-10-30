@@ -1,0 +1,172 @@
+{% for block in section.blocks %}
+  {% liquid
+    assign shelf = block.settings.collection | default: collections[block.settings.handle]
+    assign shelf_title = block.settings.title | default: shelf.title
+    assign shelf_count = shelf.products_count | default: 0 | plus: 0
+  %}
+  {% if shelf_count > 0 or request.design_mode %}
+  <section class="mesh-shelf" style="--shelf-color:{{ block.settings.color }}" {{ block.shopify_attributes }}>
+    <div class="mesh-shelf__inner">
+      <header class="mesh-shelf__heading"><div><p>{{ block.settings.eyebrow | escape }}</p><h2>{{ shelf_title | escape }}</h2><div>{{ block.settings.description | escape }}</div></div>
+      {% if shelf != blank %}<a href="{{ shelf.url }}">{{ section.settings.link_label | escape }} <span aria-hidden="true">↗</span></a>{% endif %}</header>
+      <div class="mesh-shelf__grid">
+        {% for item in shelf.products limit: section.settings.limit %}
+          {% render 'mesh-product-card', item: item, sold_out_label: section.settings.sold_out_label %}
+        {% else %}
+          {% if request.design_mode %}
+            <div class="mesh-shelf__demo">
+              {% if block.settings.preview_image != blank %}{{ block.settings.preview_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '300, 500, 700', sizes: '320px', alt: '' }}{% endif %}
+              <p>Collection preview · Published products in this collection will appear automatically.</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+{% endfor %}
+{% stylesheet %}
+.mesh-shelf{background:var(--shelf-color);padding:64px 5%;color:#071d49;font-family:Arial,sans-serif}
+.mesh-shelf__inner{max-width:1280px;margin:auto}
+.mesh-shelf__heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}
+.mesh-shelf__heading p{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 12px;color:#0754ef}
+.mesh-shelf__heading h2{font:700 clamp(28px,3.4vw,44px)/1.1 Arial,sans-serif;letter-spacing:-.035em;color:inherit;margin:0 0 14px}
+.mesh-shelf__heading div>div{font-size:17px;line-height:1.5;max-width:620px;color:#405271}
+.mesh-shelf__heading>a{flex-shrink:0;color:inherit;font-size:16px;text-underline-offset:6px;padding:12px 0}
+.mesh-shelf__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.mesh-shelf .mesh-product h3{font-size:18px}.mesh-shelf .mesh-product p{font-size:21px}
+.mesh-shelf__demo{grid-column:1/-1;display:flex;align-items:center;gap:32px;background:#ffffffa8;padding:24px;border:1px dashed #a9b7ca;border-radius:20px}.mesh-shelf__demo img{width:180px;max-height:180px;object-fit:contain;mix-blend-mode:multiply}.mesh-shelf__demo p{font-size:17px;max-width:420px}
+@media(max-width:749px){.mesh-shelf{padding:40px 5%}.mesh-shelf__heading{display:block}.mesh-shelf__heading>a{display:inline-block;margin-top:8px}.mesh-shelf__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mesh-shelf__demo{flex-direction:column;align-items:flex-start}.mesh-shelf .mesh-product h3{font-size:16px}}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Mesh category showcases",
+  "settings": [
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "Products per category",
+      "min": 2,
+      "max": 8,
+      "step": 2,
+      "default": 4
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Collection link label",
+      "default": "Explore collection"
+    },
+    {
+      "type": "text",
+      "id": "sold_out_label",
+      "label": "Sold out label",
+      "default": "Sold out"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category showcase",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "handle",
+          "label": "Fallback collection handle",
+          "default": "remote-control-toys"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "A new way to play"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Remote control adventures"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Background",
+          "default": "#edf5ff"
+        },
+        {
+          "type": "image_picker",
+          "id": "preview_image",
+          "label": "Editor preview image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mesh category showcases",
+      "blocks": [
+        {
+          "type": "category",
+          "settings": {
+            "handle": "remote-control-toys",
+            "title": "Ready, set, explore.",
+            "eyebrow": "REMOTE CONTROL",
+            "description": "Little drivers. Big adventures. Explore cars and remote-controlled play.",
+            "color": "#edf5ff",
+            "preview_image": "shopify://shop_images/1791269010_tDCij3.webp"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "handle": "puzzles-play",
+            "title": "One more try. One big grin.",
+            "eyebrow": "PUZZLES & PLAY",
+            "description": "Twist, turn and try a different way. Find a puzzle for your next play break.",
+            "color": "#fff0e5",
+            "preview_image": "shopify://shop_images/1791368548_rGjVxh.webp"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "handle": "educational-toys",
+            "title": "Made for “I did it!” moments.",
+            "eyebrow": "BUILD & DISCOVER",
+            "description": "Hands-on projects for curious makers and shared table-time.",
+            "color": "#ecf8ef",
+            "preview_image": "shopify://shop_images/1791369474_SAofge.webp"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "handle": "interactive-gadgets",
+            "title": "A little wonder, every day.",
+            "eyebrow": "PLAYFUL GADGETS",
+            "description": "Explore interactive finds for capturing, discovering and playing.",
+            "color": "#fff8dc",
+            "preview_image": "shopify://shop_images/1791269653_31TuL9.webp"
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "index"
+    ]
+  }
+}
+{% endschema %}

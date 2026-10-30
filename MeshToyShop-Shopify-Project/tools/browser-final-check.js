@@ -1,0 +1,13 @@
+const currentHandoffUrl = new URL(page.url());
+const handoffBase = globalThis.meshHandoffBaseUrl || new URL(currentHandoffUrl.pathname.endsWith('/wireframes/index.html') ? '../' : './', currentHandoffUrl).href;
+if (!handoffBase.startsWith('file:')) throw new Error('Open a local handoff HTML page first, or supply globalThis.meshHandoffBaseUrl.');
+const handoffUrl = relative => new URL(relative, handoffBase).href;
+await page.goto(handoffUrl('wireframes/index.html'),{waitUntil:'load'});
+await page.getByRole('button',{name:'Mobile 390',exact:true}).click();
+await page.evaluate(()=>scrollTo(0,document.querySelector('#wf-S02').getBoundingClientRect().top+scrollY-80));
+const mobile=await page.evaluate(()=>({width:document.querySelector('#canvas').clientWidth,scroll:document.querySelector('#canvas').scrollWidth,heroActionDisplays:[...document.querySelectorAll('.hero-copy .action')].map(x=>getComputedStyle(x).display),faqQuestions:document.querySelectorAll('.faq-question').length}));
+await page.screenshot({path:'wireframe-390-final.png',fullPage:false});
+await page.goto(handoffUrl('START-HERE.html'),{waitUntil:'load'});
+const galleryBadge=await page.locator('header .badge').evaluate(x=>({color:getComputedStyle(x).color,background:getComputedStyle(x).backgroundColor}));
+await page.screenshot({path:'gallery-desktop-final.png',fullPage:false});
+return {mobile,galleryBadge};

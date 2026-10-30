@@ -1,0 +1,163 @@
+{
+  "result": {
+    "elapsedMs": 13359,
+    "issuesDelta": [
+      {
+        "code": "DUPLICATE_SCREENSHOT",
+        "details": {
+          "duplicateOf": "shot-720cfd47-8b05-4797-8b02-2c2ceabf6098"
+        },
+        "operation": "screenshot",
+        "origin": null,
+        "recoverable": true,
+        "severity": "warning",
+        "source": "agent",
+        "timestamp": 1793305667191.0
+      }
+    ],
+    "nextAction": {
+      "mimeType": "image/png",
+      "path": "C:\\Users\\iamar\\AppData\\Local\\Tabbit\\User Data\\LocalAgent\\Runtime\\artifacts\\task-2847009d-c5bf-4ce6-9626-9b8a7b7d3545\\handbook-mobile-shot-11fe1c19-3e6f-4679-95da-222a47f2d3f0.png",
+      "type": "load_image"
+    },
+    "requestId": "handoff-qa-2",
+    "screenshotsDelta": [
+      {
+        "captureId": "shot-b6e3b19a-12f6-4b9d-ac40-f038e41a3fcc",
+        "mimeType": "image/png",
+        "nextAction": {
+          "mimeType": "image/png",
+          "path": "C:\\Users\\iamar\\AppData\\Local\\Tabbit\\User Data\\LocalAgent\\Runtime\\artifacts\\task-2847009d-c5bf-4ce6-9626-9b8a7b7d3545\\gallery-desktop-shot-b6e3b19a-12f6-4b9d-ac40-f038e41a3fcc.png",
+          "type": "load_image"
+        },
+        "path": "C:\\Users\\iamar\\AppData\\Local\\Tabbit\\User Data\\LocalAgent\\Runtime\\artifacts\\task-2847009d-c5bf-4ce6-9626-9b8a7b7d3545\\gallery-desktop-shot-b6e3b19a-12f6-4b9d-ac40-f038e41a3fcc.png",
+        "recommendedLimitExceeded": true,
+        "screenshotCount": 5,
+        "warnings": [
+          "Recommended screenshot limit of 3 exceeded"
+        ]
+      },
+      {
+        "captureId": "shot-b5ad4e89-e775-445e-8bb4-2da7b52cd41f",
+        "mimeType": "image/png",
+        "nextAction": {
+          "mimeType": "image/png",
+          "path": "C:\\Users\\iamar\\AppData\\Local\\Tabbit\\User Data\\LocalAgent\\Runtime\\artifacts\\task-2847009d-c5bf-4ce6-9626-9b8a7b7d3545\\wireframe-1280-shot-b5ad4e89-e775-445e-8bb4-2da7b52cd41f.png",
+          "type": "load_image"
+        },
+        "path": "C:\\Users\\iamar\\AppData\\Local\\Tabbit\\User Data\\LocalAgent\\Runtime\\artifacts\\task-2847009d-c5bf-4ce6-9626-9b8a7b7d3545\\wireframe-1280-shot-b5ad4e89-e775-445e-8bb4-2da7b52cd41f.png",
+        "recommendedLimitExceeded": true,
+        "screenshotCount": 6,
+        "warnings": [
+          "Recommended screenshot limit of 3 exceeded"
+        ]
+      },
+      {
+        "captureId": "shot-b3f9297d-e494-496f-ab7a-bfe7f8496aff",
+        "mimeType": "image/png",
+        "nextAction": {
+          "mimeType": "image/png",
+          "path": "C:\\Users\\iamar\\AppData\\Local\\Tabbit\\User Data\\LocalAgent\\Runtime\\artifacts\\task-2847009d-c5bf-4ce6-9626-9b8a7b7d3545\\wireframe-390-shot-b3f9297d-e494-496f-ab7a-bfe7f8496aff.png",
+          "type": "load_image"
+        },
+        "path": "C:\\Users\\iamar\\AppData\\Local\\Tabbit\\User Data\\LocalAgent\\Runtime\\artifacts\\task-2847009d-c5bf-4ce6-9626-9b8a7b7d3545\\wireframe-390-shot-b3f9297d-e494-496f-ab7a-bfe7f8496aff.png",
+        "recommendedLimitExceeded": true,
+        "screenshotCount": 7,
+        "warnings": [
+          "Recommended screenshot limit of 3 exceeded"
+        ]
+      },
+      {
+        "captureId": "shot-11fe1c19-3e6f-4679-95da-222a47f2d3f0",
+        "mimeType": "image/png",
+        "nextAction": {
+          "mimeType": "image/png",
+          "path": "C:\\Users\\iamar\\AppData\\Local\\Tabbit\\User Data\\LocalAgent\\Runtime\\artifacts\\task-2847009d-c5bf-4ce6-9626-9b8a7b7d3545\\handbook-mobile-shot-11fe1c19-3e6f-4679-95da-222a47f2d3f0.png",
+          "type": "load_image"
+        },
+        "path": "C:\\Users\\iamar\\AppData\\Local\\Tabbit\\User Data\\LocalAgent\\Runtime\\artifacts\\task-2847009d-c5bf-4ce6-9626-9b8a7b7d3545\\handbook-mobile-shot-11fe1c19-3e6f-4679-95da-222a47f2d3f0.png",
+        "recommendedLimitExceeded": true,
+        "screenshotCount": 8,
+        "warnings": [
+          "Screenshot is identical to shot-720cfd47-8b05-4797-8b02-2c2ceabf6098; load the earlier artifact instead",
+          "Recommended screenshot limit of 3 exceeded"
+        ]
+      }
+    ],
+    "value": {
+      "gallery": {
+        "boards": 8,
+        "documentWidth": 1425,
+        "loaded": true,
+        "title": "Mesh Toy Shop — Start here",
+        "width": 1440
+      },
+      "handbook": {
+        "brokenImages": 0,
+        "chapters": 13,
+        "documentWidth": 375,
+        "width": 390
+      },
+      "wireframes": [
+        {
+          "canvasClient": 1279,
+          "canvasScroll": 1279,
+          "canvasWidth": 1280,
+          "categories": "598.667px 598.667px",
+          "discovery": "291.333px 291.333px 291.333px 291.333px",
+          "faq": "596.667px 596.667px",
+          "faqQuestions": 10,
+          "growth": "596.667px 596.667px",
+          "sections": 12,
+          "videoCard": 394
+        },
+        {
+          "canvasClient": 767,
+          "canvasScroll": 767,
+          "canvasWidth": 768,
+          "categories": "342.667px 342.667px",
+          "discovery": "342.667px 342.667px",
+          "faq": "701.333px",
+          "faqQuestions": 10,
+          "growth": "701.333px",
+          "sections": 12,
+          "videoCard": 343
+        },
+        {
+          "canvasClient": 389,
+          "canvasScroll": 389,
+          "canvasWidth": 390,
+          "categories": "339.333px",
+          "discovery": "163.667px 163.667px",
+          "faq": "339.333px",
+          "faqQuestions": 10,
+          "growth": "339.333px",
+          "sections": 12,
+          "videoCard": 292
+        },
+        {
+          "canvasClient": 319,
+          "canvasScroll": 319,
+          "canvasWidth": 320,
+          "categories": "269.333px",
+          "discovery": "128.667px 128.667px",
+          "faq": "269.333px",
+          "faqQuestions": 10,
+          "growth": "269.333px",
+          "sections": 12,
+          "videoCard": 232
+        }
+      ]
+    }
+  },
+  "status": "succeeded",
+  "transition": {
+    "closedPages": [],
+    "documentGeneration": 8,
+    "openedPages": [],
+    "pageCount": 1,
+    "targetEpoch": 2,
+    "url": "file:///C:/WorkStation/MeshToyShop/MeshToyShop-Shopify-Project/START-HERE.html",
+    "urlChanged": false
+  }
+}

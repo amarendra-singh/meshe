@@ -1,0 +1,298 @@
+{
+  "design_handoff": "present",
+  "production_ready": false,
+  "initial_asset_slots": 25,
+  "standalone_reference_slots": 7,
+  "slots_without_confirmed_standalone": 18,
+  "entries": [
+    {
+      "id": "hero-desktop-mobile",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Selected scene embedded only; clean master/real shoot required, preserve woman/boy/RC composition"
+    },
+    {
+      "id": "category-remote-control",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Exact selected cutout embedded only; legacy art is not a substitute"
+    },
+    {
+      "id": "category-puzzles",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Exact selected cutout embedded only; legacy art is not a substitute"
+    },
+    {
+      "id": "category-gadgets",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Exact selected cutout embedded only; legacy art is not a substitute"
+    },
+    {
+      "id": "category-educational",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Exact selected cutout embedded only; legacy art is not a substitute"
+    },
+    {
+      "id": "product-colour_coder",
+      "category": "asset",
+      "status": "available_reference_verify_rights_resolution",
+      "source": "assets/product-source/colour-coder.jpg",
+      "owner": "implementer verifies supplied reference",
+      "blocks_layout": false,
+      "production_condition": "Catalog original; resolution/rights/SKU require verification"
+    },
+    {
+      "id": "product-magnetic_drawing_board",
+      "category": "asset",
+      "status": "available_reference_verify_rights_resolution",
+      "source": "assets/product-source/magnetic-board.jpg",
+      "owner": "implementer verifies supplied reference",
+      "blocks_layout": false,
+      "production_condition": "Catalog original; resolution/rights/SKU require verification"
+    },
+    {
+      "id": "product-diy_drill",
+      "category": "asset",
+      "status": "available_reference_verify_rights_resolution",
+      "source": "assets/product-source/diy-screw-drill-puzzle-toy.webp",
+      "owner": "implementer verifies supplied reference",
+      "blocks_layout": false,
+      "production_condition": "Catalog original; resolution/rights/SKU require verification"
+    },
+    {
+      "id": "product-maze_cube",
+      "category": "asset",
+      "status": "available_reference_verify_rights_resolution",
+      "source": "assets/product-source/3d-maze-cube.webp",
+      "owner": "implementer verifies supplied reference",
+      "blocks_layout": false,
+      "production_condition": "Catalog original; resolution/rights/SKU require verification"
+    },
+    {
+      "id": "product-sticker_book",
+      "category": "asset",
+      "status": "available_reference_verify_rights_resolution",
+      "source": "assets/product-source/sticker-book.jpg",
+      "owner": "implementer verifies supplied reference",
+      "blocks_layout": false,
+      "production_condition": "Catalog original; resolution/rights/SKU require verification"
+    },
+    {
+      "id": "product-mosaic_board",
+      "category": "asset",
+      "status": "available_reference_verify_rights_resolution",
+      "source": "assets/product-source/mosaic-board.jpg",
+      "owner": "implementer verifies supplied reference",
+      "blocks_layout": false,
+      "production_condition": "Catalog original; resolution/rights/SKU require verification"
+    },
+    {
+      "id": "product-magnetic_tiles",
+      "category": "asset",
+      "status": "available_reference_verify_rights_resolution",
+      "source": "assets/product-source/magnetic-tiles.jpg",
+      "owner": "implementer verifies supplied reference",
+      "blocks_layout": false,
+      "production_condition": "Catalog original; resolution/rights/SKU require verification"
+    },
+    {
+      "id": "shared-play-photo",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-shared-play-section-v2.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Selected mother/daughter scene embedded only"
+    },
+    {
+      "id": "creative-overhead",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-creative-play-v1.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Preserve both activities in desktop/mobile art direction"
+    },
+    {
+      "id": "video-colour-coder",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-shoppable-video-v1.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Actual clip missing; poster scene embedded only, not proof of use"
+    },
+    {
+      "id": "video-sticker-book",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-shoppable-video-v1.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Actual clip missing; poster scene embedded only, not proof of use"
+    },
+    {
+      "id": "video-mosaic-board",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-shoppable-video-v1.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Actual clip missing; poster scene embedded only, not proof of use"
+    },
+    {
+      "id": "growth-attention",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-play-growth-palette08-v3.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Selected scene embedded only; exact product geometry/realism not guaranteed"
+    },
+    {
+      "id": "growth-problem-solving",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-play-growth-palette08-v3.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Selected scene embedded only; exact product geometry/realism not guaranteed"
+    },
+    {
+      "id": "growth-creative-expression",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-play-growth-palette08-v3.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Selected scene embedded only; exact product geometry/realism not guaranteed"
+    },
+    {
+      "id": "growth-connection",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-play-growth-palette08-v3.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Selected scene embedded only; exact product geometry/realism not guaranteed"
+    },
+    {
+      "id": "whatsapp-1",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "No genuine message provided; obtain permission and redact personal data"
+    },
+    {
+      "id": "whatsapp-2",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "No genuine message provided; obtain permission and redact personal data"
+    },
+    {
+      "id": "whatsapp-3",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "No genuine message provided; obtain permission and redact personal data"
+    },
+    {
+      "id": "wordmark",
+      "category": "asset",
+      "status": "no_confirmed_standalone_production_file",
+      "source": "assets/legacy-reference/mesh-wordmark.svg",
+      "owner": "merchant/media producer supplies; implementer preserves layout",
+      "blocks_layout": false,
+      "production_condition": "Legacy candidate available but exact approved vector master unconfirmed"
+    },
+    {
+      "id": "font_files",
+      "category": "implementation_input",
+      "status": "unresolved",
+      "owner": "implementer with merchant confirmation where needed",
+      "blocks_layout": false,
+      "production_condition": "Exact font identity/license/files absent; match candidate typography to boards, verify before use."
+    },
+    {
+      "id": "ui_icons",
+      "category": "implementation_input",
+      "status": "unresolved",
+      "owner": "implementer with merchant confirmation where needed",
+      "blocks_layout": false,
+      "production_condition": "No final icon bundle; reuse compatible theme vectors or build code-native icons matching reference; no emoji substitutions."
+    },
+    {
+      "id": "shopify_bindings",
+      "category": "implementation_input",
+      "status": "unresolved",
+      "owner": "implementer with merchant confirmation where needed",
+      "blocks_layout": false,
+      "production_condition": "Resolve actual product, variant, collection and menu objects from current store."
+    },
+    {
+      "id": "support_identity",
+      "category": "implementation_input",
+      "status": "unresolved",
+      "owner": "implementer with merchant confirmation where needed",
+      "blocks_layout": false,
+      "production_condition": "Confirm support route/number; do not send messages automatically."
+    },
+    {
+      "id": "footer_readback",
+      "category": "implementation_input",
+      "status": "unresolved",
+      "owner": "implementer with merchant confirmation where needed",
+      "blocks_layout": false,
+      "production_condition": "Read current footer paragraph, menu and signup/policy settings; no approved new footer board."
+    },
+    {
+      "id": "operating_policies",
+      "category": "implementation_input",
+      "status": "unresolved",
+      "owner": "implementer with merchant confirmation where needed",
+      "blocks_layout": false,
+      "production_condition": "Confirm dispatch/shipping/COD/returns/cancellation answers before public use."
+    },
+    {
+      "id": "prepaid_enforcement",
+      "category": "implementation_input",
+      "status": "unresolved",
+      "owner": "implementer with merchant confirmation where needed",
+      "blocks_layout": false,
+      "production_condition": "Verify 15% prepaid, COD exclusion, no cap/minimum and method-switch handling in checkout."
+    },
+    {
+      "id": "media_rights",
+      "category": "implementation_input",
+      "status": "unresolved",
+      "owner": "implementer with merchant confirmation where needed",
+      "blocks_layout": false,
+      "production_condition": "Verify rights and permissions for all published assets; reference availability is not a licence."
+    }
+  ]
+}

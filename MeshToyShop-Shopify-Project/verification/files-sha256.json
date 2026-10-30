@@ -1,0 +1,587 @@
+[
+  {
+    "path": "AGENTS.md",
+    "bytes": 4854,
+    "sha256": "fa5bfd8f3f31aa1cc3bab77e704c52f51269f67fb8f2595a38b9114c76326370"
+  },
+  {
+    "path": "AI-IMPLEMENTATION-BRIEF.md",
+    "bytes": 3404,
+    "sha256": "ef584428636d7716723e6184fbdaee8143c6c56e9b40a8914606b4dca61faa9d"
+  },
+  {
+    "path": "ASSET-LIBRARY.html",
+    "bytes": 26093,
+    "sha256": "d605a2b04d0733bc93e910fe8ba1de2f7bd6eda673549faa08b5743cc60c078a"
+  },
+  {
+    "path": "assets/legacy-reference/mesh-category-educational.png",
+    "bytes": 1264186,
+    "sha256": "13d07a689d70779bd7008631d05dce2e52a3ff00290735b87ad372ac0b7b00e7"
+  },
+  {
+    "path": "assets/legacy-reference/mesh-category-gadgets.png",
+    "bytes": 1026767,
+    "sha256": "07458e6ecd6ddf92c946a2a78e8e7ef11e72a039acc6ba4961c5d451388afd20"
+  },
+  {
+    "path": "assets/legacy-reference/mesh-category-puzzles.png",
+    "bytes": 1716645,
+    "sha256": "85e79343f651db1e136d08f8a1ba875c967a8a48a655e92608dd904539d7177e"
+  },
+  {
+    "path": "assets/legacy-reference/mesh-category-remote-control.png",
+    "bytes": 1355207,
+    "sha256": "3ee0cf4a65c19fcb0f6908c966f73c3816bf3d654b11a73bec5ffa5fb6bf284c"
+  },
+  {
+    "path": "assets/legacy-reference/mesh-wordmark.svg",
+    "bytes": 505,
+    "sha256": "fcee6a244900ff738c99c594ebe5a1a87be9d1188cf66ff5c049fa4d234a0bd3"
+  },
+  {
+    "path": "assets/mockups/mesh-creative-play-v1.png",
+    "bytes": 1997161,
+    "sha256": "2866dc8fe5e2951643245999f7650998df82357fd1ba9767357dfdc9eaf916bd"
+  },
+  {
+    "path": "assets/mockups/mesh-discovery-user-selected.png",
+    "bytes": 2005933,
+    "sha256": "4cf680d75c41275a50131896437c4bffe5bc7d76ca2617c5e61a6798b3f0146f"
+  },
+  {
+    "path": "assets/mockups/mesh-faq-palette08-v3.png",
+    "bytes": 1563925,
+    "sha256": "65110b518486f75ae7ca704cc8f6d3aa4b607bed2a3d3152c07b048951c4b214"
+  },
+  {
+    "path": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+    "bytes": 1996200,
+    "sha256": "d73363f9c2c90f13e7cce31abd1f8f29d68aae3504b92cc0c1a7b3ceec79bb9b"
+  },
+  {
+    "path": "assets/mockups/mesh-play-growth-palette08-v3.png",
+    "bytes": 1933237,
+    "sha256": "1df39414b5901eb77d597673c5460104c186ba08a5712d1d941fa3b8c24a7a3b"
+  },
+  {
+    "path": "assets/mockups/mesh-shared-play-section-v2.png",
+    "bytes": 1923561,
+    "sha256": "6576cc8ce4f0f4cb107923a20bcff824edaa1f0f6a9decb8f8217acd5dbc1059"
+  },
+  {
+    "path": "assets/mockups/mesh-shoppable-video-v1.png",
+    "bytes": 1849222,
+    "sha256": "e6f2c7be6333745cd174567cca4f2132ad6c31457542ab846499e7a5bcbad384"
+  },
+  {
+    "path": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+    "bytes": 1368156,
+    "sha256": "bffcd823f6922f8aede7f49153a70f45f72fc74954dde9318cd8dd78dd0d5885"
+  },
+  {
+    "path": "assets/product-source/3d-maze-cube.webp",
+    "bytes": 261071,
+    "sha256": "d9fbaed73d92a3099223ddddab97cb193fe451b04f8c4f4ef683d424d3c7c6de"
+  },
+  {
+    "path": "assets/product-source/air-falcon.jpg",
+    "bytes": 43080,
+    "sha256": "73039cc745669dd69d72f363928bedf5b644a296858fbe0839b15d67442dde9b"
+  },
+  {
+    "path": "assets/product-source/bumper-car-go-kart.webp",
+    "bytes": 191000,
+    "sha256": "6a3e3d0fd0624cc1bbe0427e3325d9cf061a864cf799129adfae4bbd83491304"
+  },
+  {
+    "path": "assets/product-source/colour-coder.jpg",
+    "bytes": 38832,
+    "sha256": "e0ab8940c62f1fb6c39015ad92df7d48702d4ac75dd04cf1b28d4b79f8cdde69"
+  },
+  {
+    "path": "assets/product-source/diy-instant-digital-camera.webp",
+    "bytes": 257970,
+    "sha256": "64ad2966a55c9511f09569ed0c1995b7c6df3b96eb8197443a39bae043a3cf24"
+  },
+  {
+    "path": "assets/product-source/diy-screw-drill-puzzle-toy.webp",
+    "bytes": 211980,
+    "sha256": "a455639f2d32e014bc08d67abf8bec5b66191b8ed39be3af739b2145e58d16de"
+  },
+  {
+    "path": "assets/product-source/intelligent-car.webp",
+    "bytes": 103732,
+    "sha256": "abc031c6b6b888c1750b0960b477d72419d325062240816aa1e49e5b75b82638"
+  },
+  {
+    "path": "assets/product-source/magnetic-board.jpg",
+    "bytes": 23566,
+    "sha256": "c79045c35bdfc6386c618a78ad1d3eabb013cdda34a940520f87751729fbc547"
+  },
+  {
+    "path": "assets/product-source/magnetic-tiles.jpg",
+    "bytes": 59067,
+    "sha256": "a55f68af19520b41c526f89b222704b60c31e6fb2f4dbb9ca22a279ab1660854"
+  },
+  {
+    "path": "assets/product-source/mini-rc.jpg",
+    "bytes": 54912,
+    "sha256": "136bac1ce96ada2975a1d77b296a3c121fcf6e0431ba1995c8b5bf225a10a423"
+  },
+  {
+    "path": "assets/product-source/mosaic-board.jpg",
+    "bytes": 25556,
+    "sha256": "b4ced217d58b62493aa38db52f78d557f917ba7688fe67fc5de36b5f071fd4ea"
+  },
+  {
+    "path": "assets/product-source/rc-stunt-bike.webp",
+    "bytes": 173335,
+    "sha256": "1b979bf92253f79ed77e0ede000d50311bcecf0147e265ba8e5057e6d80e44c8"
+  },
+  {
+    "path": "assets/product-source/remote-watch-car.webp",
+    "bytes": 161480,
+    "sha256": "d208735aa6893cbc4cc3cfd33a9f849f779af25f0eada5230b90244877d17ffb"
+  },
+  {
+    "path": "assets/product-source/sticker-book.jpg",
+    "bytes": 49602,
+    "sha256": "a3e4a62b64d532f824075e65ef95ae4d818b231e5027a0f04a4bbf2e802012d7"
+  },
+  {
+    "path": "assets/product-source/tabletop-drift.jpg",
+    "bytes": 32635,
+    "sha256": "4ecf41fb8d8a31f0fdaeaa9e4d4dc06c75925e9c634d09f348fa238332d843f5"
+  },
+  {
+    "path": "assets/references/category-anatomy-v9-reference-only.png",
+    "bytes": 1979342,
+    "sha256": "570631afa1abf904f0fd58ef5c15d82cc618bb42db5c59268d8f42cca0953086"
+  },
+  {
+    "path": "assets/references/palette08-selection.png",
+    "bytes": 1780075,
+    "sha256": "35dd1c51cb0908646cb59004204c2b8326d8905eb3030335ba9446aeffbc1326"
+  },
+  {
+    "path": "assets/references/shallow-curve-v7-reference-only.png",
+    "bytes": 1958211,
+    "sha256": "1c7fa0f4502d0095d61ab1cace1d4d2f38ea48c535e7c23d3b6e768fc39234ba"
+  },
+  {
+    "path": "assets/references/user-category-card-detail.png",
+    "bytes": 315379,
+    "sha256": "b9b8311075004e05e343ee7de6fac0c5157e1a9fab67d98d0d410b1da6bbb19c"
+  },
+  {
+    "path": "assets/references/user-menu-pill-reference.png",
+    "bytes": 83545,
+    "sha256": "c638b0f4538771520875437854ac94044c8a7b4e6451493734aff4aa7b93c2aa"
+  },
+  {
+    "path": "assets/references/user-palette08-reference.png",
+    "bytes": 1938259,
+    "sha256": "4c8b60b5a87a1ff264ce8e7394a688217ed8e3875c0a74b6a1577f177cc2aca5"
+  },
+  {
+    "path": "assets/verification/gallery-desktop.png",
+    "bytes": 84143,
+    "sha256": "4cf1ef6fcd946f539cc445753aebd3592ef97926aab987086f454c1917789c8d"
+  },
+  {
+    "path": "assets/verification/handbook-mobile.png",
+    "bytes": 45214,
+    "sha256": "8a7c561df0b15d6c5d29cda8068df9b29e4c9c725d26136785415e64c146a63e"
+  },
+  {
+    "path": "assets/verification/wireframe-1280.png",
+    "bytes": 69169,
+    "sha256": "3116f047101fbf87fb79f5fe3c0a6e446f9e78118df1ebce3a4d60e8b5bba92c"
+  },
+  {
+    "path": "assets/verification/wireframe-390.png",
+    "bytes": 57031,
+    "sha256": "8fb28e7e3220e03a85d8aaab9bce834e5c70ac477bbbc69f5587f197a7532ff0"
+  },
+  {
+    "path": "data/asset-manifest.csv",
+    "bytes": 10940,
+    "sha256": "f06233430fbc926791cd8539f08cb022e2cc16711c4a0de2a8f323233acc0a23"
+  },
+  {
+    "path": "data/asset-manifest.json",
+    "bytes": 18194,
+    "sha256": "9fe8b3047799269bd112c71c8686e63574eba9cf4382c67177bfb615f0181519"
+  },
+  {
+    "path": "data/asset-slots.json",
+    "bytes": 6945,
+    "sha256": "aab19440402804272daf4f016e947c9534fea5dab7afc2830a95d637c2c82830"
+  },
+  {
+    "path": "data/content.json",
+    "bytes": 8036,
+    "sha256": "a6b80be7a9f86adbb928fdbe0a28b7d1f38659d8f3f8a847a841a58d0eef86c7"
+  },
+  {
+    "path": "data/design-manifest.json",
+    "bytes": 5171,
+    "sha256": "f59a3bf8c63b86e2d3bc18e4f6b3e81f76f2521afb6906f186258ffe8bbc0fd2"
+  },
+  {
+    "path": "data/design-tokens.json",
+    "bytes": 1000,
+    "sha256": "888cd5ea96361089c6e8a5c297a7bb7e8d2d4613a4d8613d64da464941adbf06"
+  },
+  {
+    "path": "data/product-map.json",
+    "bytes": 4790,
+    "sha256": "af6304b848b99548fc8ec3cd5adceb04f2b364e5bc944a5da0bc38376442e4af"
+  },
+  {
+    "path": "data/readiness-register.json",
+    "bytes": 13261,
+    "sha256": "920b087925f41b77d680ad4d73925b20529d5c2a53c98798ff0bf2345f8d5825"
+  },
+  {
+    "path": "data/routes-and-actions.json",
+    "bytes": 12463,
+    "sha256": "43b7eedfda4e83de3184e3e0b6ac55b022296cc77b495a1f03ce2456f550dd83"
+  },
+  {
+    "path": "docs/01-design-authority.md",
+    "bytes": 4735,
+    "sha256": "ca74afe8f57bac12fae6b77b7c92109c2424e703fa52ec0e382d06aa0ebb1596"
+  },
+  {
+    "path": "docs/02-page-structure.md",
+    "bytes": 4286,
+    "sha256": "74ffba15e766368894418bf710d1045df11325365e41eace7c6ad2f0a53111d8"
+  },
+  {
+    "path": "docs/03-design-system-responsive.md",
+    "bytes": 5979,
+    "sha256": "f5c7eff443427dd5985eff5d4deb853f293ad49fd7d2873c1686aa39ca0c6c37"
+  },
+  {
+    "path": "docs/04-section-specifications.md",
+    "bytes": 12105,
+    "sha256": "5fc4709cb4ddebce71827f2cb9ed1d14bebcfcd36dff85b6b38f52cf488a771c"
+  },
+  {
+    "path": "docs/05-content-and-destinations.md",
+    "bytes": 5897,
+    "sha256": "cc7dca2b32f31813d6a818001fe3bd9f32ee02b1076723692c036b104c340448"
+  },
+  {
+    "path": "docs/06-assets-and-production.md",
+    "bytes": 5350,
+    "sha256": "c567754777cdebf13c8ff0adbc9095e305f0eed33e4e23f01b3afb7c4c8e6b98"
+  },
+  {
+    "path": "docs/07-shopify-architecture.md",
+    "bytes": 6752,
+    "sha256": "7ebb4c240f4520d08e2ee88ac3dd57eb7d0a32a1eeb1fc86e093670c8dea8cd7"
+  },
+  {
+    "path": "docs/08-interactions-and-cart.md",
+    "bytes": 5608,
+    "sha256": "593b1b2a9df9c1bdb2146c447e5acc5a5ae74663a502506ba756302e456e81e3"
+  },
+  {
+    "path": "docs/09-commerce-and-launch-dependencies.md",
+    "bytes": 5943,
+    "sha256": "deaeaa7692cf436b9daff62116245c26ea8a9181b655574f5442ebe8c4107b51"
+  },
+  {
+    "path": "docs/10-quality-requirements.md",
+    "bytes": 4732,
+    "sha256": "8784c1b0a4b1e08250a56538f562ba2886b595fde895c751a32931b0ae51f917"
+  },
+  {
+    "path": "docs/11-build-and-acceptance.md",
+    "bytes": 5312,
+    "sha256": "932237ec2b92eb6b918e905415d2b9a3be3685a2b641a2f86d0977e388b879c7"
+  },
+  {
+    "path": "docs/12-do-not-repeat.md",
+    "bytes": 3613,
+    "sha256": "e6adb32d5f3e2ea3420caa43602e4edcd4dbf542f675da2bd652355d175f5553"
+  },
+  {
+    "path": "docs/13-evidence-and-decisions.md",
+    "bytes": 4413,
+    "sha256": "854ec1ee7e2fc723175726178dfee8ba2c4f2eb711641b86b68ff03cce2b4a62"
+  },
+  {
+    "path": "docs/14-receiving-ai-audit.md",
+    "bytes": 8007,
+    "sha256": "c2be294a790fd2123b9d703cfe10d03f9711444659a9124c519c1316d50b7854"
+  },
+  {
+    "path": "FINAL-MOCKUPS.html",
+    "bytes": 5836,
+    "sha256": "a752b97568b324a3001a7fe99748cef1c0217eeac44553dc43c4d690d3266564"
+  },
+  {
+    "path": "HANDOFF-STATUS.md",
+    "bytes": 4327,
+    "sha256": "6a82440fc8fc3ee785ad4509e2aa41d4f9bd11a14eb89080ad3335490249254f"
+  },
+  {
+    "path": "implementation-reference/README.md",
+    "bytes": 669,
+    "sha256": "a4a92274b80e56200212014e06605ac82e0f8a5f59a11e431e7e3fa601e378b2"
+  },
+  {
+    "path": "implementation-reference/sections/mesh-category-shelves.liquid",
+    "bytes": 8060,
+    "sha256": "c1d4e42031407b1af3ff191a6c9929a07b51291f2d26ed1e324cd8b30c0994d2"
+  },
+  {
+    "path": "implementation-reference/sections/mesh-faq.liquid",
+    "bytes": 4973,
+    "sha256": "560c1eaec50caa43e54120814e02252185a65233dbd01a2c2d44b00775a8ac24"
+  },
+  {
+    "path": "implementation-reference/sections/mesh-media-rail.liquid",
+    "bytes": 19891,
+    "sha256": "3bfee34a735c1694237e7ac566c3b751c3246be8113f233fec97fc3d02fa7198"
+  },
+  {
+    "path": "implementation-reference/sections/mesh-play-story.liquid",
+    "bytes": 4647,
+    "sha256": "b39cae7de83b61dee921071afbcc3fc76e2f2e2c3c25d2c4cb036997fc8237f7"
+  },
+  {
+    "path": "implementation-reference/sections/mesh-reference-home.liquid",
+    "bytes": 14508,
+    "sha256": "14fb2d212cb97477faef0a6730ff81e0536e85b6760b12b3d55ab978258bbd54"
+  },
+  {
+    "path": "implementation-reference/snippets/mesh-product-card.liquid",
+    "bytes": 2775,
+    "sha256": "97145a0dae46e673f566da3c7d70d96cc2e42c2fa2ad071a3f7b095452e1631c"
+  },
+  {
+    "path": "README.md",
+    "bytes": 4918,
+    "sha256": "1500272b836e99a9b8a1dcc621ea37d5002c5984128419dc13913b48ec27349d"
+  },
+  {
+    "path": "source-notes/01-project-brief.txt",
+    "bytes": 11188,
+    "sha256": "73bb6a24511c758b9646a73c31c00fd6828dc5fde9cf2a7858be01254387925e"
+  },
+  {
+    "path": "source-notes/03-branding-and-colours.txt",
+    "bytes": 10439,
+    "sha256": "efb85af3f9e92a0fcb8e6bc12dbaff12829de3cf20c435b4c81311adaf5e5a54"
+  },
+  {
+    "path": "source-notes/11-layout-priority-and-media.txt",
+    "bytes": 5172,
+    "sha256": "180f2c5e6f31f0b914712a0bb7fc85cbe5bb364b6e4bd67f7779b5fce48c3d28"
+  },
+  {
+    "path": "source-notes/12-review-reference-verification.txt",
+    "bytes": 5253,
+    "sha256": "3c0941b4b27ab1e6ba75e3870f4f6d3f24ba85d9cdd1e2ebc40e06e5b8a25b2c"
+  },
+  {
+    "path": "source-notes/13-homepage-review-visibility.txt",
+    "bytes": 2755,
+    "sha256": "10bd56d0157cbc40645cf8ab1bd73fbc5dcbfdb6533ae86bfaebdcf5d63a3316"
+  },
+  {
+    "path": "source-notes/16-hero-options-2026-10-29.txt",
+    "bytes": 13581,
+    "sha256": "58195cad451fe626688e16fe8525b10531075ee2d0f067944cdf2c2a1a261050"
+  },
+  {
+    "path": "source-notes/17-next-section-discovery-2026-10-29.txt",
+    "bytes": 7381,
+    "sha256": "381965b04574522ad7bc7c670061d49eecf932fc1c3a3047fbaaf5f97b6cf6c3"
+  },
+  {
+    "path": "source-notes/18-shared-play-section-2026-10-29.txt",
+    "bytes": 4151,
+    "sha256": "edaa528921d0c4d42c2720d7543b2e88a15755cc6431cd33057094294b118f5b"
+  },
+  {
+    "path": "source-notes/19-rc-section-2026-10-29.txt",
+    "bytes": 7150,
+    "sha256": "3472a33794ba627422a68e41272444ed45d72a93fc97a60e2bc24cbe278e083b"
+  },
+  {
+    "path": "source-notes/20-creative-play-section-2026-10-29.txt",
+    "bytes": 4166,
+    "sha256": "06ad9a1d268cecae70b2469f3a6a8cbfc2a9527e26d28e99d03348195e05cd4f"
+  },
+  {
+    "path": "source-notes/21-buying-help-section-2026-10-29.txt",
+    "bytes": 4503,
+    "sha256": "d90f0d3a9f9c1bd2c9a0a16ab4ddf2f0520bacbeded171042e83b6e393381f67"
+  },
+  {
+    "path": "source-notes/22-growth-faq-whatsapp-2026-10-30.txt",
+    "bytes": 8760,
+    "sha256": "96528fe40c4a53fdafb5e004b83457e55d503844cb767a7264af67b2ed4acda5"
+  },
+  {
+    "path": "source-notes/23-shoppable-video-section-2026-10-30.txt",
+    "bytes": 4732,
+    "sha256": "402e160ee00f11d684e765323bfc46a1897e1893317e3c440cf3c1131226e3d1"
+  },
+  {
+    "path": "source-notes/prompts/buying-help-section-prompt.txt",
+    "bytes": 3577,
+    "sha256": "0020d18664f181a9ba7d8622fa0833a9c0aa535039dd41915c124df56a686f76"
+  },
+  {
+    "path": "source-notes/prompts/creative-play-section-prompt.txt",
+    "bytes": 4677,
+    "sha256": "b967d3e25706491db9ad51e55ba00503f972f16b7d787f1e5bc7a6a47335bd24"
+  },
+  {
+    "path": "source-notes/prompts/expanded-faq-prompt.txt",
+    "bytes": 2077,
+    "sha256": "95c0b5bf20a8bc2192d07a2b0de0c1f22a7838c84afc0155526f79c55231a275"
+  },
+  {
+    "path": "source-notes/prompts/growth-section-prompt.txt",
+    "bytes": 2654,
+    "sha256": "bbf60abded2943f395e0786d748719381d7a5b68b23ad9800d2365bedd57006e"
+  },
+  {
+    "path": "source-notes/prompts/next-section-prompt-v1.txt",
+    "bytes": 4426,
+    "sha256": "3092d69b7df594d0c6423b56bd7787fa9cae55fb199c1550fa11675064788e28"
+  },
+  {
+    "path": "source-notes/prompts/rc-section-prompt.txt",
+    "bytes": 3868,
+    "sha256": "3a60b7fba1167576e6f882a6ecd290d07af36a4140161b1af3f385a5d7e428ed"
+  },
+  {
+    "path": "source-notes/prompts/rc-section-redesign-prompt.txt",
+    "bytes": 4407,
+    "sha256": "02c9e5d93340e61fb09f3f6f22b3e5d7e3f22d0e1c1f26b5b7d2c84875855d38"
+  },
+  {
+    "path": "source-notes/prompts/shared-play-section-prompt.txt",
+    "bytes": 4005,
+    "sha256": "19e61306c24e8415ae70d2504532905141344975de41140654f24b3e8bd9ea7a"
+  },
+  {
+    "path": "source-notes/prompts/video-section-prompt.txt",
+    "bytes": 2810,
+    "sha256": "a98c5fddb7af47330b4236449d32b8c5436cfdc1a3c764e05d7366ce22b5318b"
+  },
+  {
+    "path": "source-notes/prompts/whatsapp-section-prompt.txt",
+    "bytes": 2660,
+    "sha256": "e8d8e9ddb9a8c961cc3a758f80ef7ef2ecb6f92be9d7bf851d66122d65594c48"
+  },
+  {
+    "path": "source-notes/README.md",
+    "bytes": 386,
+    "sha256": "5402ae8190e5a2df93b3ca341141adae2ac09bf16038c60d85175a0104207754"
+  },
+  {
+    "path": "START-HERE.html",
+    "bytes": 8574,
+    "sha256": "d7cd514da5fc4f7505ffbfabe35e3a80e3f5f09742d7250cf62cc6ec050175c4"
+  },
+  {
+    "path": "TECHNICAL-HANDBOOK.html",
+    "bytes": 99026,
+    "sha256": "5fcaf619bf5320f8a0262fe8df16b67dde91cdeea46ea2b9ea44550abb4ac0b0"
+  },
+  {
+    "path": "tools/audit_handoff.py",
+    "bytes": 6029,
+    "sha256": "2fe5601cf6e11fb8fa939fa19c37a68c173c37e24ee2216f22b2b59089772caa"
+  },
+  {
+    "path": "tools/browser-final-check.js",
+    "bytes": 1398,
+    "sha256": "99bd573a2f4f4a01c5744f3cf0d5bf8433c7b5e035a6483ea688840d884a2543"
+  },
+  {
+    "path": "tools/browser-qa.js",
+    "bytes": 2788,
+    "sha256": "cdfb42f5813671812b773ee0f836305cee4058325cac6ff9386677566b1adab6"
+  },
+  {
+    "path": "tools/browser-receiving-audit.js",
+    "bytes": 2561,
+    "sha256": "1ce58bba2e503bd4751086a9256ab6ba68034b8f9a92648e907ef90434f20464"
+  },
+  {
+    "path": "tools/build_package.py",
+    "bytes": 19802,
+    "sha256": "7c9b05cfcb465710a73c0a934b5d7af91dd2b19a99d5b142fa0ba15ecbd48727"
+  },
+  {
+    "path": "tools/build_viewers.py",
+    "bytes": 22311,
+    "sha256": "ebb780c6199af773fa894dfc4e807cfb6319a36943aa40931b1716df8416e23b"
+  },
+  {
+    "path": "tools/README.md",
+    "bytes": 2009,
+    "sha256": "e3016cba6202a277f9733c0d350d6a4ab598e1e19fba7dfbdcad347b16171bab"
+  },
+  {
+    "path": "tools/validate_package.py",
+    "bytes": 9020,
+    "sha256": "34299709b5fa9ab669f7b0d71ee3595ea024acba26dece1b134a7934764264d5"
+  },
+  {
+    "path": "verification/browser-checks.json",
+    "bytes": 1581,
+    "sha256": "b742714cac8bb6ea302b2e9e9d3a9c2a443405b7c82b69a00615f2e582975fe1"
+  },
+  {
+    "path": "verification/browser-final-checks.json",
+    "bytes": 255,
+    "sha256": "5fc9f82c1a3845f3b01e9832c5d6a439e2bf2e5197f5f112718f6a0ccda405d6"
+  },
+  {
+    "path": "verification/browser-receipt.json",
+    "bytes": 6296,
+    "sha256": "5916a73442ac012ff0af6c5d03990e93f1271b5c4beac7600584e0e878ec9272"
+  },
+  {
+    "path": "verification/deep-audit.json",
+    "bytes": 6796,
+    "sha256": "d9833f28fde4ad6bafe76b05a78e4f3016a8be668682f07e4b46638ba2d1bc0f"
+  },
+  {
+    "path": "verification/package-checks.json",
+    "bytes": 9010,
+    "sha256": "77d01dc0084ee684d43ff201ab87e73edc1232b3887dea7f120f729eb6384338"
+  },
+  {
+    "path": "verification/receiving-ai-browser-checks.json",
+    "bytes": 3081,
+    "sha256": "96849eb2554991d0136bf102320c54d10abcb8efed0c01a72bf8efceb9a5a751"
+  },
+  {
+    "path": "verification/REPORT.md",
+    "bytes": 1826,
+    "sha256": "fcbc6d3a3b7a23083a4f64011b35d3e24756770990806fc4a0216e29a812083f"
+  },
+  {
+    "path": "wireframes/index.html",
+    "bytes": 18159,
+    "sha256": "770e109f3704d1a9dde3921443815bdf66ce13c1a89f853c606827c605a37fe8"
+  },
+  {
+    "path": "wireframes/README.md",
+    "bytes": 1213,
+    "sha256": "4b9b002d5904a5c85364be602734bc900c1dec87ef23c8f9ca6ef963cf83102c"
+  }
+]

@@ -1,0 +1,1 @@
+return await Promise.allSettled([inspectCompetitor('kobbo','https://www.kobbo.in/products/the-little-explorer-kit'),inspectCompetitor('viaana','https://viaanakidsstore.com/products/4drc-4d-v2-wifi-drone-motion-camera')]);

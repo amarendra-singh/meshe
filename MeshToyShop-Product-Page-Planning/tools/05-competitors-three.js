@@ -1,0 +1,1 @@
+return await Promise.allSettled([inspectCompetitor('finalsuspect','https://finalsuspect.com/product/the-neighbours/'),inspectCompetitor('shumee','https://www.shumee.in/products/wooden-activity-triangle-game')]);

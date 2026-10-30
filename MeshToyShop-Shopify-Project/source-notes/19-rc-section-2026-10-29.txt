@@ -1,0 +1,53 @@
+# RC comparison section — 29 October 2026
+
+DISCARDED as an additional homepage section: merchant clarified RC is already covered. Do not deploy either RC proposal in this document. Replaced by the creative-play proposal in document20. Pricing rule remains confirmed.
+
+Proposal following the approved shared-play section. No deployment. Merchant approved shared-play v2 with 'next approve'; that selection is recorded in document18.
+
+## Merchant correction and superseding redesign
+
+The merchant rejected v1 because both layout and story repeated earlier sections, requested Add to cart, and reiterated that the broader IndiaMART catalog must be used. Previous instructions in this document to reuse four equal cards and View toy are superseded for this section only. Other approved sections remain unchanged.
+
+New direction: one featured tabletop drift car scene at left, two compact horizontal alternatives at right; mobile featured item followed by two full-width horizontal rows. Cream/blue/navy brand styling retained, no repeating pastel four-card grid or stock adventure tagline. Story: Make the table your racetrack. All three products have filled blue Add to cart controls and prices.
+
+Merchant price rule: '2.5x the price' means2.5 times each IndiaMART listed quote, without invented rounding. This is adopted for new IndiaMART selections in the mockup; existing Shopify prices have not been changed. Source https://www.meshenterprise.in/kids-remote-control-car.html checked today, source HTML and photos saved in catalog-references.
+
+| Product | IndiaMART listed price | Multiplier | Mockup retail |
+|---|---:|---:|---:|
+| Mini1:43 Tabletop Drift Car Set |825|2.5|2062.50INR|
+| Air Falcon Flying Car |1500|2.5|3750INR|
+| Mini RC Car |700|2.5|1750INR|
+
+These are authorized calculated retail prices, not live Shopify prices or verified landed cost/margins. Public quotes can change. Source Mini RC Car image depicts black/gold coupe whereas its prose describes different colours; use supplied image only for concept, confirm exact SKU before importing. Air Falcon age table and body copy conflict; omit ages and children using it. Source descriptions are not proof of performance.
+
+The Add to cart buttons are required visual controls in the mockup. Implementation must first map verified purchasable Shopify variant IDs, use actual availability, show adding/added/error states and update cart; unavailable products cannot be shown as successfully added. No actual cart, product import, or price change performed here. No claim that a mockup proves conversion lift.
+
+### Redesign artifact and QA
+
+[Featured RC and Add to cart v2](../output/design-concepts/mesh-rc-feature-add-to-cart-v2.png), built-in imagegen using three inspected IndiaMART photos and selected discovery image for typography/palette only. [Exact prompt](../output/design-concepts/rc-section-redesign-prompt.txt).
+
+Verified visually: genuinely asymmetric desktop feature+two horizontal alternatives; mobile feature+two single-column rows; three product names, three exact calculated prices and three filled Add to cart buttons on each view; no invented sales/reviews/discounts; approved preceding sections absent and untouched. The large feature scene replaces the rejected repeated grid and story. Approximate desktop feature width648px vs alternatives484px; mobile viewport348px instead of the planned420px, with image/card contents still visible. Small mobile alternative buttons render about39px high; implementation must meet44px tap targets. Product morphology, controller internals, markings and scale are generated approximations, not proof of real toy behavior or exact box contents.
+
+Why this change: one clear focal product explains a distinct use scenario, two alternatives remain easy to scan, and Add to cart enables a direct purchase step once implemented. This reduces a required navigation step for a shopper already ready to buy; it does not prove conversion increases. Keep linked product titles for details. Validate actual add-to-cart success and purchases per exposed session, not button clicks alone.
+
+## Reference inventory
+
+Inspected the exact selected discovery shelf:1536x1024, approximately1100px desktop and420px mobile,14px gutter. Keep four desktop cards and mobile2x2, rounded tall pastel photography zones, descriptor chips, navy titles, slate descriptions, cobalt outlined capsule buttons, cream page, navy/cobalt rounded heading and small orange strokes. Earlier hero, mobile curve, menu, ticker, category cards and shared-play panel remain untouched and outside this new artifact. New addition: verified retail price above each button. No reviews or discount badges.
+
+## Product evidence
+
+Read Shopify catalog live today: seven active RC listings. Selected Remote Watch Car850INR; Intelligent Car1499INR; RC Stunt Bike1499INR; Bumper Car Go Kart1999INR. These are retail prices in Shopify, not Mesh Enterprise wholesale quotes. All have one returned variant. This does not confirm operational stock, color selection or dispatch readiness. Use View toy, not availability assertions. Original product photos downloaded and inspected before generation.
+
+The wrist-remote and line-following descriptions come from catalog text/source imagery inspected in this conversation; three wheels are visible on the actual bike image. These are listing-grounded descriptions, not independently tested performance. Do not copy supplier claims for speed, range, age, development or included accessories without further checks.
+
+## Intent
+
+Headline: Ready. Set. Play.
+Subline: Little drivers. New routes. Adventures to share.
+One product-specific path per card, plus Explore RC toys to the existing RC collection. This balances the preceding learning shelf/story with the actual RC range, gives visual and price comparisons and returns shoppers to shopping after editorial content. It uses the approved component instead of inventing another UI pattern. No claim of superiority or conversion uplift; evaluate section-exposed product visits, add-to-cart and purchases. Risk: page length and repeated grids; test against a shorter homepage.
+
+Built-in imagegen; [prompt](../output/design-concepts/rc-section-prompt.txt). Rendered products remain approximations; use original verified product photos and live prices in implementation.
+
+## Output review
+
+[RC desktop/mobile mockup v1](../output/design-concepts/mesh-rc-section-v1.png). Visually checked four complete cards on both views, correct price/product mapping, readable titles/descriptions, aligned prices/buttons, accurate broad toy identities and controllers, no invented reviews/discounts. Approved preceding sections untouched. Differences from prompt: generator retained coloured chips matching selected shelf instead of navy chip text; some small warm text needs contrast checking in implementation. Desktop image panels remain tall (about255x362px); mobile approximately190x210px. Mobile raster buttons are around35px high and need44px minimum CSS tap targets. Not an implemented accessibility check. Product imagery and lettering remain AI approximations; no product performance was tested.

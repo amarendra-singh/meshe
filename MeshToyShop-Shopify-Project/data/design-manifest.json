@@ -1,0 +1,202 @@
+{
+  "version": "1.0",
+  "date": "2026-10-30",
+  "authority": "Latest user homepage-complete instruction plus explicit earlier selections/corrections",
+  "order_status": "Documented assembly inference; no full-page composite supplied",
+  "mockups": [
+    {
+      "id": "M01",
+      "path": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+      "title": "Ticker, header, hero and four categories",
+      "sections": [
+        "S00",
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "basis": "Latest corrected hero; final baseline"
+    },
+    {
+      "id": "M02",
+      "path": "assets/mockups/mesh-discovery-user-selected.png",
+      "title": "Learning discovery",
+      "sections": [
+        "S04"
+      ],
+      "basis": "Exact user-selected attachment"
+    },
+    {
+      "id": "M03",
+      "path": "assets/mockups/mesh-shared-play-section-v2.png",
+      "title": "Shared play",
+      "sections": [
+        "S05"
+      ],
+      "basis": "Explicit next approve"
+    },
+    {
+      "id": "M04",
+      "path": "assets/mockups/mesh-creative-play-v1.png",
+      "title": "Creative shopping",
+      "sections": [
+        "S06"
+      ],
+      "basis": "Retained final baseline"
+    },
+    {
+      "id": "M05",
+      "path": "assets/mockups/mesh-shoppable-video-v1.png",
+      "title": "Shoppable video",
+      "sections": [
+        "S07"
+      ],
+      "basis": "Latest addition before homepage-complete instruction"
+    },
+    {
+      "id": "M06",
+      "path": "assets/mockups/mesh-play-growth-palette08-v3.png",
+      "title": "Growth and connection",
+      "sections": [
+        "S08"
+      ],
+      "basis": "Latest palette08 revision"
+    },
+    {
+      "id": "M07",
+      "path": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+      "title": "Customer WhatsApp stories",
+      "sections": [
+        "S09"
+      ],
+      "basis": "Latest layout; real messages missing"
+    },
+    {
+      "id": "M08",
+      "path": "assets/mockups/mesh-faq-palette08-v3.png",
+      "title": "Expanded FAQ",
+      "sections": [
+        "S10"
+      ],
+      "basis": "Latest ten-question revision"
+    }
+  ],
+  "sections": [
+    {
+      "id": "S00",
+      "key": "announcement",
+      "title": "Announcement",
+      "mockup": "M01",
+      "desktop": "Full width",
+      "mobile": "Full width",
+      "order": 0
+    },
+    {
+      "id": "S01",
+      "key": "header",
+      "title": "Header",
+      "mockup": "M01",
+      "desktop": "Logo + 3 icon pills + search/cart",
+      "mobile": "Logo + search/cart/menu",
+      "order": 1
+    },
+    {
+      "id": "S02",
+      "key": "hero",
+      "title": "Hero",
+      "mockup": "M01",
+      "desktop": "Photo with left cream overlay",
+      "mobile": "Copy + shallow curve + photo",
+      "order": 2
+    },
+    {
+      "id": "S03",
+      "key": "categories",
+      "title": "Four categories",
+      "mockup": "M01",
+      "desktop": "2 columns × 2 rows",
+      "mobile": "4 horizontal stacked cards",
+      "order": 3
+    },
+    {
+      "id": "S04",
+      "key": "discovery",
+      "title": "Learning discovery",
+      "mockup": "M02",
+      "desktop": "4 product columns",
+      "mobile": "2 columns × 2 rows",
+      "order": 4
+    },
+    {
+      "id": "S05",
+      "key": "shared-play",
+      "title": "Shared play",
+      "mockup": "M03",
+      "desktop": "Photo 63% / copy 37%",
+      "mobile": "Copy, photo, steps, CTA",
+      "order": 5
+    },
+    {
+      "id": "S06",
+      "key": "creative-play",
+      "title": "Creative shopping",
+      "mockup": "M04",
+      "desktop": "Panorama + 2 purchase areas",
+      "mobile": "Photo + 2 purchase rows",
+      "order": 6
+    },
+    {
+      "id": "S07",
+      "key": "shoppable-video",
+      "title": "Video shopping",
+      "mockup": "M05",
+      "desktop": "3 portrait cards",
+      "mobile": "1 card + next glimpse",
+      "order": 7
+    },
+    {
+      "id": "S08",
+      "key": "growth",
+      "title": "Growth and connection",
+      "mockup": "M06",
+      "desktop": "2 × 2 image/text modules",
+      "mobile": "4 stacked image/text rows",
+      "order": 8
+    },
+    {
+      "id": "S09",
+      "key": "customer-stories",
+      "title": "WhatsApp stories",
+      "mockup": "M07",
+      "desktop": "3 portrait cards",
+      "mobile": "1 card + next glimpse",
+      "order": 9
+    },
+    {
+      "id": "S10",
+      "key": "faq",
+      "title": "Expanded FAQ",
+      "mockup": "M08",
+      "desktop": "2 groups / 10 questions",
+      "mobile": "2 stacked groups / 10 questions",
+      "order": 10
+    },
+    {
+      "id": "S11",
+      "key": "footer",
+      "title": "Inherited footer",
+      "mockup": null,
+      "desktop": "Existing native footer",
+      "mobile": "Existing responsive footer",
+      "order": 11
+    }
+  ],
+  "rejected": [
+    "mesh-mobile-curve-restored-v10.png",
+    "mesh-rc-section-v1.png",
+    "mesh-rc-feature-add-to-cart-v2.png"
+  ],
+  "superseded_not_to_substitute": [
+    "mesh-next-section-discovery-v3.png",
+    "mesh-buying-help-v1.png"
+  ]
+}

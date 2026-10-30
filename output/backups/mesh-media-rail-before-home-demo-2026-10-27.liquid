@@ -1,0 +1,410 @@
+{% liquid
+  assign visible_count = 0
+  assign video_collection = section.settings.video_collection | default: collections['new-arrivals']
+  assign automatic_count = 0
+  if section.settings.mode == 'video' and section.settings.automatic_videos
+    for item in video_collection.products limit: 50
+      assign product_video = item.media | where: 'media_type', 'video' | first
+      if product_video != blank
+        assign automatic_count = automatic_count | plus: 1
+        if automatic_count >= section.settings.video_limit
+          break
+        endif
+      endif
+    endfor
+    assign visible_count = automatic_count
+  endif
+  for block in section.blocks
+    if block.type == section.settings.mode
+      if block.settings.demo == false or request.design_mode
+        if block.settings.video != blank or block.settings.image != blank
+          assign visible_count = visible_count | plus: 1
+        endif
+      endif
+    endif
+  endfor
+%}
+{% if visible_count > 0 or request.design_mode %}
+<mesh-media-rail class="mesh-rail mesh-rail--{{ section.settings.mode }}{% if section.settings.mode == 'review' and section.settings.show_review_details == false %} mesh-rail--images-only{% endif %}">
+  <div class="mesh-rail__heading"><div><p>{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2><div>{{ section.settings.description | escape }}</div></div>
+    {% if section.settings.mode == 'video' %}<div class="mesh-rail__controls" hidden><button type="button" data-step="-1" aria-label="{{ section.settings.previous_label | escape }}">←</button><button type="button" data-step="1" aria-label="{{ section.settings.next_label | escape }}">→</button></div>{% endif %}
+  </div>
+  <div class="mesh-rail__viewport">
+  {% if section.settings.mode == 'review' %}<div class="mesh-rail__controls" hidden><button type="button" data-step="-1" aria-label="{{ section.settings.previous_label | escape }}">‹</button><button type="button" data-step="1" aria-label="{{ section.settings.next_label | escape }}">›</button></div>{% endif %}
+  <div class="mesh-rail__track" tabindex="0" role="region" aria-label="{{ section.settings.heading | escape }}">
+    {% if automatic_count > 0 %}
+      {% assign rendered_videos = 0 %}
+      {% for item in video_collection.products limit: 50 %}
+        {% assign product_video = item.media | where: 'media_type', 'video' | first %}
+        {% if product_video != blank %}
+          <article class="mesh-rail__card">
+            {{ product_video | video_tag: controls: true, autoplay: false, preload: 'none', loading: 'lazy', image_size: '600x', class: 'mesh-rail__media' }}
+            <div class="mesh-rail__copy"><h3><a href="{{ item.url }}">{{ item.title | escape }}</a></h3><p>{{ item.price_min | money }}{% if item.price_varies %} – {{ item.price_max | money }}{% endif %}</p></div>
+          </article>
+          {% assign rendered_videos = rendered_videos | plus: 1 %}
+          {% if rendered_videos >= section.settings.video_limit %}{% break %}{% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% for block in section.blocks %}
+      {% if block.type == section.settings.mode %}
+        {% if block.settings.demo == false or request.design_mode %}
+          {% if block.settings.video != blank or block.settings.image != blank %}
+          <article class="mesh-rail__card" {{ block.shopify_attributes }}>
+            {% if block.settings.demo %}<p class="mesh-rail__demo">{{ section.settings.demo_label | escape }}</p>{% endif %}
+            {% if block.type == 'video' %}
+              {% if block.settings.video != blank %}
+                {{ block.settings.video | video_tag: controls: true, autoplay: false, preload: 'none', loading: 'lazy', image_size: '600x', class: 'mesh-rail__media' }}
+              {% else %}
+                {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', class: 'mesh-rail__media mesh-rail__poster', widths: '280, 450, 700', sizes: '(min-width: 990px) 300px, 75vw' }}
+              {% endif %}
+            {% else %}
+              <a class="mesh-rail__image-link" href="{{ block.settings.image | image_url: width: 1800 }}" target="_blank" rel="noopener" aria-label="{{ section.settings.enlarge_label | escape }}">
+                {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'mesh-rail__media', widths: '300, 450, 600, 900, 1200', sizes: 'auto', alt: block.settings.title }}
+              </a>
+            {% endif %}
+            <div class="mesh-rail__copy">
+              {% assign linked_product = block.settings.product %}
+              <h3>{% if linked_product != blank %}<a href="{{ linked_product.url }}">{{ linked_product.title | escape }}</a>{% else %}{{ block.settings.title | escape }}{% endif %}</h3>
+              {% if block.settings.caption != blank %}<p>{{ block.settings.caption | escape }}</p>{% endif %}
+              {% if block.settings.transcript != blank %}<details><summary>{{ section.settings.transcript_label | escape }}</summary><div>{{ block.settings.transcript | escape | newline_to_br }}</div></details>{% endif %}
+            </div>
+          </article>
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% if visible_count == 0 and request.design_mode %}<p class="mesh-rail__empty">Add your videos or permission-cleared customer images in this section. Demo blocks are visible only in the theme editor.</p>{% endif %}
+  </div>
+  </div>
+</mesh-media-rail>
+{% endif %}
+{% stylesheet %}
+.mesh-rail{display:block;padding:64px max(5%,calc((100% - 1280px)/2));background:#fffcf5;color:#071d49;font-family:Arial,sans-serif}
+.mesh-rail__heading{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:30px}.mesh-rail__heading p{margin:0 0 12px;color:#0754ef;font-weight:700;font-size:13px;letter-spacing:.1em}.mesh-rail h2{font:700 clamp(30px,3.6vw,46px)/1.1 Arial,sans-serif;letter-spacing:-.035em;margin:0 0 16px;color:inherit}.mesh-rail__heading div>div{font-size:18px;color:#405271;line-height:1.5}
+.mesh-rail__controls{display:flex;gap:10px}.mesh-rail__controls[hidden]{display:none}.mesh-rail__controls button{width:48px;height:48px;border-radius:50%;border:1px solid #dce3ef;background:white;color:#071d49;cursor:pointer;font-size:22px}.mesh-rail__controls button:disabled{opacity:.35;cursor:default}
+.mesh-rail__track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 60px)/4);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;scrollbar-width:thin;overscroll-behavior-x:contain}
+.mesh-rail__card{scroll-snap-align:start;overflow:hidden;border-radius:22px;border:1px solid #e5e8ee;background:#fff;align-self:start}.mesh-rail__demo{margin:0;padding:10px 12px;background:#fff0c7;color:#654400;font-size:12px;line-height:1.3;font-weight:700;text-align:center}
+.mesh-rail__media{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:#f3f5f7}.mesh-rail__poster{object-fit:contain;background:white;padding:14px}
+.mesh-rail__copy{padding:18px}.mesh-rail h3{font:700 18px/1.35 Arial,sans-serif;color:inherit;margin:0}.mesh-rail h3 a{color:inherit;text-decoration:none}.mesh-rail__copy p,.mesh-rail details{font-size:15px;line-height:1.5;color:#405271}.mesh-rail summary{cursor:pointer;padding:10px 0}.mesh-rail a:focus-visible,.mesh-rail button:focus-visible,.mesh-rail__track:focus-visible{outline:3px solid #ff8547;outline-offset:3px}.mesh-rail__empty{min-width:300px;font-size:16px}
+@media(max-width:989px){.mesh-rail{padding:42px 5%}.mesh-rail__track{grid-auto-columns:72%;gap:16px}.mesh-rail__heading{align-items:start}.mesh-rail__controls{gap:6px}.mesh-rail__controls button{width:44px;height:44px}.mesh-rail h2{font-size:31px}}
+.mesh-rail--review{padding:54px max(24px,2vw) 72px;background:#fffaf3;color:#111}
+.mesh-rail--review .mesh-rail__heading{display:block;text-align:center;margin:0 auto 46px;max-width:960px}
+.mesh-rail--review .mesh-rail__heading p,.mesh-rail--review .mesh-rail__heading div>div{display:none}
+.mesh-rail--review h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,3.2vw,58px);line-height:1.15;letter-spacing:-.025em;margin:0}
+.mesh-rail--review .mesh-rail__viewport{position:relative}
+.mesh-rail--review .mesh-rail__track{grid-auto-columns:calc((100% - 72px)/4);gap:24px;padding:0;scrollbar-width:none;scroll-snap-stop:always}
+.mesh-rail--review .mesh-rail__track::-webkit-scrollbar{display:none}
+.mesh-rail--review .mesh-rail__card{border:0;border-radius:0;background:transparent;position:relative}
+.mesh-rail--review .mesh-rail__image-link{display:block}
+.mesh-rail--review .mesh-rail__media{aspect-ratio:1;object-fit:contain;background:#172126}
+.mesh-rail--review .mesh-rail__demo{position:absolute;top:0;left:0;right:0;z-index:1;padding:8px;font-size:11px}
+.mesh-rail--images-only .mesh-rail__copy{display:none}
+.mesh-rail--review .mesh-rail__controls{position:absolute;inset:0;z-index:2;pointer-events:none;display:block}
+.mesh-rail--review .mesh-rail__controls[hidden]{display:none}
+.mesh-rail--review .mesh-rail__controls button{position:absolute;top:var(--mesh-control-y,50%);transform:translateY(-50%);pointer-events:auto;width:48px;height:48px;border:0;border-radius:10px;background:#b73537;color:#fff;font:400 42px/1 Arial,sans-serif}
+.mesh-rail--review [data-step="-1"]{left:0}.mesh-rail--review [data-step="1"]{right:0}
+.mesh-rail--review .mesh-rail__controls button:disabled{opacity:.45}
+@media(min-width:750px) and (max-width:989px){.mesh-rail--review .mesh-rail__track{grid-auto-columns:calc((100% - 24px)/2)}}
+@media(max-width:749px){.mesh-rail--review{padding:38px 24px 52px}.mesh-rail--review .mesh-rail__heading{margin-bottom:32px}.mesh-rail--review h2{font-size:clamp(27px,6vw,36px)}.mesh-rail--review .mesh-rail__track{grid-auto-columns:100%;gap:20px}.mesh-rail--review .mesh-rail__controls button{width:40px;height:44px;font-size:36px;border-radius:8px}}
+{% endstylesheet %}
+{% javascript %}
+if (!customElements.get('mesh-media-rail')) {
+  customElements.define('mesh-media-rail', class extends HTMLElement {
+    connectedCallback() {
+      this.track = this.querySelector('.mesh-rail__track');
+      this.buttons = [...this.querySelectorAll('[data-step]')];
+      this.abort = new AbortController();
+      const signal = this.abort.signal;
+      this.update = () => {
+        const maximum = this.track.scrollWidth - this.track.clientWidth;
+        this.buttons[0].disabled = this.track.scrollLeft < 2;
+        this.buttons[1].disabled = this.track.scrollLeft >= maximum - 2;
+        this.querySelector('.mesh-rail__controls').hidden = maximum < 2;
+        const media = this.track.querySelector('.mesh-rail__media');
+        if (media) this.style.setProperty('--mesh-control-y', `${media.offsetHeight / 2}px`);
+      };
+      this.move = direction => {
+        const card = this.track.querySelector('.mesh-rail__card');
+        if (!card) return;
+        const step = card.getBoundingClientRect().width + (parseFloat(getComputedStyle(this.track).columnGap) || 0);
+        const left = direction === 'start' ? 0 : direction === 'end' ? this.track.scrollWidth : this.track.scrollLeft + direction * step;
+        this.track.scrollTo({left, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+      };
+      this.buttons.forEach(button => button.addEventListener('click', () => {
+        this.move(Number(button.dataset.step));
+      }, {signal}));
+      this.track.addEventListener('keydown', event => {
+        if (event.target !== this.track) return;
+        const directions = {ArrowLeft: -1, ArrowRight: 1, Home: 'start', End: 'end'};
+        if (!(event.key in directions)) return;
+        event.preventDefault();
+        this.move(directions[event.key]);
+      }, {signal});
+      this.track.addEventListener('scroll', this.update, {passive:true, signal});
+      this.addEventListener('play', event => this.querySelectorAll('video').forEach(video => {if (video !== event.target) video.pause();}), {capture:true, signal});
+      document.addEventListener('visibilitychange', () => {if (document.hidden) this.querySelectorAll('video').forEach(video => video.pause());}, {signal});
+      this.observer = new ResizeObserver(this.update);
+      this.observer.observe(this.track);
+      const firstMedia = this.track.querySelector('.mesh-rail__media');
+      if (firstMedia) this.observer.observe(firstMedia);
+      this.update();
+    }
+    disconnectedCallback() {this.abort?.abort();this.observer?.disconnect();}
+  });
+}
+{% endjavascript %}
+{% schema %}
+{
+  "name": "Mesh media rail",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_review_details",
+      "label": "Show captions and product links below screenshots",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "automatic_videos",
+      "label": "Show videos from products automatically",
+      "default": true,
+      "info": "In video mode, uses the first Shopify-hosted video from each eligible product. Add real videos to product media."
+    },
+    {
+      "type": "collection",
+      "id": "video_collection",
+      "label": "Automatic video collection",
+      "info": "Defaults to New Arrivals. Checks the first 50 products in collection order; new published products with videos appear automatically."
+    },
+    {
+      "type": "range",
+      "id": "video_limit",
+      "label": "Maximum automatic videos",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "select",
+      "id": "mode",
+      "label": "Content type",
+      "options": [
+        {
+          "value": "video",
+          "label": "Product videos"
+        },
+        {
+          "value": "review",
+          "label": "Customer screenshots"
+        }
+      ],
+      "default": "video"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "PLAY, UP CLOSE"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "See the little moments unfold."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Product demos, discoveries and ideas for your next play break."
+    },
+    {
+      "type": "text",
+      "id": "demo_label",
+      "label": "Demo disclosure",
+      "default": "Demo — replace before launch"
+    },
+    {
+      "type": "text",
+      "id": "previous_label",
+      "label": "Previous control",
+      "default": "Previous items"
+    },
+    {
+      "type": "text",
+      "id": "next_label",
+      "label": "Next control",
+      "default": "Next items"
+    },
+    {
+      "type": "text",
+      "id": "enlarge_label",
+      "label": "Image enlargement label",
+      "default": "Open full customer screenshot"
+    },
+    {
+      "type": "text",
+      "id": "transcript_label",
+      "label": "Transcript label",
+      "default": "Read transcript"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Product video",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Shopify-hosted video"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Poster or screenshot"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Related product"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "A little play moment"
+        },
+        {
+          "type": "textarea",
+          "id": "caption",
+          "label": "Caption"
+        },
+        {
+          "type": "textarea",
+          "id": "transcript",
+          "label": "Transcript or screenshot text"
+        },
+        {
+          "type": "checkbox",
+          "id": "demo",
+          "label": "Demo content — editor only",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Customer screenshot",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Poster or screenshot"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Related product"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "A little play moment"
+        },
+        {
+          "type": "textarea",
+          "id": "caption",
+          "label": "Caption"
+        },
+        {
+          "type": "textarea",
+          "id": "transcript",
+          "label": "Transcript or screenshot text"
+        },
+        {
+          "type": "checkbox",
+          "id": "demo",
+          "label": "Demo content — editor only",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mesh product videos",
+      "settings": {
+        "mode": "video"
+      },
+      "blocks": [
+        {
+          "type": "video",
+          "settings": {
+            "title": "A twist, a turn, another try",
+            "image": "shopify://shop_images/1791368548_rGjVxh.webp",
+            "caption": "Demo storyboard. Add your own product video.",
+            "demo": true
+          }
+        },
+        {
+          "type": "video",
+          "settings": {
+            "title": "Little makers at work",
+            "image": "shopify://shop_images/1791369474_SAofge.webp",
+            "caption": "Demo storyboard. Add your own product video.",
+            "demo": true
+          }
+        },
+        {
+          "type": "video",
+          "settings": {
+            "title": "Ready for a mini adventure",
+            "image": "shopify://shop_images/1791295989_uBTPqe.webp",
+            "caption": "Demo storyboard. Add your own product video.",
+            "demo": true
+          }
+        },
+        {
+          "type": "video",
+          "settings": {
+            "title": "Capture their discoveries",
+            "image": "shopify://shop_images/1791269653_31TuL9.webp",
+            "caption": "Demo storyboard. Add your own product video.",
+            "demo": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mesh customer screenshots",
+      "settings": {
+        "mode": "review",
+        "eyebrow": "MESSAGES FROM OUR COMMUNITY",
+        "heading": "Little notes. Happy moments.",
+        "description": "Customer messages, shared with permission."
+      },
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "title": "Demo conversation",
+            "caption": "Fictional sample for layout review. Replace with a genuine customer screenshot.",
+            "demo": true
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "index"
+    ]
+  }
+}
+{% endschema %}

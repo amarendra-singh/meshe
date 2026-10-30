@@ -1,0 +1,46 @@
+{% doc %}
+  Renders a catalogue product or an editor-only preview with consistent uncropped photography.
+  @param {product} [item] - Current Shopify product.
+  @param {block} [preview] - Editor-only fallback block.
+  @param {string} sold_out_label - Merchant-editable stock label.
+{% enddoc %}
+{% liquid
+  assign card_image = item.featured_image
+  assign card_title = item.title
+  if item == blank and request.design_mode and preview != blank
+    assign card_image = preview.settings.preview_image
+    assign card_title = preview.settings.preview_title
+  endif
+%}
+{% if item != blank or request.design_mode and preview != blank %}
+<article class="mesh-product" {% if preview != blank %}{{ preview.shopify_attributes }}{% endif %}>
+  {% if item != blank %}<a class="mesh-product__link" href="{{ item.url }}">{% endif %}
+  <div class="mesh-product__media">
+    {% if card_image != blank %}
+      {{ card_image | image_url: width: 1200 | image_tag: class: 'mesh-product__image', loading: 'lazy', widths: '240, 360, 600, 900, 1200', sizes: '(min-width: 1280px) 580px, 46vw' }}
+    {% else %}
+      {{ 'product-1' | placeholder_svg_tag: 'mesh-product__image' }}
+    {% endif %}
+  </div>
+  <div class="mesh-product__copy">
+    <h3>{{ card_title | escape }}</h3>
+    {% if item != blank %}
+      <p>{{ item.price_min | money }}{% if item.price_varies %} – {{ item.price_max | money }}{% endif %}</p>
+      {% unless item.available %}<span class="mesh-product__availability">{{ sold_out_label | escape }}</span>{% endunless %}
+    {% else %}<p>{{ preview.settings.preview_price | escape }}</p>{% endif %}
+  </div>
+  {% if item != blank %}</a>{% endif %}
+</article>
+{% endif %}
+{% stylesheet %}
+.mesh-product{min-width:0;overflow:hidden;border:1px solid #ece9e5;border-radius:20px;background:#fff;color:#071d49;font-family:Arial,sans-serif}
+.mesh-product__link{display:block;color:inherit;text-decoration:none;height:100%}
+.mesh-product__media{aspect-ratio:1;background:#fff;padding:clamp(12px,2vw,28px);overflow:hidden}
+.mesh-product__image{display:block;width:100%;height:100%;object-fit:contain;border-radius:0;mix-blend-mode:multiply}
+.mesh-product__copy{padding:16px 20px 22px}
+.mesh-product h3{margin:0;color:inherit;font:600 clamp(16px,2vw,24px)/1.25 Arial,sans-serif;letter-spacing:-.025em;overflow-wrap:anywhere}
+.mesh-product p{font-size:clamp(18px,2.2vw,26px);line-height:1.2;font-weight:700;margin:8px 0 0}
+.mesh-product__availability{display:inline-block;margin-top:8px;font-size:14px;color:#405271}
+.mesh-product__link:focus-visible{outline:3px solid #ff8547;outline-offset:-4px}
+@media(max-width:749px){.mesh-product__copy{padding:12px}.mesh-product h3{font-size:16px}.mesh-product p{font-size:19px}}
+{% endstylesheet %}

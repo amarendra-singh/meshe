@@ -1,0 +1,202 @@
+[
+  {
+    "id": "hero-desktop-mobile",
+    "section": "S02",
+    "kind": "lifestyle",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+    "notes": "Selected scene embedded only; clean master/real shoot required, preserve woman/boy/RC composition"
+  },
+  {
+    "id": "category-remote-control",
+    "section": "S03",
+    "kind": "cutout",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+    "notes": "Exact selected cutout embedded only; legacy art is not a substitute"
+  },
+  {
+    "id": "category-puzzles",
+    "section": "S03",
+    "kind": "cutout",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+    "notes": "Exact selected cutout embedded only; legacy art is not a substitute"
+  },
+  {
+    "id": "category-gadgets",
+    "section": "S03",
+    "kind": "cutout",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+    "notes": "Exact selected cutout embedded only; legacy art is not a substitute"
+  },
+  {
+    "id": "category-educational",
+    "section": "S03",
+    "kind": "cutout",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-mobile-shallow-curve-v11.png",
+    "notes": "Exact selected cutout embedded only; legacy art is not a substitute"
+  },
+  {
+    "id": "product-colour_coder",
+    "section": "catalog",
+    "kind": "packshot",
+    "standalone_available": true,
+    "source": "assets/product-source/colour-coder.jpg",
+    "notes": "Catalog original; resolution/rights/SKU require verification"
+  },
+  {
+    "id": "product-magnetic_drawing_board",
+    "section": "catalog",
+    "kind": "packshot",
+    "standalone_available": true,
+    "source": "assets/product-source/magnetic-board.jpg",
+    "notes": "Catalog original; resolution/rights/SKU require verification"
+  },
+  {
+    "id": "product-diy_drill",
+    "section": "catalog",
+    "kind": "packshot",
+    "standalone_available": true,
+    "source": "assets/product-source/diy-screw-drill-puzzle-toy.webp",
+    "notes": "Catalog original; resolution/rights/SKU require verification"
+  },
+  {
+    "id": "product-maze_cube",
+    "section": "catalog",
+    "kind": "packshot",
+    "standalone_available": true,
+    "source": "assets/product-source/3d-maze-cube.webp",
+    "notes": "Catalog original; resolution/rights/SKU require verification"
+  },
+  {
+    "id": "product-sticker_book",
+    "section": "catalog",
+    "kind": "packshot",
+    "standalone_available": true,
+    "source": "assets/product-source/sticker-book.jpg",
+    "notes": "Catalog original; resolution/rights/SKU require verification"
+  },
+  {
+    "id": "product-mosaic_board",
+    "section": "catalog",
+    "kind": "packshot",
+    "standalone_available": true,
+    "source": "assets/product-source/mosaic-board.jpg",
+    "notes": "Catalog original; resolution/rights/SKU require verification"
+  },
+  {
+    "id": "product-magnetic_tiles",
+    "section": "catalog",
+    "kind": "packshot",
+    "standalone_available": true,
+    "source": "assets/product-source/magnetic-tiles.jpg",
+    "notes": "Catalog original; resolution/rights/SKU require verification"
+  },
+  {
+    "id": "shared-play-photo",
+    "section": "S05",
+    "kind": "lifestyle",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-shared-play-section-v2.png",
+    "notes": "Selected mother/daughter scene embedded only"
+  },
+  {
+    "id": "creative-overhead",
+    "section": "S06",
+    "kind": "lifestyle",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-creative-play-v1.png",
+    "notes": "Preserve both activities in desktop/mobile art direction"
+  },
+  {
+    "id": "video-colour-coder",
+    "section": "S07",
+    "kind": "video_and_poster",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-shoppable-video-v1.png",
+    "notes": "Actual clip missing; poster scene embedded only, not proof of use"
+  },
+  {
+    "id": "video-sticker-book",
+    "section": "S07",
+    "kind": "video_and_poster",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-shoppable-video-v1.png",
+    "notes": "Actual clip missing; poster scene embedded only, not proof of use"
+  },
+  {
+    "id": "video-mosaic-board",
+    "section": "S07",
+    "kind": "video_and_poster",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-shoppable-video-v1.png",
+    "notes": "Actual clip missing; poster scene embedded only, not proof of use"
+  },
+  {
+    "id": "growth-attention",
+    "section": "S08",
+    "kind": "lifestyle",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-play-growth-palette08-v3.png",
+    "notes": "Selected scene embedded only; exact product geometry/realism not guaranteed"
+  },
+  {
+    "id": "growth-problem-solving",
+    "section": "S08",
+    "kind": "lifestyle",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-play-growth-palette08-v3.png",
+    "notes": "Selected scene embedded only; exact product geometry/realism not guaranteed"
+  },
+  {
+    "id": "growth-creative-expression",
+    "section": "S08",
+    "kind": "lifestyle",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-play-growth-palette08-v3.png",
+    "notes": "Selected scene embedded only; exact product geometry/realism not guaranteed"
+  },
+  {
+    "id": "growth-connection",
+    "section": "S08",
+    "kind": "lifestyle",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-play-growth-palette08-v3.png",
+    "notes": "Selected scene embedded only; exact product geometry/realism not guaranteed"
+  },
+  {
+    "id": "whatsapp-1",
+    "section": "S09",
+    "kind": "customer_screenshot",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+    "notes": "No genuine message provided; obtain permission and redact personal data"
+  },
+  {
+    "id": "whatsapp-2",
+    "section": "S09",
+    "kind": "customer_screenshot",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+    "notes": "No genuine message provided; obtain permission and redact personal data"
+  },
+  {
+    "id": "whatsapp-3",
+    "section": "S09",
+    "kind": "customer_screenshot",
+    "standalone_available": false,
+    "source": "assets/mockups/mesh-whatsapp-palette08-v2.png",
+    "notes": "No genuine message provided; obtain permission and redact personal data"
+  },
+  {
+    "id": "wordmark",
+    "section": "S01",
+    "kind": "logo",
+    "standalone_available": false,
+    "source": "assets/legacy-reference/mesh-wordmark.svg",
+    "notes": "Legacy candidate available but exact approved vector master unconfirmed"
+  }
+]
